@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 book:
-  title: "Learning Diary of CASA0023"
+  title: "Learning Diary"
   author: "Xianlai Yin"
   date: "3/13/2023"
   navbar:
@@ -13,7 +13,7 @@ book:
     background: light
     right:
       - icon: github
-  repo-url: https://github.com/XianlaiYin/CASA0023/tree/main/learning_diary
+  repo-url: https://github.com/XianlaiYin/XianlaiYin.github.io
   repo-actions: [edit, issue]
   chapters:
     - index.qmd

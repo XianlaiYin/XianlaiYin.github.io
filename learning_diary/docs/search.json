@@ -4,28 +4,28 @@
     "href": "index.html",
     "title": "Learning Diary of CASA0023",
     "section": "",
-    "text": "This is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.\n\n1 + 1\n\n[1] 2"
+    "text": "This is a learning diary of CASA0023 from Xianlai Yin.\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "WEEK1.html",
     "href": "WEEK1.html",
     "title": "\n1  WEEK1\n",
     "section": "",
-    "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming."
+    "text": "test"
   },
   {
     "objectID": "WEEK1.html#summary",
     "href": "WEEK1.html#summary",
     "title": "\n1  WEEK1\n",
     "section": "\n1.1 Summary",
-    "text": "1.1 Summary\n\n1 + 1\n\n[1] 2\n\n\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+    "text": "1.1 Summary\n\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "WEEK2.html",
     "href": "WEEK2.html",
     "title": "\n2  WEEK2\n",
     "section": "",
-    "text": "1 + 1\n\n[1] 2"
+    "text": "test"
   },
   {
     "objectID": "references.html",
@@ -33,5 +33,12 @@
     "title": "References",
     "section": "",
     "text": "Knuth, Donald E. 1984. “Literate Programming.” Comput.\nJ. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97."
+  },
+  {
+    "objectID": "WEEK2.html#summary",
+    "href": "WEEK2.html#summary",
+    "title": "\n2  WEEK2\n",
+    "section": "\n2.1 Summary",
+    "text": "2.1 Summary\n\n1 + 1\n\n[1] 2"
   }
 ]

@@ -1,7 +1,7 @@
-# Preface {.unnumbered}
+> This is a learning diary of CASA0023.
 
-This is a learning diary of CASA0023 from Xianlai Yin.
+# Content {.unnumbered}
 
-```{r}
-1 + 1
-```
+::: test
+test
+:::

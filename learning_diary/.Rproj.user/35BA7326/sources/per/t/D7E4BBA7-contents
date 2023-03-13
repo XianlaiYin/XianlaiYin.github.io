@@ -1,0 +1,36 @@
+project:
+  type: book
+  output-dir: docs
+
+book:
+  title: "Learning Diary of CASA0023"
+  author: "Xianlai Yin"
+  date: "3/13/2023"
+  navbar:
+    collapse: true
+    collapse-below: lg
+    search: true
+    background: light
+    right:
+      - icon: github
+  repo-url: https://github.com/XianlaiYin/CASA0023/tree/main/learning_diary
+  repo-actions: [edit, issue]
+  chapters:
+    - index.qmd
+    - WEEK1.qmd
+    - WEEK2.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      light: flatly
+      dark: darkly
+    code-link: true
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+

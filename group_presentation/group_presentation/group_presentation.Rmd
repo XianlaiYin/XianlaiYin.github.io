@@ -1,0 +1,24 @@
+---
+title: "Group Presentation"
+subtitle: "osyz"
+author: "Xianlai Yin"
+institute: "RStudio, PBC"
+date: "2023/3/14"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+```
+
+class: center, middle
+
+# osyz
+
+### test

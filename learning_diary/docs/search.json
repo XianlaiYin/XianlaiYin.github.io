@@ -4,118 +4,279 @@
     "href": "index.html",
     "title": "Learning Diary",
     "section": "",
-    "text": "Content\n\ntest"
+    "text": "Content\n\n\n\nWEEK\nTHEME\n\n\n\n\nWEEK 1\nAn Introduction to Remote Sensing\n\n\nWEEK 2\nPortfolio tools: Xaringan and Quarto\n\n\nWEEK 3\nRemote sensing data\n\n\nWEEK 4\nPolicy applications\n\n\nWEEK 5\nAn introduction to Google Earth Engine\n\n\nWEEK 6\nClassification\n\n\nWEEK 7\nClassification the big questions and accuracy\n\n\nWEEK 8\nTemperature and policy"
+  },
+  {
+    "objectID": "index.html#content",
+    "href": "index.html#content",
+    "title": "Learning Diary",
+    "section": "Content",
+    "text": "Content\n\n\n\nWEEK\nTHEME\n\n\n\n\nWEEK 1\nAn Introduction to Remote Sensing\n\n\nWEEK 2\nPortfolio tools: Xaringan and Quarto\n\n\nWEEK 3\nRemote sensing data\n\n\nWEEK 4\nPolicy applications\n\n\nWEEK 5\nAn introduction to Google Earth Engine\n\n\nWEEK 6\nClassification\n\n\nWEEK 7\nClassification the big questions and accuracy\n\n\nWEEK 8\nTemperature and policy"
   },
   {
     "objectID": "WEEK1.html",
     "href": "WEEK1.html",
-    "title": "\n1  WEEK1\n",
+    "title": "WEEK 1",
     "section": "",
-    "text": "test"
+    "text": "This is a learning diary of CASA0023 WEEK 1, the lecture presentation is here, and the practical material is here."
   },
   {
     "objectID": "WEEK1.html#summary",
     "href": "WEEK1.html#summary",
-    "title": "\n1  WEEK1\n",
-    "section": "\n1.1 Summary",
-    "text": "1.1 Summary\n\n1 + 1\n\n[1] 2"
+    "title": "WEEK 1",
+    "section": "1 Summary",
+    "text": "1 Summary\n\n\n\nMindmap of Week 1 Leacture\n\n\n\n\n1.1 Remote sensing\n\nDefinition\nNASA defines remote sensing as acquiring information from a distance, interchangeable used with Earth Observation or EO.\n\n\nData acquisition\nThis is achieved through sensors mounted on a platform, e.g. satellites, planes (aerial imagery), drones, phones, free standing on the ground or sea (with hand held devices), there are more than 150 satellites in orbit carrying sensors.\n\n\nAdvantages\n\nMass of data: satellites collect data on the same points on Earth every day to every 16 days\nFrequency of update and less reliance on authorities (e.g. London Atlas)\nMore free resources to process large volumes of data (e.g. Google Earth Engine)\n\n\n\nTypes of sensor\nPassive sensor\n\nUse energy that is available\nDon’t emit anything\nUsually detecting reflected energy from the sun\nEnergy is in electromagnetic waves…\nSuch as: Human eye, camera, satellite sensor\n\nActive sensor\n\nHave an energy source for illumination\nActively emits electormagentic waves and then waits to receive\nSuch as: Radar, X-ray, LiDAR\n\n\n\n\n1.2 Electromagentic waves\n\n\n\n\n\n\nTerms\n\n\n\n\nWaves of an electromagnetic field, travel through space and carry radiant energy = Electromagnetic radiation (EMR). Waves are part of the EMR spectrum.\nEnergy carried by EMR waves = radiant energy\nEnergy per unit of time = radiant flux\nEnergy from the sun = incoming short wave radiation or shortwave radiation\nEnergy (solar power) from the sun per unit area per unit time (from electromagnetic radiation) = solar irradiance (per unit time - flux)\nEnergy leaving a surface per unit area per unit time = Exitance (emittance) (per unit time - flux)\nFlux means time here.\n\n\n\n\nElectromagnetic radiation (EMR)\nEMR has both electric and magnetic fields, propagates (moves) as waves: c = vλ\n\nc = velocity of light 3 x 10^8 meters per second\nv = frequency, rate of oscillation\nλ = wavelength, distance between two crests\n\nEMR isn’t automatically reflected. It experiences a number of changes prior to hitting the sensor\n\nSurface: Energy being absorbed by the surface and being transmitted through the surface\nAtmospheric: Energy can be scattered by particles in the atmosphere\n\n\n\n\n1.3 Interacting with Earth’s surface\n\nAtmospheric scattering\n\nRayleigh = particles are very small compared to the wavelength\nMie = particles are the same size compared to the wavelength\nNon selective = particles are much larger than the wavelength\n\n\n\nSynthetic Aperture Radar (SAR)\n\nRadar collects at longer wavelengths than optical sensors - pass through clouds that have smaller particle sizes (wavelength dictates how far it can penetrate into medium)\nHas it’s own bands - e.g. P, L, S, C, X, Ku, K\nCollects data at night\n\n\n\nBidirectional Reflectance Distribution Function (BRDF)\n\nView (e.g. sensor) and illumination (e.g. sun) angles can change\nEnergy being reflected from the surface that is smooth or diffuse\n\n\n\nPolarization\nDefinition\nApplicable to Radar: Electromagnetic waves are polarized and the direction depends on the oscillation of the electromagnetic field. When they are reflected from the surface the waves can be linked to surface properties - roughness, shape, orientation, moisture, salinity, density.\nDifferent ploarizations\n\nSingle polarization: same polarization transmitted and received = 1 horizontal (or vertical)\nDual polarization: One sent, different one received = transmits and receives both horizontal and vertical\nQuad polarization: system can transmit and receive four types = emitted in horizontal (H) and received in horizontal (H)\n\n\n\n\n1.4 Remote sensing data\n\nData formats\n\nband interleaved by line (BIL)\nband sequential (BSQ)\nband interleaved by pixel (BIP)\nGeoTIFF (most common)\n\n\n\nFour resolutions\n\nSpatial = the size of the raster grid per pixel (e.g. 20cm or 30m)\nSpectral = the number of bands it records data in…more soon\nTemporal = the time it revisits (e.g. daily, every 7 days, on demand)\nRadiometric = identify differences in light or reflectance, in practice this is the range of possible values.\n\n\n\n\nSpectral resolution. Source: NASA Science\n\n\n\n\nType of orbit\n\ngeosynchronous orbit (GSO) = satellite matches the Earth’s rotation\ngeostationary orbit = holds same position, usually only for communications but some sensors are geostationary."
+  },
+  {
+    "objectID": "WEEK1.html#application",
+    "href": "WEEK1.html#application",
+    "title": "WEEK 1",
+    "section": "Application",
+    "text": "Application"
+  },
+  {
+    "objectID": "WEEK1.html#reflection",
+    "href": "WEEK1.html#reflection",
+    "title": "WEEK 1",
+    "section": "Reflection",
+    "text": "Reflection"
   },
   {
     "objectID": "WEEK2.html",
     "href": "WEEK2.html",
-    "title": "\n2  WEEK2\n",
+    "title": "2  WEEK 1",
     "section": "",
-    "text": "test"
+    "text": "An Introduction to Remote Sensing"
   },
   {
     "objectID": "WEEK2.html#summary",
     "href": "WEEK2.html#summary",
-    "title": "\n2  WEEK2\n",
-    "section": "\n2.1 Summary",
-    "text": "2.1 Summary\n\n1 + 1\n\n[1] 2"
+    "title": "2  WEEK 1",
+    "section": "2.1 Summary",
+    "text": "2.1 Summary"
   },
   {
     "objectID": "WEEK3.html",
     "href": "WEEK3.html",
-    "title": "\n3  WEEK3\n",
+    "title": "3  WEEK 1",
     "section": "",
-    "text": "test"
+    "text": "An Introduction to Remote Sensing"
   },
   {
     "objectID": "WEEK3.html#summary",
     "href": "WEEK3.html#summary",
-    "title": "\n3  WEEK3\n",
-    "section": "\n3.1 Summary",
-    "text": "3.1 Summary\n\n1 + 1\n\n[1] 2"
+    "title": "3  WEEK 1",
+    "section": "3.1 Summary",
+    "text": "3.1 Summary"
   },
   {
     "objectID": "WEEK4.html",
     "href": "WEEK4.html",
-    "title": "\n4  WEEK4\n",
+    "title": "4  WEEK 1",
     "section": "",
-    "text": "test"
+    "text": "An Introduction to Remote Sensing"
   },
   {
     "objectID": "WEEK4.html#summary",
     "href": "WEEK4.html#summary",
-    "title": "\n4  WEEK4\n",
-    "section": "\n4.1 Summary",
-    "text": "4.1 Summary\n\n1 + 1\n\n[1] 2"
+    "title": "4  WEEK 1",
+    "section": "4.1 Summary",
+    "text": "4.1 Summary"
   },
   {
     "objectID": "WEEK5.html",
     "href": "WEEK5.html",
-    "title": "\n5  WEEK5\n",
+    "title": "5  WEEK 1",
     "section": "",
-    "text": "test"
+    "text": "An Introduction to Remote Sensing"
   },
   {
     "objectID": "WEEK5.html#summary",
     "href": "WEEK5.html#summary",
-    "title": "\n5  WEEK5\n",
-    "section": "\n5.1 Summary",
-    "text": "5.1 Summary\n\n1 + 1\n\n[1] 2"
+    "title": "5  WEEK 1",
+    "section": "5.1 Summary",
+    "text": "5.1 Summary"
   },
   {
     "objectID": "WEEK6.html",
     "href": "WEEK6.html",
-    "title": "\n6  WEEK6\n",
+    "title": "6  WEEK 1",
     "section": "",
-    "text": "test"
+    "text": "An Introduction to Remote Sensing"
   },
   {
     "objectID": "WEEK6.html#summary",
     "href": "WEEK6.html#summary",
-    "title": "\n6  WEEK6\n",
-    "section": "\n6.1 Summary",
-    "text": "6.1 Summary\n\n1 + 1\n\n[1] 2"
+    "title": "6  WEEK 1",
+    "section": "6.1 Summary",
+    "text": "6.1 Summary"
   },
   {
     "objectID": "WEEK7.html",
     "href": "WEEK7.html",
-    "title": "\n7  WEEK7\n",
+    "title": "7  WEEK 1",
     "section": "",
-    "text": "test"
+    "text": "An Introduction to Remote Sensing"
   },
   {
     "objectID": "WEEK7.html#summary",
     "href": "WEEK7.html#summary",
-    "title": "\n7  WEEK7\n",
-    "section": "\n7.1 Summary",
-    "text": "7.1 Summary\n\n1 + 1\n\n[1] 2"
+    "title": "7  WEEK 1",
+    "section": "7.1 Summary",
+    "text": "7.1 Summary"
   },
   {
     "objectID": "WEEK8.html",
     "href": "WEEK8.html",
-    "title": "\n8  WEEK8\n",
+    "title": "8  WEEK 1",
     "section": "",
-    "text": "test"
+    "text": "An Introduction to Remote Sensing"
   },
   {
     "objectID": "WEEK8.html#summary",
     "href": "WEEK8.html#summary",
-    "title": "\n8  WEEK8\n",
-    "section": "\n8.1 Summary",
-    "text": "8.1 Summary\n\n1 + 1\n\n[1] 2"
+    "title": "8  WEEK 1",
+    "section": "8.1 Summary",
+    "text": "8.1 Summary"
+  },
+  {
+    "objectID": "WEEK1.html#remote-sensing",
+    "href": "WEEK1.html#remote-sensing",
+    "title": "1  WEEK 1",
+    "section": "2.1 Remote sensing",
+    "text": "2.1 Remote sensing\n\n2.1.1 Define\n\nNASA defines remote sensing as acquiring information from a distance\n\n\n\n2.1.2 Characteristic\n\nInterchangeable used with Earth Observation or EO\nThis is achieved through sensors mounted on a platform (e.g. satellites, planes (aerial imagery), drones, phones, free standing on the ground or sea (with hand held devices))\nMore than 150 satellites in orbit carrying sensors\n\n\n\n2.1.3 Advantages\n\nMass of data: satellites collect data on the same points on Earth every day to every 16 days\nFrequency of update and less reliance on authorities (e.g. London Atlas)\nMore free resources to process large volumes of data (e.g. Google Earth Engine)\n\n\n\n2.1.4 Types of sensor\n\nPassive\n\nUse energy that is available\nDon’t emit anything\nUsually detecting reflected energy from the sun\nEnergy is in electromagnetic waves…\nSuch as: Human eye, camera, satellite sensor\n\nActive\n\nHave an energy source for illumination\nActively emits electormagentic waves and then waits to receive\nSuch as: Radar, X-ray, LiDAR"
+  },
+  {
+    "objectID": "WEEK1.html#electromagentic-waves",
+    "href": "WEEK1.html#electromagentic-waves",
+    "title": "1  WEEK 1",
+    "section": "2.2 Electromagentic waves",
+    "text": "2.2 Electromagentic waves\n\n2.2.1 Electromagnetic radiation (EMR)\n\nEMR has both electric and magnetic fields, propagates (moves) as waves, perpendicular electric and magnetic field\nc = vλ\n\nc = velocity of light 3 x 10^8 meters per second\nv = frequency, rate of oscillation\nλ = wavelength, distance between two crests\n\nEMR isn’t automatically reflected. It experiences a number of changes prior to hitting the sensor\n\nSurface\n\nEnergy being absorbed by the surface\nEnergy being transmitted through the surface\n\nAtmospheric\n\nEnergy can be scattered by particles in the atmosphere (next slide)\n\n\n\n\n\n2.2.2 Terms\n\nWaves of an electromagnetic field, travel through space and carry radiant energy = Electromagnetic radiation (EMR). Waves are part of the EMR spectrum.\nEnergy carried by EMR waves = radiant energy\nEnergy per unit of time = radiant flux\nEnergy from the sun = incoming short wave radiation or shortwave radiation\nEnergy (solar power) from the sun per unit area per unit time (from electromagnetic radiation) = solar irradiance (per unit time - flux)\nEnergy leaving a surface per unit area per unit time = Exitance (emittance) (per unit time - flux)"
+  },
+  {
+    "objectID": "WEEK1.html#atmospheric-scattering",
+    "href": "WEEK1.html#atmospheric-scattering",
+    "title": "1  WEEK 1",
+    "section": "2.3 Atmospheric scattering",
+    "text": "2.3 Atmospheric scattering\n\n2.3.1 Rayleigh = particles are very small compared to the wavelength\n\n\n2.3.2 Mie = particles are the same size compared to the wavelength\n\n\n2.3.3 Non selective = particles are much larger than the wavelength"
+  },
+  {
+    "objectID": "WEEK1.html#interacting-with-earths-surface",
+    "href": "WEEK1.html#interacting-with-earths-surface",
+    "title": "1  WEEK 1",
+    "section": "2.4 Interacting with Earth’s surface",
+    "text": "2.4 Interacting with Earth’s surface\n\n2.4.1 Synthetic Aperture Radar (SAR) data\n\nRadar collects at longer wavelengths than optical sensors - pass through clouds that have smaller particle sizes\nHas it’s own bands - e.g. P, L, S, C, X, Ku, K\nWavelength dictates how far it can penetrate into medium\nSee through clouds, volcanic ash + atmospheric conditions\nCollects data at night\n\n\n\n2.4.2 Bidirectional Reflectance Distribution Function (BRDF)\n\nView (e.g. sensor) and illumination (e.g. sun) angles can change\nEnergy being reflected from the surface that is smooth or diffuse.\n\n\n\n2.4.3 Polarization\n\nDifferent ploarizations\n\norientation of the plane in which EMR waves transmitted.\n“direction of travel of an electromagnetic wave vector’s tip: vertical (up and down), horizontal (left to right), or circular (rotating in a constant plane left or right).”\n\nSingle = 1 horizontal (or vertical)\nDual = transmits and receives both horizontal and vertical\nHH = emitted in horizontal (H) and received in horizontal (H)"
+  },
+  {
+    "objectID": "WEEK1.html#remote-sensing-data",
+    "href": "WEEK1.html#remote-sensing-data",
+    "title": "1  WEEK 1",
+    "section": "2.5 Remote sensing data",
+    "text": "2.5 Remote sensing data\n\n2.5.1 Data formats\n\nband interleaved by line (BIL)\nband sequential (BSQ)\nband interleaved by pixel (BIP)\nGeoTIFF (most common)\n\n\n\n2.5.2 Four resolutions\n\nSpatial = the size of the raster grid per pixel (e.g. 20cm or 30m)\nSpectral = the number of bands it records data in…more soon\nTemporal = the time it revisits (e.g. daily, every 7 days, on demand)\nRadiometric = identify differences in light or reflectance, in practice this is the range of possible values.\n\n\n\n2.5.3 Type of orbit\n\ngeosynchronous orbit (GSO) = satellite matches the Earth’s rotation\ngeostationary orbit = holds same position, usually only for communications but some sensors are geostationary."
+  },
+  {
+    "objectID": "WEEK2.html#application",
+    "href": "WEEK2.html#application",
+    "title": "2  WEEK 1",
+    "section": "2.2 Application",
+    "text": "2.2 Application"
+  },
+  {
+    "objectID": "WEEK2.html#reflection",
+    "href": "WEEK2.html#reflection",
+    "title": "2  WEEK 1",
+    "section": "2.3 Reflection",
+    "text": "2.3 Reflection"
+  },
+  {
+    "objectID": "WEEK3.html#application",
+    "href": "WEEK3.html#application",
+    "title": "3  WEEK 1",
+    "section": "3.2 Application",
+    "text": "3.2 Application"
+  },
+  {
+    "objectID": "WEEK3.html#reflection",
+    "href": "WEEK3.html#reflection",
+    "title": "3  WEEK 1",
+    "section": "3.3 Reflection",
+    "text": "3.3 Reflection"
+  },
+  {
+    "objectID": "WEEK4.html#application",
+    "href": "WEEK4.html#application",
+    "title": "4  WEEK 1",
+    "section": "4.2 Application",
+    "text": "4.2 Application"
+  },
+  {
+    "objectID": "WEEK4.html#reflection",
+    "href": "WEEK4.html#reflection",
+    "title": "4  WEEK 1",
+    "section": "4.3 Reflection",
+    "text": "4.3 Reflection"
+  },
+  {
+    "objectID": "WEEK5.html#application",
+    "href": "WEEK5.html#application",
+    "title": "5  WEEK 1",
+    "section": "5.2 Application",
+    "text": "5.2 Application"
+  },
+  {
+    "objectID": "WEEK5.html#reflection",
+    "href": "WEEK5.html#reflection",
+    "title": "5  WEEK 1",
+    "section": "5.3 Reflection",
+    "text": "5.3 Reflection"
+  },
+  {
+    "objectID": "WEEK6.html#application",
+    "href": "WEEK6.html#application",
+    "title": "6  WEEK 1",
+    "section": "6.2 Application",
+    "text": "6.2 Application"
+  },
+  {
+    "objectID": "WEEK6.html#reflection",
+    "href": "WEEK6.html#reflection",
+    "title": "6  WEEK 1",
+    "section": "6.3 Reflection",
+    "text": "6.3 Reflection"
+  },
+  {
+    "objectID": "WEEK7.html#application",
+    "href": "WEEK7.html#application",
+    "title": "7  WEEK 1",
+    "section": "7.2 Application",
+    "text": "7.2 Application"
+  },
+  {
+    "objectID": "WEEK7.html#reflection",
+    "href": "WEEK7.html#reflection",
+    "title": "7  WEEK 1",
+    "section": "7.3 Reflection",
+    "text": "7.3 Reflection"
+  },
+  {
+    "objectID": "WEEK8.html#application",
+    "href": "WEEK8.html#application",
+    "title": "8  WEEK 1",
+    "section": "8.2 Application",
+    "text": "8.2 Application"
+  },
+  {
+    "objectID": "WEEK8.html#reflection",
+    "href": "WEEK8.html#reflection",
+    "title": "8  WEEK 1",
+    "section": "8.3 Reflection",
+    "text": "8.3 Reflection"
+  },
+  {
+    "objectID": "WEEK1.html#terms",
+    "href": "WEEK1.html#terms",
+    "title": "1  WEEK 1",
+    "section": "1.2 Terms",
+    "text": "1.2 Terms\n\nWaves of an electromagnetic field, travel through space and carry radiant energy = Electromagnetic radiation (EMR). Waves are part of the EMR spectrum.\nEnergy carried by EMR waves = radiant energy\nEnergy per unit of time = radiant flux\nEnergy from the sun = incoming short wave radiation or shortwave radiation\nEnergy (solar power) from the sun per unit area per unit time (from electromagnetic radiation) = solar irradiance (per unit time - flux)\nEnergy leaving a surface per unit area per unit time = Exitance (emittance) (per unit time - flux)\nFlux means time here.\n:::\n\n\n1.2.1 Interacting with Earth’s surface\n\nAtmospheric scattering\n\nRayleigh = particles are very small compared to the wavelength\nMie = particles are the same size compared to the wavelength\nNon selective = particles are much larger than the wavelength\n\nSynthetic Aperture Radar (SAR)\n\nRadar collects at longer wavelengths than optical sensors - pass through clouds that have smaller particle sizes (wavelength dictates how far it can penetrate into medium)\nHas it’s own bands - e.g. P, L, S, C, X, Ku, K\nCollects data at night\n\nBidirectional Reflectance Distribution Function (BRDF)\n\nView (e.g. sensor) and illumination (e.g. sun) angles can change\nEnergy being reflected from the surface that is smooth or diffuse\n\nPolarization\n\nDefine\n\nApplicable to Radar: Electromagnetic waves are polarized and the direction depends on the oscillation of the electromagnetic field. When they are reflected from the surface the waves can be linked to surface properties - roughness, shape, orientation, moisture, salinity, density.\n\nDifferent ploarizations\n\nSingle polarization: same polarization transmitted and received = 1 horizontal (or vertical)\nDual polarization: One sent, different one received = transmits and receives both horizontal and vertical\nQuad polarization: system can transmit and receive four types = emitted in horizontal (H) and received in horizontal (H)\n\n\n\n\n\n1.2.2 Remote sensing data\n\nData formats\n\nband interleaved by line (BIL)\nband sequential (BSQ)\nband interleaved by pixel (BIP)\nGeoTIFF (most common)\n\nFour resolutions\n\nSpatial = the size of the raster grid per pixel (e.g. 20cm or 30m)\nSpectral = the number of bands it records data in…more soon\nTemporal = the time it revisits (e.g. daily, every 7 days, on demand)\nRadiometric = identify differences in light or reflectance, in practice this is the range of possible values.\n\n\n\n\nSpectral resolution. Source: NASA Science\n\n\nType of orbit\n\ngeosynchronous orbit (GSO) = satellite matches the Earth’s rotation\ngeostationary orbit = holds same position, usually only for communications but some sensors are geostationary."
   }
 ]

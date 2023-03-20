@@ -1,1 +1,2 @@
 # XianlaiYin.github.io
+This is the learning diary of CASA0023 from Xianlai Yin, the website link is [here](https://xianlaiyin.github.io/learning_diary/docs/).

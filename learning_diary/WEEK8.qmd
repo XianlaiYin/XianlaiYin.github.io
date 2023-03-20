@@ -1,9 +1,11 @@
-# WEEK8
+# WEEK 1
 
-test
+***An Introduction to Remote Sensing***
+
+> The lecture presentation is [here](https://andrewmaclachlan.github.io/CASA0023-lecture-1/#1), the practical material is [here](https://andrewmaclachlan.github.io/CASA0023/intro.html).
 
 ## Summary
 
-```{r}
-1 + 1
-```
+## Application
+
+## Reflection

@@ -1,9 +1,128 @@
-# WEEK1
+# **WEEK 1** {.unnumbered}
 
-test
+#### ***An Introduction to Remote Sensing*** {.unnumbered}
 
-## Summary
+> This is a learning diary of CASA0023 WEEK 1, the lecture presentation is [here](https://andrewmaclachlan.github.io/CASA0023-lecture-1/#1), and the practical material is [here](https://andrewmaclachlan.github.io/CASA0023/intro.html).
 
-```{r}
-1 + 1
-```
+## **1 Summary**
+
+![Mindmap of Week 1 Leacture](img/WEEK1_Mindmap.svg)
+
+------------------------------------------------------------------------
+
+### **1.1 Remote sensing**
+
+#### **Definition** {.unnumbered}
+
+NASA defines remote sensing as `acquiring information from a distance`, interchangeable used with Earth Observation or EO.
+
+#### **Data acquisition** {.unnumbered}
+
+This is achieved through sensors mounted on a platform, e.g. satellites, planes (aerial imagery), drones, phones, free standing on the ground or sea (with hand held devices), there are more than 150 satellites in orbit carrying sensors.
+
+#### **Advantages** {.unnumbered}
+
+-   Mass of data: satellites collect data on the same points on Earth every day to every 16 days
+-   Frequency of update and less reliance on authorities (e.g. London Atlas)
+-   More free resources to process large volumes of data (e.g. Google Earth Engine)
+
+#### **Types of sensor** {.unnumbered}
+
+***Passive sensor***
+
+-   Use energy that is available
+-   Don't emit anything
+-   Usually detecting reflected energy from the sun
+-   Energy is in electromagnetic waves...
+-   Such as: Human eye, camera, satellite sensor
+
+***Active sensor***
+
+-   Have an energy source for illumination
+-   Actively emits electormagentic waves and then waits to receive
+-   Such as: Radar, X-ray, LiDAR
+
+### **1.2 Electromagentic waves**
+
+::: callout-tip
+#### Terms {.unnumbered}
+
+-   Waves of an electromagnetic field, travel through space and carry radiant energy = `Electromagnetic radiation (EMR)`. Waves are part of the EMR spectrum.
+-   Energy carried by EMR waves = `radiant energy`
+-   Energy per unit of time = `radiant flux`
+-   Energy from the sun = `incoming short wave radiation or shortwave radiation`
+-   Energy (solar power) from the sun per unit area per unit time (from electromagnetic radiation) = `solar irradiance` (per unit time - flux)
+-   Energy leaving a surface per unit area per unit time = `Exitance (emittance)` (per unit time - flux)
+-   *Flux means time here.*
+:::
+
+#### **Electromagnetic radiation (EMR)** {.unnumbered}
+
+EMR has both electric and magnetic fields, propagates (moves) as waves: `c = vλ`
+
+-   `c` = velocity of light 3 x 10\^8 meters per second
+-   `v` = frequency, rate of oscillation
+-   `λ` = wavelength, distance between two crests
+
+EMR isn't automatically reflected. It experiences a number of changes prior to hitting the sensor
+
+-   `Surface`: Energy being absorbed by the surface and being transmitted through the surface
+-   `Atmospheric`: Energy can be scattered by particles in the atmosphere
+
+### **1.3 Interacting with Earth's surface**
+
+#### **Atmospheric scattering** {.unnumbered}
+
+-   `Rayleigh` = particles are very small compared to the wavelength
+-   `Mie` = particles are the same size compared to the wavelength
+-   `Non selective` = particles are much larger than the wavelength
+
+#### **Synthetic Aperture Radar (SAR)** {.unnumbered}
+
+-   Radar collects at longer wavelengths than optical sensors - pass through clouds that have smaller particle sizes (wavelength dictates how far it can penetrate into medium)
+-   Has it's own bands - e.g. P, L, S, C, X, Ku, K
+-   Collects data at night
+
+#### **Bidirectional Reflectance Distribution Function (BRDF)** {.unnumbered}
+
+-   View (e.g. sensor) and illumination (e.g. sun) angles can change
+-   Energy being reflected from the surface that is smooth or diffuse
+
+#### **Polarization** {.unnumbered}
+
+***Definition***
+
+Applicable to Radar: Electromagnetic waves are polarized and the direction depends on the oscillation of the electromagnetic field. When they are reflected from the surface the waves can be linked to surface properties - roughness, shape, orientation, moisture, salinity, density.
+
+***Different ploarizations***
+
+-   Single polarization: same polarization transmitted and received = 1 horizontal (or vertical)
+-   Dual polarization: One sent, different one received = transmits and receives both horizontal and vertical
+-   Quad polarization: system can transmit and receive four types = emitted in horizontal (H) and received in horizontal (H)
+
+### **1.4 Remote sensing data**
+
+#### **Data formats** {.unnumbered}
+
+-   band interleaved by line (BIL)
+-   band sequential (BSQ)
+-   band interleaved by pixel (BIP)
+-   `GeoTIFF (most common)`
+
+#### **Four resolutions** {.unnumbered}
+
+-   `Spatial` = the size of the raster grid per pixel (e.g. 20cm or 30m)
+-   `Spectral` = the number of bands it records data in...more soon
+-   `Temporal` = the time it revisits (e.g. daily, every 7 days, on demand)
+-   `Radiometric` = identify differences in light or reflectance, in practice this is the range of possible values.
+
+![Spectral resolution. Source: NASA Science](img/EMS-Introduction.jpg)
+
+#### **Type of orbit** {.unnumbered}
+
+-   `geosynchronous orbit (GSO)` = satellite matches the Earth's rotation
+-   `geostationary orbit` = holds same position, usually only for communications but some sensors are geostationary.
+
+## **Application**
+
+## **Reflection**

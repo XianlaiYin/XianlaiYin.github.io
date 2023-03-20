@@ -5,14 +5,7 @@ project:
 book:
   title: "Learning Diary"
   author: "Xianlai Yin"
-  date: "3/13/2023"
-  navbar:
-    collapse: true
-    collapse-below: lg
-    search: true
-    background: light
-    right:
-      - icon: github
+  date: "3/19/2023"
   repo-url: https://github.com/XianlaiYin/XianlaiYin.github.io
   repo-actions: [issue]
   chapters:

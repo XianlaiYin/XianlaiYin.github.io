@@ -1,7 +1,14 @@
-> This is a learning diary of CASA0023.
+> This is a learning diary of CASA0023 from Xianlai Yin, the repository of this page is [here](https://github.com/XianlaiYin/XianlaiYin.github.io/tree/main/learning_diary).
 
-# Content {.unnumbered}
+### **Content** {.unnumbered}
 
-::: test
-test
-:::
+| WEEK   | THEME                                                                                                        |
+|:----------------------------|-----------------------------------------------------|
+| WEEK 1 | [An Introduction to Remote Sensing](https://xianlaiyin.github.io/learning_diary/docs/WEEK1.html)             |
+| WEEK 2 | [Portfolio tools: Xaringan and Quarto](https://xianlaiyin.github.io/learning_diary/docs/WEEK2.html)          |
+| WEEK 3 | [Remote sensing data](https://xianlaiyin.github.io/learning_diary/docs/WEEK3.html)                           |
+| WEEK 4 | [Policy applications](https://xianlaiyin.github.io/learning_diary/docs/WEEK4.html)                           |
+| WEEK 5 | [An introduction to Google Earth Engine](https://xianlaiyin.github.io/learning_diary/docs/WEEK5.html)        |
+| WEEK 6 | [Classification](https://xianlaiyin.github.io/learning_diary/docs/WEEK6.html)                                |
+| WEEK 7 | [Classification the big questions and accuracy](https://xianlaiyin.github.io/learning_diary/docs/WEEK7.html) |
+| WEEK 8 | [Temperature and policy](https://xianlaiyin.github.io/learning_diary/docs/WEEK8.html)                        |

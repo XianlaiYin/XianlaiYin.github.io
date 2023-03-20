@@ -189,7 +189,7 @@
 
 \begin{document}
 \maketitle
-\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[frame hidden, interior hidden, borderline west={3pt}{0pt}{shadecolor}, boxrule=0pt, enhanced, sharp corners, breakable]}{\end{tcolorbox}}\fi
+\ifdefined\Shaded\renewenvironment{Shaded}{\begin{tcolorbox}[borderline west={3pt}{0pt}{shadecolor}, enhanced, breakable, interior hidden, boxrule=0pt, sharp corners, frame hidden]}{\end{tcolorbox}}\fi
 
 \renewcommand*\contentsname{Table of contents}
 {
@@ -360,7 +360,7 @@ sensor}}{Types of sensor}}\label{types-of-sensor}}
 waves}}{1.2 Electromagentic waves}}\label{electromagentic-waves}}
 \addcontentsline{toc}{subsection}{\textbf{1.2 Electromagentic waves}}
 
-\begin{tcolorbox}[enhanced jigsaw, titlerule=0mm, breakable, bottomtitle=1mm, left=2mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Terms}, arc=.35mm, coltitle=black, colframe=quarto-callout-tip-color-frame, opacityback=0, bottomrule=.15mm, colback=white, colbacktitle=quarto-callout-tip-color!10!white, rightrule=.15mm, leftrule=.75mm, toptitle=1mm, toprule=.15mm, opacitybacktitle=0.6]
+\begin{tcolorbox}[enhanced jigsaw, toprule=.15mm, opacityback=0, bottomrule=.15mm, arc=.35mm, title=\textcolor{quarto-callout-tip-color}{\faLightbulb}\hspace{0.5em}{Terms}, titlerule=0mm, colframe=quarto-callout-tip-color-frame, coltitle=black, colback=white, left=2mm, bottomtitle=1mm, colbacktitle=quarto-callout-tip-color!10!white, toptitle=1mm, breakable, leftrule=.75mm, rightrule=.15mm, opacitybacktitle=0.6]
 
 \begin{itemize}
 \tightlist
@@ -373,8 +373,8 @@ waves}}{1.2 Electromagentic waves}}\label{electromagentic-waves}}
 \item
   Energy per unit of time = \texttt{radiant\ flux}
 \item
-  Energy from the sun =
-  \texttt{incoming\ short\ wave\ radiation\ or\ shortwave\ radiation}
+  Energy from the sun = \texttt{incoming\ short\ wave\ radiation} or
+  \texttt{shortwave\ radiation}
 \item
   Energy (solar power) from the sun per unit area per unit time (from
   electromagnetic radiation) = \texttt{solar\ irradiance} (per unit time

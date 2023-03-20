@@ -1,11 +1,5 @@
-# WEEK 1
+# **WEEK 8** {.unnumbered}
 
-***An Introduction to Remote Sensing***
+#### ***Temperature and policy*** {.unnumbered}
 
-> The lecture presentation is [here](https://andrewmaclachlan.github.io/CASA0023-lecture-1/#1), the practical material is [here](https://andrewmaclachlan.github.io/CASA0023/intro.html).
-
-## Summary
-
-## Application
-
-## Reflection
+> This is a learning diary of CASA0023 WEEK 8, the lecture presentation is [here](https://andrewmaclachlan.github.io/CASA0023-lecture-8/#1), and the practical material is [here](https://andrewmaclachlan.github.io/CASA0023/8_temperature.html).

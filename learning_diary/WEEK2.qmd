@@ -1,11 +1,5 @@
-# WEEK 1
+# **WEEK 2** {.unnumbered}
 
-***An Introduction to Remote Sensing***
+#### ***Portfolio tools: Xaringan and Quarto*** {.unnumbered}
 
-> The lecture presentation is [here](https://andrewmaclachlan.github.io/CASA0023-lecture-1/#1), the practical material is [here](https://andrewmaclachlan.github.io/CASA0023/intro.html).
-
-## Summary
-
-## Application
-
-## Reflection
+> This is a learning diary of CASA0023 WEEK 2, the lecture presentation is [here](https://andrewmaclachlan.github.io/CASA0023-lecture-2/#1), and the practical material is [here](https://andrewmaclachlan.github.io/CASA0023/2_portfolio.html).

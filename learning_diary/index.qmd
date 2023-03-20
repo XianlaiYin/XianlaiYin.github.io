@@ -3,7 +3,7 @@
 ### **Content** {.unnumbered}
 
 | WEEK   | THEME                                                                                                        |
-|:----------------------------|-----------------------------------------------------|
+|:-------|--------------------------------------------------------------------------------------------------------------|
 | WEEK 1 | [An Introduction to Remote Sensing](https://xianlaiyin.github.io/learning_diary/docs/WEEK1.html)             |
 | WEEK 2 | [Portfolio tools: Xaringan and Quarto](https://xianlaiyin.github.io/learning_diary/docs/WEEK2.html)          |
 | WEEK 3 | [Remote sensing data](https://xianlaiyin.github.io/learning_diary/docs/WEEK3.html)                           |

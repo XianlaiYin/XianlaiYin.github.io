@@ -1,11 +1,6 @@
-# WEEK 1
+# **WEEK 5** {.unnumbered}
 
-***An Introduction to Remote Sensing***
+#### ***An introduction to Google Earth Engine*** {.unnumbered}
 
-> The lecture presentation is [here](https://andrewmaclachlan.github.io/CASA0023-lecture-1/#1), the practical material is [here](https://andrewmaclachlan.github.io/CASA0023/intro.html).
+> This is a learning diary of CASA0023 WEEK 5, the lecture presentation is [here](https://andrewmaclachlan.github.io/CASA0023-lecture-5/#1), and the practical material is [here](https://andrewmaclachlan.github.io/CASA0023/5_GEE_I.html).
 
-## Summary
-
-## Application
-
-## Reflection

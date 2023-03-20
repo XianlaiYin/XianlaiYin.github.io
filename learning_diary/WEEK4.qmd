@@ -1,11 +1,5 @@
-# WEEK 1
+# **WEEK 4** {.unnumbered}
 
-***An Introduction to Remote Sensing***
+#### ***Policy applications*** {.unnumbered}
 
-> The lecture presentation is [here](https://andrewmaclachlan.github.io/CASA0023-lecture-1/#1), the practical material is [here](https://andrewmaclachlan.github.io/CASA0023/intro.html).
-
-## Summary
-
-## Application
-
-## Reflection
+> This is a learning diary of CASA0023 WEEK 4, the lecture presentation is [here](https://andrewmaclachlan.github.io/CASA0023-lecture-4/#1), and the practical material is [here](https://andrewmaclachlan.github.io/CASA0023/4_policy.html).

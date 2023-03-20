@@ -1,11 +1,6 @@
-# WEEK 1
+# **WEEK 7** {.unnumbered}
 
-***An Introduction to Remote Sensing***
+#### ***Classification the big questions and accuracy*** {.unnumbered}
 
-> The lecture presentation is [here](https://andrewmaclachlan.github.io/CASA0023-lecture-1/#1), the practical material is [here](https://andrewmaclachlan.github.io/CASA0023/intro.html).
+> This is a learning diary of CASA0023 WEEK 7, the lecture presentation is [here](https://andrewmaclachlan.github.io/CASA0023-lecture-7/#1), and the practical material is [here](https://andrewmaclachlan.github.io/CASA0023/7_classification_II.html).
 
-## Summary
-
-## Application
-
-## Reflection

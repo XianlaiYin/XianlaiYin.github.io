@@ -149,10 +149,13 @@ The specific application methods of remote sensing based on spectral features in
 
 ### **2.2 Application case**
 
+::: callout-tip
+#### Sourse {.unnumbered}
 
 ***Characterizing and classifying urban tree species using bi-monthly terrestrial hyperspectral images in Hong Kong***
+, *Sourse: @abbas_characterizing_2021*
 
-*Sourse: @abbas_characterizing_2021*
+:::
 
 Urban trees exhibit a wide range of ecosystem services that have long been unveiled and increasingly reported. The ability to map tree species and analyze tree health conditions would become vividly essential. Remote sensing techniques, especially hyperspectral imaging, are being evolved for `species identification` and `vegetation monitoring` from spectral reponse patterns.
 
@@ -164,4 +167,4 @@ In this study, a hyperspectral library for urban tree species in Hong Kong was e
 
 ## **3 Reflection**
 
-
+During this week I have learnt about the basics of remote sensing and Electromagnetic radiation (EMR), which has greatly broadened my horizons when researching urban. Due to limited data collection facilities, detailed urban datasets (e.g. traffic flow data, mobile phone signalling data, etc.) are only available for main cities in developed areas, which makes many studies not reproducible in a wide range of non-developed or small cities. However, the extensive coverage of remote sensing data compensates well for this shortcoming, and the variety of data collected through the rich diversity of sensors can be of great help in urban (or regional) analysis.

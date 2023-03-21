@@ -4,12 +4,12 @@
 
 > This is a learning diary of CASA0023 WEEK 2, the lecture presentation is [here](https://andrewmaclachlan.github.io/CASA0023-lecture-2/#1), and the practical material is [here](https://andrewmaclachlan.github.io/CASA0023/2_portfolio.html).
 
-### *Introduction to Hyperspectral Radiometer (Homework)*
+### **Introduction to Hyperspectral Radiometer (Homework)**
 
-[This website](https://xianlaiyin.github.io/learning_diary/docs/) and [this slide](https://xianlaiyin.github.io/week2_xaringan/) can be used as a practical presentation of the content of this week.
+[This website](https://xianlaiyin.github.io/learning_diary/docs/) and [this slide](https://xianlaiyin.github.io/week2_xaringan/week2_xaringan.html#1) can be used as a practical presentation of the content of this week.
 
 ```{r, echo = FALSE, out.width='40%'}
 xaringanExtra::embed_xaringan(
-  url = "https://xianlaiyin.github.io/week2_xaringan/",
+  url = "https://xianlaiyin.github.io/week2_xaringan/week2_xaringan.html#1",
   ratio = "16:9")
 ```

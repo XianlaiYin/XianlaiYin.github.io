@@ -25,21 +25,21 @@
     "href": "WEEK1.html#application",
     "title": "WEEK 1",
     "section": "2 Application",
-    "text": "2 Application"
+    "text": "2 Application\n\nThis week’s lecture is mainly about the basic knowledge of remote sensing and Electromagnetic radiation (EMR), so I would like to introduce some of the remote sensing applications based on spectral characteristics here.\n\n\n2.1 Remote sensing applications based on spectral features\nRemote sensing uses spectral features to identify, classify and analyse a variety of features on the surface or in the atmosphere. Remote sensing has many applications using spectral features：\n\nIn the field of agriculture, the spectral characteristics of vegetation can be used to monitor the growth of crops, damage, yield prediction, etc.\nIn the field of environmental, the spectral characteristics of water bodies, soil and atmosphere can be used to monitor water quality, soil types, pollutant types and concentrations, etc.\nIn the field of geology, the spectral characteristics of rocks, minerals, etc. can be used to detect mineral resources, geological formations, seismic activity, etc.\nIn the field of urban planning, the spectral characteristics of buildings, roads, etc. can be used to extract urban spatial information, assess the level of urban development and influencing factors, etc.\n\nThe specific application methods of remote sensing based on spectral features in the field of urban planning are mainly as follows:\n\nUsing remote sensing images to obtain information on the current situation of land use, analyse the structure and spatial distribution characteristics of urban land use, and provide basic data for urban planning.\nUsing remote sensing images for urban ecological environment evaluation, monitoring urban heat island effect, air quality, tree health, water quality and other environmental indicators, and providing ecological guarantee for urban planning.\nUse remote sensing imagery for urban construction change monitoring, identifying the impact of urban construction activities on land use, and providing dynamic management for urban planning.\n\n\n\n2.2 Application case\nCharacterizing and classifying urban tree species using bi-monthly terrestrial hyperspectral images in Hong Kong\nSourse: Abbas et al. (2021)\nUrban trees exhibit a wide range of ecosystem services that have long been unveiled and increasingly reported. The ability to map tree species and analyze tree health conditions would become vividly essential. Remote sensing techniques, especially hyperspectral imaging, are being evolved for species identification and vegetation monitoring from spectral reponse patterns.\n\n\n\nAn example of image clustering and corresponding spectral signatures of classes. The shadow class in grey represents canopy shadow and/or branches, and the shadow class in orange indicates shaded leaves.\n\n\nIn this study, a hyperspectral library for urban tree species in Hong Kong was established comprising 75 urban trees belonging to 19 species. 450 bi-monthly images were acquired by a terrestrial hyperspectral camera (SPECIM-IQ) from November 2018 to October 2019. A Deep Neural Network classification model was developed to identify tree species from the hyperspectral imagery with an overall accuracy ranging from 85% to 96% among different seasons. Representative spectral reflectance curves of healthy and unhealthy conditions for each species were extracted and analyzed. This can be used to identify urban trees and monitor their health.\n\n\n\nThe overall workflow of species classification framework using the Deep Neural Network modelling."
   },
   {
     "objectID": "WEEK1.html#reflection",
     "href": "WEEK1.html#reflection",
     "title": "WEEK 1",
     "section": "3 Reflection",
-    "text": "3 Reflection"
+    "text": "3 Reflection\n\n\n\n\nAbbas, Sawaid, Qian Peng, Man Sing Wong, Zhilin Li, Jicheng Wang, Kathy Tze Kwun Ng, Coco Yin Tung Kwok, and Karena Ka Wai Hui. 2021. “Characterizing and Classifying Urban Tree Species Using Bi-Monthly Terrestrial Hyperspectral Images in Hong Kong.” ISPRS Journal of Photogrammetry and Remote Sensing 177 (July): 204–16. https://doi.org/10.1016/j.isprsjprs.2021.05.003."
   },
   {
     "objectID": "WEEK2.html",
     "href": "WEEK2.html",
     "title": "WEEK 2",
     "section": "",
-    "text": "Introduction to Hyperspectral Radiometer (Homework)\nThis website and this slide can be used as a practical presentation of the content of this week."
+    "text": "Homework: Introduction to Hyperspectral Radiometer\nThis website and this slide can be used as a practical presentation of the content of this week."
   },
   {
     "objectID": "WEEK3.html",
@@ -82,5 +82,12 @@
     "title": "WEEK 8",
     "section": "",
     "text": "This is a learning diary of CASA0023 WEEK 8, the lecture presentation is here, and the practical material is here."
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "References",
+    "section": "",
+    "text": "Abbas, Sawaid, Qian Peng, Man Sing Wong, Zhilin Li, Jicheng Wang, Kathy\nTze Kwun Ng, Coco Yin Tung Kwok, and Karena Ka Wai Hui. 2021.\n“Characterizing and Classifying Urban Tree Species Using\nBi-Monthly Terrestrial Hyperspectral Images in Hong\nKong.” ISPRS Journal of Photogrammetry and\nRemote Sensing 177 (July): 204–16. https://doi.org/10.1016/j.isprsjprs.2021.05.003."
   }
 ]

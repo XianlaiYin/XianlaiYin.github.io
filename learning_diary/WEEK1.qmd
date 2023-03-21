@@ -116,7 +116,7 @@ Applicable to Radar: Electromagnetic waves are polarized and the direction depen
 -   `Temporal` = the time it revisits (e.g. daily, every 7 days, on demand)
 -   `Radiometric` = identify differences in light or reflectance, in practice this is the range of possible values.
 
-![Spectral resolution. Source: [NASA Science](https://earthdata.nasa.gov/learn/backgrounders/remote-sensing#orbits)] (img/EMS-Introduction.jpg)
+![Spectral resolution. Source: [NASA Science](https://earthdata.nasa.gov/learn/backgrounders/remote-sensing#orbits)](img/EMS_Introduction.jpg)
 
 #### **Type of orbit** {.unnumbered}
 

@@ -118,7 +118,7 @@ knitr::include_graphics('img/instrument_outline.jpg')
 
 #### Application scenarios related to remote sensing
 
-Hyperspectral remote sensing is used in a wide array of applications. Although originally developed for mining and geology (the ability of hyperspectral imaging to identify various minerals makes it ideal for the mining and oil industries, where it can be used to look for ore and oil), it has now spread into fields as widespread as ecology and surveillance, as well as historical manuscript researc.`r Citep(myBib,"noauthor_hyperspectral_2023")`
+Hyperspectral remote sensing is used in a wide array of applications. Although originally developed for mining and geology *(the ability of hyperspectral imaging to identify various minerals makes it ideal for the mining and oil industries, where it can be used to look for ore and oil)*, it has now spread into fields as widespread as ecology and surveillance, as well as historical manuscript researc.`r Citep(myBib,"noauthor_hyperspectral_2023")`
 ***
 
 ***Environmental monitoring***: the hyperspectral radiometer can be used to monitor environmental parameters such as air, water and soil, such as gas concentration, chlorophyll concentration in water, soil moisture, etc., thus providing data to support environmental monitoring and protection.
@@ -133,7 +133,7 @@ Hyperspectral remote sensing is used in a wide array of applications. Although o
 
 #### Application case
 
-Better target excavation at likely smelting sites and mines: Just as iron and copper look different in visible light, iron- and copper-rich minerals reflect varying amounts of light in the infrared spectrum, the hundreds of bands in hyperspectral imagery enable researchers to differentiate minerals and rocks that appear similar in visible light. Outcrops near Khirbat en-Nahas that are uniformly dark in natural color are variegated in false-color, signifying different rock types.`r Citep(myBib,"noauthor_earth_2010")`
+***Better target excavation at likely smelting sites and mines***: Just as iron and copper look different in visible light, iron- and copper-rich minerals reflect varying amounts of light in the infrared spectrum, the hundreds of bands in hyperspectral imagery enable researchers to differentiate minerals and rocks that appear similar in visible light. Outcrops near Khirbat en-Nahas that are uniformly dark in natural color are variegated in false-color, signifying different rock types.`r Citep(myBib,"noauthor_earth_2010")`
 
 .pull-left[
 ```{r echo=FALSE,, out.width='100%', fig.align='center'}
@@ -156,17 +156,17 @@ knitr::include_graphics('img/hyperion_21_45_200.jpg')
 .pull-left[
 #### Advantages
 
-- Because an entire spectrum is acquired at each point, the operator needs no prior knowledge of the sample, and postprocessing allows all available information from the dataset to be mined. 
+- Because an entire spectrum is acquired at each point, the operator needs no prior knowledge of the sample, and ***postprocessing allows all available information from the dataset to be mined***.
 
-- Hyperspectral imaging can also take advantage of the spatial relationships among the different spectra in a neighbourhood, allowing more elaborate spectral-spatial models for a more accurate segmentation and classification of the image.
+- Hyperspectral imaging can also take advantage of the spatial relationships among the different spectra in a neighbourhood, allowing more elaborate spectral-spatial models for a ***more accurate segmentation and classification of the image***.
 ]
 
 .pull-left[
 #### Disdvantages
 
-- Significant data storage capacity is necessary since uncompressed hyperspectral cubes are large, multidimensional datasets, potentially exceeding hundreds of megabytes. All of these factors greatly increase the cost of acquiring and processing hyperspectral data. 
+- Significant data storage capacity is necessary since uncompressed hyperspectral cubes are large, multidimensional datasets, potentially exceeding hundreds of megabytes. All of these factors ***greatly increase the cost of acquiring and processing hyperspectral data***. 
 
-- One of the hurdles researchers have had to face is finding ways to program hyperspectral satellites to sort through data on their own and transmit only the most important images, as both transmission and storage of that much data could prove difficult and costly.
+- One of the hurdles researchers have had to face is finding ways to program hyperspectral satellites to sort through data on their own and transmit only the most important images, as ***both transmission and storage of that much data could prove difficult and costly***.
 ]
 
 ---

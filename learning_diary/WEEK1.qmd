@@ -116,13 +116,16 @@ Applicable to Radar: Electromagnetic waves are polarized and the direction depen
 -   `Temporal` = the time it revisits (e.g. daily, every 7 days, on demand)
 -   `Radiometric` = identify differences in light or reflectance, in practice this is the range of possible values.
 
-![Spectral resolution. Source: NASA Science](img/EMS-Introduction.jpg)
+![Spectral resolution. Source: [NASA Science](https://earthdata.nasa.gov/learn/backgrounders/remote-sensing#orbits)]
+(img/EMS-Introduction.jpg)
 
 #### **Type of orbit** {.unnumbered}
 
 -   `geosynchronous orbit (GSO)` = satellite matches the Earth's rotation
 -   `geostationary orbit` = holds same position, usually only for communications but some sensors are geostationary.
 
-## **Application**
+## **2 Application**
 
-## **Reflection**
+
+## **3 Reflection**
+

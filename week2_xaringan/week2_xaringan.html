@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="" xml:lang="">
+  <head>
+    <title>Introduction to Synthetic Aperture Radar</title>
+    <meta charset="utf-8" />
+    <meta name="author" content="Xianlai Yin" />
+    <meta name="date" content="2023-03-21" />
+    <script src="libs/header-attrs/header-attrs.js"></script>
+    <script src="libs/mark.js/mark.min.js"></script>
+    <link href="libs/xaringanExtra-search/search.css" rel="stylesheet" />
+    <script src="libs/xaringanExtra-search/search.js"></script>
+    <script>window.addEventListener('load', function() { window.xeSearch = new RemarkSearch({"position":"bottom-left","caseSensitive":false,"showIcon":true,"autoSearch":true}) })</script>
+    <link href="libs/panelset/panelset.css" rel="stylesheet" />
+    <script src="libs/panelset/panelset.js"></script>
+    <link rel="stylesheet" href="xaringan-themer.css" type="text/css" />
+    <link rel="stylesheet" href="custom.css" type="text/css" />
+    <link rel="stylesheet" href="widths.css" type="text/css" />
+  </head>
+  <body>
+    <textarea id="source">
+
+
+class: inverse, left-left, title-slide, middle
+
+
+
+
+
+
+
+
+
+
+
+background-image: url("img/piqiang_ast_2005055_468_decorrelation_lrg.jpg")
+background-size: cover
+background-position: center
+
+## Introduction to Hyperspectral Radiometer
+
+***
+
+### CASA0023 WEEK2
+
+### *Xianlai Yin*
+
+---
+
+### Summary
+
+#### Hyperspectral Radiometer
+
+.pull-left.w60[
+.panelset[
+.panel[.panel-name[Definition]
+Hyperspectral Radiometer is ***"An advanced multispectral sensor that detects hundreds of very narrow spectral bands throughout the visible, near-infrared, and mid-infrared portions of the electromagnetic spectrum. This sensor’s very high spectral resolution facilitates fine discrimination between different targets based on their spectral response in each of the narrow bands."*** &lt;a name=cite-earth_science_data_systems_active_2021&gt;&lt;/a&gt;([Earth Science Data Systems, 2021](#bib-earth_science_data_systems_active_2021))
+
+Hyperspectral cubes are generated from airborne sensors like NASA's [Airborne Visible/Infrared Imaging Spectrometer (AVIRIS)](https://www.jpl.nasa.gov/missions/airborne-visible-infrared-imaging-spectrometer-aviris), or from satellites like NASA's [EO-1](https://earthobservatory.nasa.gov/features/EO1) with its hyperspectral instrument Hyperion.
+]
+
+.panel[.panel-name[Sensors]
+Figuratively speaking, hyperspectral sensors collect information as a set of 'images'. Each image represents a narrow wavelength range of the electromagnetic spectrum, also known as a spectral band. These 'images' are combined to form a three-dimensional (x,y,λ) hyperspectral data cube for processing and analysis, where x and y represent two spatial dimensions of the scene, and λ represents the spectral dimension (comprising a range of wavelengths).&lt;a name=cite-noauthor_spectral_nodate&gt;&lt;/a&gt;([MicroscopyU, 2023](#bib-noauthor_spectral_nodate))
+
+Technically speaking, there are four ways for sensors to sample the hyperspectral cube: ***Spatial scanning***, ***spectral scanning***, ***snapshot imaging***, and ***spatio-spectral scanning***.
+]
+]
+]
+
+.w35.pull-right[
+&lt;img src="img/AcquisitionTechniques.jpg" width="70%" style="display: block; margin: auto;" /&gt;
+.center[
+&lt;font size = 3&gt;Hyperspectral datacube. Source: [Wikipedia](https://en.wikipedia.org/wiki/Hyperspectral_imaging#/media/File:AcquisitionTechniques.jpg)
+]
+]
+
+---
+
+### Summary
+
+#### AVIRIS
+
+.pull-left.w60[
+AVIRIS is a proven instrument in the realm of Earth Remote Sensing. It is a unique optical sensor that delivers calibrated images of the upwelling spectral radiance in 224 contiguous spectral channels (bands) with wavelengths from 400 to 2500 nanometers. 
+
+AVIRIS has been flown on four aircraft platforms: NASA's ER-2 jet, Twin Otter International's turboprop, Scaled Composites' Proteus, and NASA's WB-57.
+
+The main objective of the AVIRIS project is to ***identify, measure, and monitor constituents of the Earth's surface and atmosphere based on molecular absorption and particle scattering signatures***. Research with AVIRIS data is predominantly focused on understanding processes related to the global environment and climate change.&lt;a name=cite-noauthor_aviris_nodate&gt;&lt;/a&gt;([Jet Propulsion Laboratory, 2023](#bib-noauthor_aviris_nodate))
+]
+
+.w35.pull-right[
+&lt;img src="img/instrument_outline.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;font size = 3&gt;AVIRIS Instrument: Silicon (Si) detectors for the visible range, indium gallium arsenide (InGaAr) for the NIR, and indium-antimonide (InSb) detectors for the SWIR. Source: [JPL, NASA](https://aviris.jpl.nasa.gov/aviris/instrument.html)
+]
+
+---
+
+### Application
+
+#### Application scenarios related to remote sensing
+
+Hyperspectral remote sensing is used in a wide array of applications. Although originally developed for mining and geology (the ability of hyperspectral imaging to identify various minerals makes it ideal for the mining and oil industries, where it can be used to look for ore and oil), it has now spread into fields as widespread as ecology and surveillance, as well as historical manuscript researc.&lt;a name=cite-noauthor_hyperspectral_2023&gt;&lt;/a&gt;([Wikipedia, 2023](#bib-noauthor_hyperspectral_2023))
+***
+
+***Environmental monitoring***: the hyperspectral radiometer can be used to monitor environmental parameters such as air, water and soil, such as gas concentration, chlorophyll concentration in water, soil moisture, etc., thus providing data to support environmental monitoring and protection.
+
+***Agriculture***: the hyperspectral radiometer can be used to monitor plants and provide information on their growth status, pests and diseases to guide agricultural production and plant protection.
+
+***Geological research***: the hyperspectral radiometer can be used to study the mineral composition, rock types and topographic features of the earth's surface, providing data to support geological research.
+
+---
+
+### Application
+
+#### Application case
+
+Better target excavation at likely smelting sites and mines: Just as iron and copper look different in visible light, iron- and copper-rich minerals reflect varying amounts of light in the infrared spectrum, the hundreds of bands in hyperspectral imagery enable researchers to differentiate minerals and rocks that appear similar in visible light. Outcrops near Khirbat en-Nahas that are uniformly dark in natural color are variegated in false-color, signifying different rock types.&lt;a name=cite-noauthor_earth_2010&gt;&lt;/a&gt;([Earth Observatory, 2010](#bib-noauthor_earth_2010))
+
+.pull-left[
+&lt;img src="img/hyperion_11_19_33.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;font size = 3&gt;natural color. Source: [earthobservatory, NASA](https://earthobservatory.nasa.gov/features/EO1Tenth/page3.php)
+]
+
+.pull-right[
+&lt;img src="img/hyperion_21_45_200.jpg" width="100%" style="display: block; margin: auto;" /&gt;
+&lt;font size = 3&gt;false-color. Source: [earthobservatory, NASA](https://earthobservatory.nasa.gov/features/EO1Tenth/page3.php)
+]
+
+---
+
+### Reflection
+
+.pull-left[
+#### Advantages
+
+- Because an entire spectrum is acquired at each point, the operator needs no prior knowledge of the sample, and postprocessing allows all available information from the dataset to be mined. 
+
+- Hyperspectral imaging can also take advantage of the spatial relationships among the different spectra in a neighbourhood, allowing more elaborate spectral-spatial models for a more accurate segmentation and classification of the image.
+]
+
+.pull-left[
+#### Disdvantages
+
+- Significant data storage capacity is necessary since uncompressed hyperspectral cubes are large, multidimensional datasets, potentially exceeding hundreds of megabytes. All of these factors greatly increase the cost of acquiring and processing hyperspectral data. 
+
+- One of the hurdles researchers have had to face is finding ways to program hyperspectral satellites to sort through data on their own and transmit only the most important images, as both transmission and storage of that much data could prove difficult and costly.
+]
+
+---
+
+class: left, left
+
+### References
+
+&lt;font size = 3&gt;
+&lt;a name=bib-noauthor_earth_2010&gt;&lt;/a&gt;[Earth Observatory,
+N.](#cite-noauthor_earth_2010) (2010). _Earth Observing-1: Ten Years of
+Innovation_. Publisher: NASA Earth Observatory.
+
+&lt;a name=bib-earth_science_data_systems_active_2021&gt;&lt;/a&gt;[Earth Science
+Data Systems, N.](#cite-earth_science_data_systems_active_2021) (2021).
+_Active Sensors_. Earthdata. Publisher: Earth Science Data Systems,
+NASA.
+
+&lt;a name=bib-noauthor_aviris_nodate&gt;&lt;/a&gt;[Jet Propulsion Laboratory,
+N.](#cite-noauthor_aviris_nodate) (2023). _AVIRIS - Airborne Visible /
+Infrared Imaging Spectrometer_.
+
+&lt;a name=bib-noauthor_spectral_nodate&gt;&lt;/a&gt;[MicroscopyU,
+N.](#cite-noauthor_spectral_nodate) (2023). _Spectral Imaging and
+Linear Unmixing_. Nikon’s MicroscopyU.
+
+&lt;a
+name=bib-noauthor_hyperspectral_2023&gt;&lt;/a&gt;[Wikipedia](#cite-noauthor_hyperspectral_2023)
+(2023). "Hyperspectral imaging". In: _Wikipedia_. Page Version ID:
+1136429523.
+
+---
+
+
+class: inverse, center, middle
+
+## THANK YOU
+
+*Xianlai Yin*
+    </textarea>
+<style data-target="print-only">@media screen {.remark-slide-container{display:block;}.remark-slide-scaler{box-shadow:none;}}</style>
+<script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+<script>var slideshow = remark.create({
+"slideNumberFormat": "%current%",
+"highlightStyle": "github",
+"highlightLines": true,
+"ratio": "16:9",
+"countIncrementalSlides": true
+});
+if (window.HTMLWidgets) slideshow.on('afterShowSlide', function (slide) {
+  window.dispatchEvent(new Event('resize'));
+});
+(function(d) {
+  var s = d.createElement("style"), r = d.querySelector(".remark-slide-scaler");
+  if (!r) return;
+  s.type = "text/css"; s.innerHTML = "@page {size: " + r.style.width + " " + r.style.height +"; }";
+  d.head.appendChild(s);
+})(document);
+
+(function(d) {
+  var el = d.getElementsByClassName("remark-slides-area");
+  if (!el) return;
+  var slide, slides = slideshow.getSlides(), els = el[0].children;
+  for (var i = 1; i < slides.length; i++) {
+    slide = slides[i];
+    if (slide.properties.continued === "true" || slide.properties.count === "false") {
+      els[i - 1].className += ' has-continuation';
+    }
+  }
+  var s = d.createElement("style");
+  s.type = "text/css"; s.innerHTML = "@media print { .has-continuation { display: none; } }";
+  d.head.appendChild(s);
+})(document);
+// delete the temporary CSS (for displaying all slides initially) when the user
+// starts to view slides
+(function() {
+  var deleted = false;
+  slideshow.on('beforeShowSlide', function(slide) {
+    if (deleted) return;
+    var sheets = document.styleSheets, node;
+    for (var i = 0; i < sheets.length; i++) {
+      node = sheets[i].ownerNode;
+      if (node.dataset["target"] !== "print-only") continue;
+      node.parentNode.removeChild(node);
+    }
+    deleted = true;
+  });
+})();
+// add `data-at-shortcutkeys` attribute to <body> to resolve conflicts with JAWS
+// screen reader (see PR #262)
+(function(d) {
+  let res = {};
+  d.querySelectorAll('.remark-help-content table tr').forEach(tr => {
+    const t = tr.querySelector('td:nth-child(2)').innerText;
+    tr.querySelectorAll('td:first-child .key').forEach(key => {
+      const k = key.innerText;
+      if (/^[a-z]$/.test(k)) res[k] = t;  // must be a single letter (key)
+    });
+  });
+  d.body.setAttribute('data-at-shortcutkeys', JSON.stringify(res));
+})(document);
+(function() {
+  "use strict"
+  // Replace <script> tags in slides area to make them executable
+  var scripts = document.querySelectorAll(
+    '.remark-slides-area .remark-slide-container script'
+  );
+  if (!scripts.length) return;
+  for (var i = 0; i < scripts.length; i++) {
+    var s = document.createElement('script');
+    var code = document.createTextNode(scripts[i].textContent);
+    s.appendChild(code);
+    var scriptAttrs = scripts[i].attributes;
+    for (var j = 0; j < scriptAttrs.length; j++) {
+      s.setAttribute(scriptAttrs[j].name, scriptAttrs[j].value);
+    }
+    scripts[i].parentElement.replaceChild(s, scripts[i]);
+  }
+})();
+(function() {
+  var links = document.getElementsByTagName('a');
+  for (var i = 0; i < links.length; i++) {
+    if (/^(https?:)?\/\//.test(links[i].getAttribute('href'))) {
+      links[i].target = '_blank';
+    }
+  }
+})();
+// adds .remark-code-has-line-highlighted class to <pre> parent elements
+// of code chunks containing highlighted lines with class .remark-code-line-highlighted
+(function(d) {
+  const hlines = d.querySelectorAll('.remark-code-line-highlighted');
+  const preParents = [];
+  const findPreParent = function(line, p = 0) {
+    if (p > 1) return null; // traverse up no further than grandparent
+    const el = line.parentElement;
+    return el.tagName === "PRE" ? el : findPreParent(el, ++p);
+  };
+
+  for (let line of hlines) {
+    let pre = findPreParent(line);
+    if (pre && !preParents.includes(pre)) preParents.push(pre);
+  }
+  preParents.forEach(p => p.classList.add("remark-code-has-line-highlighted"));
+})(document);</script>
+
+<script>
+slideshow._releaseMath = function(el) {
+  var i, text, code, codes = el.getElementsByTagName('code');
+  for (i = 0; i < codes.length;) {
+    code = codes[i];
+    if (code.parentNode.tagName !== 'PRE' && code.childElementCount === 0) {
+      text = code.textContent;
+      if (/^\\\((.|\s)+\\\)$/.test(text) || /^\\\[(.|\s)+\\\]$/.test(text) ||
+          /^\$\$(.|\s)+\$\$$/.test(text) ||
+          /^\\begin\{([^}]+)\}(.|\s)+\\end\{[^}]+\}$/.test(text)) {
+        code.outerHTML = code.innerHTML;  // remove <code></code>
+        continue;
+      }
+    }
+    i++;
+  }
+};
+slideshow._releaseMath(document);
+</script>
+<!-- dynamically load mathjax for compatibility with self-contained -->
+<script>
+(function () {
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src  = 'https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-MML-AM_CHTML';
+  if (location.protocol !== 'file:' && /^https?:/.test(script.src))
+    script.src  = script.src.replace(/^https?:/, '');
+  document.getElementsByTagName('head')[0].appendChild(script);
+})();
+</script>
+  </body>
+</html>

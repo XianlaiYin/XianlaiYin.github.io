@@ -6,7 +6,7 @@
 
 ## **1 Summary**
 
-![Mindmap of Week 1 Leacture](img/WEEK1_Mindmap.svg){width=100%}
+![Mindmap of Week 1 Leacture](img/WEEK1_Mindmap.svg){width="100%"}
 
 ------------------------------------------------------------------------
 
@@ -116,7 +116,7 @@ Applicable to Radar: Electromagnetic waves are polarized and the direction depen
 -   `Temporal` = the time it revisits (e.g. daily, every 7 days, on demand)
 -   `Radiometric` = identify differences in light or reflectance, in practice this is the range of possible values.
 
-![Spectral resolution. Source: [NASA Science](https://earthdata.nasa.gov/learn/backgrounders/remote-sensing#orbits)](img/EMS_Introduction.jpg){width=100%}
+![Spectral resolution. Source: [NASA Science](https://earthdata.nasa.gov/learn/backgrounders/remote-sensing#orbits)](img/EMS_Introduction.jpg){width="100%"}
 
 #### **Type of orbit** {.unnumbered}
 
@@ -125,45 +125,43 @@ Applicable to Radar: Electromagnetic waves are polarized and the direction depen
 
 ## **2 Application**
 
-> This week's lecture is mainly about the basic knowledge of remote sensing and Electromagnetic radiation (EMR), so I would like to introduce some of the remote sensing applications based on spectral characteristics here.
+> This week's lecture is mainly about the basic knowledge of remote sensing and Electromagnetic radiation (EMR), so I would like to introduce some of the remote sensing applications based on spectral characteristics.
 
 ### **2.1 Remote sensing applications based on spectral features**
 
 Remote sensing uses spectral features to identify, classify and analyse a variety of features on the surface or in the atmosphere. Remote sensing has many applications using spectral features：
 
-- In the field of `agriculture`, the spectral characteristics of vegetation can be used to monitor the growth of crops, damage, yield prediction, etc.
+-   In the field of `agriculture`, the spectral characteristics of vegetation can be used to monitor the growth of crops, damage, yield prediction, etc.
 
-- In the field of `environmental`, the spectral characteristics of water bodies, soil and atmosphere can be used to monitor water quality, soil types, pollutant types and concentrations, etc.
+-   In the field of `environmental`, the spectral characteristics of water bodies, soil and atmosphere can be used to monitor water quality, soil types, pollutant types and concentrations, etc.
 
-- In the field of `geology`, the spectral characteristics of rocks, minerals, etc. can be used to detect mineral resources, geological formations, seismic activity, etc.
+-   In the field of `geology`, the spectral characteristics of rocks, minerals, etc. can be used to detect mineral resources, geological formations, seismic activity, etc.
 
-- In the field of `urban planning`, the spectral characteristics of buildings, roads, etc. can be used to extract urban spatial information, assess the level of urban development and influencing factors, etc.
+-   In the field of `urban planning`, the spectral characteristics of buildings, roads, etc. can be used to extract urban spatial information, assess the level of urban development and influencing factors, etc.
 
 The specific application methods of remote sensing based on spectral features in the field of urban planning are mainly as follows:
 
-- Using remote sensing images to `obtain information` on the current situation of land use, analyse the structure and spatial distribution characteristics of urban land use, and provide basic data for urban planning.
+-   Using remote sensing images to `obtain information` on the current situation of land use, analyse the structure and spatial distribution characteristics of urban land use, and provide basic data for urban planning.
 
-- Using remote sensing images for urban `ecological environment evaluation`, monitoring urban heat island effect, air quality, tree health, water quality and other environmental indicators, and providing ecological guarantee for urban planning.
+-   Using remote sensing images for urban `ecological environment evaluation`, monitoring urban heat island effect, air quality, tree health, water quality and other environmental indicators, and providing ecological guarantee for urban planning.
 
-- Use remote sensing imagery for urban `construction change monitoring`, identifying the impact of urban construction activities on land use, and providing dynamic management for urban planning.
+-   Use remote sensing imagery for urban `construction change monitoring`, identifying the impact of urban construction activities on land use, and providing dynamic management for urban planning.
 
 ### **2.2 Application case**
 
 ::: callout-tip
 #### Sourse {.unnumbered}
 
-***Characterizing and classifying urban tree species using bi-monthly terrestrial hyperspectral images in Hong Kong***
-, *Sourse: @abbas_characterizing_2021*
-
+***Characterizing and classifying urban tree species using bi-monthly terrestrial hyperspectral images in Hong Kong*** , *Sourse: @abbas_characterizing_2021*
 :::
 
 Urban trees exhibit a wide range of ecosystem services that have long been unveiled and increasingly reported. The ability to map tree species and analyze tree health conditions would become vividly essential. Remote sensing techniques, especially hyperspectral imaging, are being evolved for `species identification` and `vegetation monitoring` from spectral reponse patterns.
 
-![An example of image clustering and corresponding spectral signatures of classes. The shadow class in grey represents canopy shadow and/or branches, and the shadow class in orange indicates shaded leaves.](img/1.png){width=100%}
+![An example of image clustering and corresponding spectral signatures of classes. The shadow class in grey represents canopy shadow and/or branches, and the shadow class in orange indicates shaded leaves.](img/1.png){width="100%"}
 
 In this study, a hyperspectral library for urban tree species in Hong Kong was established comprising 75 urban trees belonging to 19 species. 450 bi-monthly images were acquired by a terrestrial hyperspectral camera (SPECIM-IQ) from November 2018 to October 2019. A `Deep Neural Network classification model` was developed to identify tree species from the hyperspectral imagery with an overall accuracy ranging from 85% to 96% among different seasons. Representative spectral reflectance curves of healthy and unhealthy conditions for each species were extracted and analyzed. This can be used to identify urban trees and monitor their health.
 
-![The overall workflow of species classification framework using the Deep Neural Network modelling.](img/2.png){width=100%}
+![The overall workflow of species classification framework using the Deep Neural Network modelling.](img/2.png){width="100%"}
 
 ## **3 Reflection**
 

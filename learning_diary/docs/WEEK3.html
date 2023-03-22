@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -165,7 +184,11 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#corrections" id="toc-corrections" class="nav-link" data-scroll-target="#corrections"><strong>1.2 Corrections</strong></a></li>
   <li><a href="#data-joining-and-enhancement" id="toc-data-joining-and-enhancement" class="nav-link" data-scroll-target="#data-joining-and-enhancement"><strong>1.3 Data joining and enhancement</strong></a></li>
   </ul></li>
-  <li><a href="#application-case" id="toc-application-case" class="nav-link" data-scroll-target="#application-case"><strong>2 Application case</strong></a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><strong>2 Application</strong></a>
+  <ul class="collapse">
+  <li><a href="#applications-of-remote-sensing-image-enhancement" id="toc-applications-of-remote-sensing-image-enhancement" class="nav-link" data-scroll-target="#applications-of-remote-sensing-image-enhancement"><strong>2.1 Applications of remote sensing image enhancement</strong></a></li>
+  <li><a href="#application-case" id="toc-application-case" class="nav-link" data-scroll-target="#application-case"><strong>2.2 Application case</strong></a></li>
+  </ul></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><strong>3 Reflection</strong></a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/XianlaiYin/XianlaiYin.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
@@ -500,13 +523,63 @@ Terms
 </section>
 </section>
 </section>
-<section id="application-case" class="level2">
-<h2 class="anchored" data-anchor-id="application-case"><strong>2 Application case</strong></h2>
+<section id="application" class="level2">
+<h2 class="anchored" data-anchor-id="application"><strong>2 Application</strong></h2>
+<blockquote class="blockquote">
+<p>This week, the main focus was on the correction, joining and enhancement of remote sensing images, mostly applied to pre-processing before analysis, but remote sensing image enhancement has a wider range of applications.</p>
+</blockquote>
+<section id="applications-of-remote-sensing-image-enhancement" class="level3">
+<h3 class="anchored" data-anchor-id="applications-of-remote-sensing-image-enhancement"><strong>2.1 Applications of remote sensing image enhancement</strong></h3>
+<p>Remote sensing image enhancement refers to the improvement of the quality and information of remote sensing images through some technical means to make them more suitable for human vision or subsequent analytical processing. Remote sensing image enhancement can be applied to the following areas:</p>
+<p><code>Contrast enhancement</code>: By adjusting the grey level of a remotely sensing image, the contrast of the image is increased to make it clearer and brighter. Contrast enhancement can be done using methods such as histogram stretching, histogram equalisation and segmented linear stretching.</p>
+<p><code>Band ratioing</code>: Extracts specific information from remote sensing images, such as vegetation indices, water indices, soil indices, etc., by calculating the ratio between different bands. Band ratios can be calculated using methods such as band arithmetic and band combination.</p>
+<p><code>Filtering</code>: Remove noise or enhance edges and textures in an image by convolving the remote sensing image in the spatial or frequency domain. Filtering can use methods such as smoothing filtering, sharpening filtering and edge detection filtering.</p>
+<p><code>Principal component analysis (PCA)</code>: By applying orthogonal transformations to multiple bands of remote sensing images, the main information in the image is extracted and the redundancy and correlation of the data is reduced. Principal component analysis can use statistical methods or methods such as wavelet transform.</p>
+<p><code>Texture</code>: Describes the surface roughness or structural features in an image by calculating the grey scale variation within a region of the remotely sensed image. Texturing can use methods such as grey level co-occurrence matrix, grey level distance matrix, grey level gradient matrix, etc.</p>
+<p><code>Fusion</code>: Increasing the spatial or spectral resolution of an image and increasing the amount of information in the image by combining remote sensing images from different sources or at different resolutions. Fusion can be done using methods such as HIS transform, wavelet transform, multi-resolution analysis, etc.</p>
+</section>
+<section id="application-case" class="level3">
+<h3 class="anchored" data-anchor-id="application-case"><strong>2.2 Application case</strong></h3>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Sourse
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><em>PCA‐based land‐use change detection and analysis using multitemporal and multisensor satellite data</em></strong> , <em>Sourse: <span class="citation" data-cites="deng_pcabased_2008">Deng et al. (<a href="references.html#ref-deng_pcabased_2008" role="doc-biblioref">2008</a>)</span></em></p>
+</div>
+</div>
+<p>Remote‐sensing change detection based on multitemporal, multispectral, and multisensor imagery has been developed over several decades and provided timely and comprehensive information for planning and decision‐making. In practice, however, it is still difficult to select a suitable change‐detection method, especially in urban areas, because of the impacts of complex factors.</p>
+<p>This paper presents a new method using <code>multitemporal</code> and <code>multisensor</code> data (SPOT‐5 and Landsat data) to detect land‐use changes in an urban environment based on <code>principal‐component analysis (PCA)</code> and <code>hybrid classification</code> methods. After geometric correction and radiometric normalization, PCA was used to enhance the change information from stacked multisensor data. Then, a hybrid classifier combining unsupervised and supervised classification was performed to identify and quantify land‐use changes. Finally, stratified random and user‐defined plots sampling methods were synthetically used to obtain total 966 reference points for accuracy assessment.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/tres_a_295182_o_f0002g.jpeg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Example of land‐use changes from cropland to urban land (Economic and Technological Development Zone). (a) Pan image of ETM (2000); (b) aerial photograph (2000); (c) RGB composition image of SPOT‐5 (2003); (d) RGB composition image of IKONOS (2003); (e)–(h) first four principal components.</figcaption><p></p>
+</figure>
+</div>
+<p>Although errors and confusion exist, this method shows satisfying results with an overall accuracy to be 89.54% and 0.88 for the kappa coefficient. When compared with the post‐classification method, PCA‐based change detection also showed a better accuracy in terms of overall, producer’s, and user’s accuracy and kappa index. The results suggested that significant land‐use changes have occurred in Hangzhou City from 2000 to 2003, which may be related to rapid economy development and urban expansion. It is further indicated that most changes occurred in cropland areas due to urban encroachment.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/tres_a_295182_o_f0005g.jpeg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Land use and land‐use change detected using the PCA‐based approach.</figcaption><p></p>
+</figure>
+</div>
+</section>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection"><strong>3 Reflection</strong></h2>
+<p>This week I learnt the principles and methods of correcting, joining and enhancing remotely sensed images and understood how to pre-process remotely sensed data. Although most of the data we acquired had already been pre-processed, this knowledge gave me a better understanding of how to apply remote sensing images to the actual analysis and what could cause errors and whether further processing was needed. In addition, the study of remote sensing image enhancement has taught me more about remote sensing data analysis methods and principles in a deeper way.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-deng_pcabased_2008" class="csl-entry" role="doc-biblioentry">
+Deng, J. S., K. Wang, Y. H. Deng, and G. J. Qi. 2008. <span>“<span>PCA</span>‐based Land‐use Change Detection and Analysis Using Multitemporal and Multisensor Satellite Data.”</span> <em>International Journal of Remote Sensing</em> 29 (16): 4823–38. <a href="https://doi.org/10.1080/01431160801950162">https://doi.org/10.1080/01431160801950162</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

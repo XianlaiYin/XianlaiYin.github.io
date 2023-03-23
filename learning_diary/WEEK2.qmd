@@ -6,10 +6,10 @@
 
 ### **Homework: Introduction to Hyperspectral Radiometer**
 
-[This website](https://xianlaiyin.github.io/learning_diary/docs/) and [this slide](https://xianlaiyin.github.io/week2_xaringan/week2_xaringan.html#1) can be used as a practical presentation of the content of this week.
+[This website](https://xianlaiyin.github.io/learning_diary/docs/) and [this slide](https://xianlaiyin.github.io/week2_xaringan/week2_xaringan.html#1) can be used as a presentation of what I learnt the content of this week.
 
 ```{r, echo = FALSE, out.width='40%'}
 xaringanExtra::embed_xaringan(
-  url = "https://xianlaiyin.github.io/week2_xaringan/week2_xaringan.html#1",
+  url = "https://xianlaiyin.github.io/learning_diary/week2_xaringan/week2_xaringan.html#1",
   ratio = "16:9")
 ```

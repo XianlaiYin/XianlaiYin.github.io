@@ -17,25 +17,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
-div.csl-bib-body { }
-div.csl-entry {
-  clear: both;
-}
-.hanging div.csl-entry {
-  margin-left:2em;
-  text-indent:-2em;
-}
-div.csl-left-margin {
-  min-width:2em;
-  float:left;
-}
-div.csl-right-inline {
-  margin-left:2em;
-  padding-left:1em;
-}
-div.csl-indent {
-  margin-left: 2em;
-}
 </style>
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -171,7 +152,7 @@ div.csl-indent {
   <li>
 <a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><strong>3 Application</strong></a>
   <ul class="collapse">
-<li><a href="#applications-of-remote-sensing-image-enhancement" id="toc-applications-of-remote-sensing-image-enhancement" class="nav-link" data-scroll-target="#applications-of-remote-sensing-image-enhancement"><strong>3.1 Applications of remote sensing image enhancement</strong></a></li>
+<li><a href="#applications-developed-on-the-basis-of-gee" id="toc-applications-developed-on-the-basis-of-gee" class="nav-link" data-scroll-target="#applications-developed-on-the-basis-of-gee"><strong>3.1 Applications developed on the basis of GEE</strong></a></li>
   <li><a href="#application-case" id="toc-application-case" class="nav-link" data-scroll-target="#application-case"><strong>3.2 Application case</strong></a></li>
   <li><a href="#case-comments" id="toc-case-comments" class="nav-link" data-scroll-target="#case-comments"><strong>3.3 Case comments</strong></a></li>
   </ul>
@@ -322,6 +303,11 @@ GEE terms
 <li>The operations of the proejction are determined by the output</li>
 <li>Setting the projection is allowed, but there is no real reason to do this</li>
 </ul></section></section><section id="gee-in-action" class="level3"><h3 class="anchored" data-anchor-id="gee-in-action"><strong>1.2 GEE in action</strong></h3>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure"><p><img src="img/Code_editor_diagram.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">What does GEE look like. Source: <a href="https://andrewmaclachlan.github.io/CASA0023-lecture-5/#31">lecture</a></figcaption><p></p>
+</figure>
+</div>
 <section id="building-blocks-of-gee" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="building-blocks-of-gee"><strong>Building blocks of GEE</strong></h4>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure"><p><img src="img/GEE_object_classes.png" class="img-fluid figure-img" style="width:100.0%"></p>
@@ -352,11 +338,6 @@ GEE terms
 <li>
 <code>Feature</code> collection = several features with attributes</li>
 </ul></section><section id="what-typical-processes-can-do-in-gee" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="what-typical-processes-can-do-in-gee"><strong>What typical processes can do in GEE?</strong></h4>
-<div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/Code_editor_diagram.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<p></p><figcaption class="figure-caption">What does GEE look like. Source: <a href="https://andrewmaclachlan.github.io/CASA0023-lecture-5/#31">lecture</a></figcaption><p></p>
-</figure>
-</div>
 <p><strong><em>Geometry operations (e.g.&nbsp;spatial operations)</em></strong></p>
 <ul>
 <li><code>Joins</code></li>
@@ -422,8 +403,12 @@ GEE terms
 </ul>
 </li>
 </ul>
-<p><strong><em>We can combine reducers for regression</em></strong> - Regression per pixels (typically with an image collection over several years) - Regression of all the values within a polygon (taking an image of 1 date, extracting all the pixels and then running regression) - In GEE we must add a constant as an independent variable for the intercept (unless it is 0)</p>
-</section><section id="joins" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="joins"><strong>Joins</strong></h4>
+<p><strong><em>We can combine reducers for regression</em></strong></p>
+<ul>
+<li>Regression per pixels (typically with an image collection over several years)</li>
+<li>Regression of all the values within a polygon (taking an image of 1 date, extracting all the pixels and then running regression)</li>
+<li>In GEE we must add a constant as an independent variable for the intercept (unless it is 0)</li>
+</ul></section><section id="joins" class="level4 unnumbered"><h4 class="unnumbered anchored" data-anchor-id="joins"><strong>Joins</strong></h4>
 <p><strong><em>Joins in GEE are similar to joins in R</em></strong></p>
 <ul>
 <li>We can join image collections (e.g.&nbsp;satellite data from January with data from October)</li>
@@ -448,24 +433,34 @@ GEE terms
 <blockquote class="blockquote">
 <p>This week’s practical will consist mainly of the following:</p>
 <ul>
-<li>Introduction and access to Landsat data</li>
-<li>A deeper understanding of atmospheric correction and how it works in practice</li>
-<li>Introduction to the principles of Radiance (or DN) to Reflectance</li>
-<li>Practical exercises in image joining</li>
-<li>A deep understanding of image enhancement and how it works in practice</li>
+<li>Acquire remote sensing image data using GEE and perform basic operations such as clipping and mosaicing of data</li>
+<li>Remote sensing image pre-processing and band mathing using GEE</li>
+<li>Exporting GEE analysis results</li>
+<li>GEE-related applications and data</li>
 </ul>
 </blockquote>
-<p>For this week’s practical I chose to follow the guidance using Landsat data from Cape Town. I used R to do atmospheric corrections, merging, data enhancement and other operations on the data. Through practical, I gained a better understanding of remote sensing data pre-processing and was able to apply this to my workflow in R. Combined with the previous term’s CASA0005 course, I can now use R to analyse more types of data.</p>
+<p>In this week’s practical, I learnt the basic operations of remote sensing data processing using GEE. I followed the instructions to process and analyse the Landsat remote sensing image data from New Delhi, including texture measures, PCA, band math, etc. However, I was pleasantly surprised to learn about a lot of applications developed using GEE, which were very interesting and greatly broadened my view of remote sensing image applications and made me look forwards to developing applications using GEE.</p>
 <div class="quarto-figure quarto-figure-center">
-<figure class="figure"><p><img src="img/my_plot.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<p></p><figcaption class="figure-caption">Texture of landsat data from Cape Town</figcaption><p></p>
+<figure class="figure"><p><img src="img/WEEK5practical.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">PCA analysis of Landsat 8 images in New Delhi.</figcaption><p></p>
 </figure>
 </div>
 </section><section id="application" class="level2"><h2 class="anchored" data-anchor-id="application"><strong>3 Application</strong></h2>
 <blockquote class="blockquote">
-<p>This week, the main focus was on the correction, joining and enhancement of remote sensing images, mostly applied to pre-processing before analysis, but remote sensing image enhancement has a wider range of applications.</p>
+<p>As mentioned above, there are a wide variety of valuable applications that can be developed using GEE, and I would like to explore the applications that can be developed based on GEE</p>
 </blockquote>
-<section id="applications-of-remote-sensing-image-enhancement" class="level3"><h3 class="anchored" data-anchor-id="applications-of-remote-sensing-image-enhancement"><strong>3.1 Applications of remote sensing image enhancement</strong></h3>
+<section id="applications-developed-on-the-basis-of-gee" class="level3"><h3 class="anchored" data-anchor-id="applications-developed-on-the-basis-of-gee"><strong>3.1 Applications developed on the basis of GEE</strong></h3>
+<p>GEE provides powerful computing capabilities for processing and analysing geospatial data and can be of great use in a number of areas.</p>
+<p><code>Land cover change detection</code>: By comparing remotely sensed images from different time periods, land cover changes such as urban expansion, deforestation and wetland degradation can be detected. For example: <a href="https://earthengine.google.com/timelapse/">Google Earth Engine Timelapse</a>.</p>
+<p><code>Forest health monitoring</code>: Using high resolution and multi-temporal remote sensing imagery to analyse forest growth and identify forest health issues such as pests, drought and fire. For example: <a href="https://www.globalforestwatch.org/map/">Global Forest Watch (GFW)</a>.</p>
+<p><code>Agricultural management</code>: Remote sensing imagery is used to analyse crop growth, acreage and yields to provide strong support for agricultural production and food security. For example: <a href="https://earthengineedu.users.earthengine.app/view/agriculturalmonitoring">Cropland Mapping App</a>.</p>
+<p><code>Water resources monitoring</code>: Using remote sensing data to analyse the area of water bodies, water quality conditions and changes in water resources, providing a scientific basis for water resources management and protection. For example: <a href="https://global-surface-water.appspot.com/map">Global Surface Water Explorer (GSWE)</a>.</p>
+<p><code>Climate change research</code>: To explore the causes and impacts of climate change by analysing long-term changes in surface temperature, precipitation, snow and ice and other climate factors. For example: <a href="https://app.climateengine.com/climateEngine">Climate Engine</a>.</p>
+<p><code>Disaster assessment and management</code>: Using remote sensing images to detect natural disasters such as floods, earthquakes and landslides in a timely manner, providing information to support disaster assessment and rescue work. For example: <a href="https://diluvium.colorado.edu/arcgis/apps/Viewer/index.html?appid=759d697577dd438ab7f2d48f605593d5">DFO Flood Observatory Web Map Server</a>.</p>
+<p><code>Ecosystem service assessment</code>: Evaluate the value of ecosystem services to humans by analysing ecological indicators such as land cover, vegetation productivity and biodiversity. For example: <a href="https://khaledalshamaa.users.earthengine.app/view/modis-ndvi-slider">NDVI slider</a>.</p>
+<p><code>Urban planning and management</code>: Analyse urban construction land, traffic conditions and green space distribution through remote sensing images to provide decision support for urban planning and management. For example: <a href="https://earthengineedu.users.earthengine.app/view/urbanization">Urbanization Explorer</a>.</p>
+<p><code>Air quality monitoring</code>: Using remote sensing data to analyse the concentration and distribution of atmospheric pollutants, providing data support for air quality monitoring and environmental protection. For example: <a href="https://gaertnerp.users.earthengine.app/view/europe-air-quality-winner#cloud=10;scale=15000;ranking=absolute%20difference%20(%CE%BCmol%2Fm%C2%B2);startdate=2020-03-01;enddate=2020-04-01;">Europe’s Air Quality Winner</a>.</p>
+<p><code>Wildlife protection</code>: analyse wildlife habitats, migration paths and the status of protected areas through remote sensing images to provide scientific basis for wildlife protection. For example: <a href="https://ebird.org/map">eBird</a>.</p>
 </section><section id="application-case" class="level3"><h3 class="anchored" data-anchor-id="application-case"><strong>3.2 Application case</strong></h3>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
@@ -477,20 +472,42 @@ Sourse
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p><strong><em>PCA‐based land‐use change detection and analysis using multitemporal and multisensor satellite data</em></strong> , <em>Sourse: <span class="citation" data-cites="deng_pcabased_2008">Deng et al. (<a href="references.html#ref-deng_pcabased_2008" role="doc-biblioref">2008</a>)</span></em></p>
+<p><strong><em>Global Forest Watch (GFW)</em></strong> , <em>Sourse: <a href="https://www.globalforestwatch.org/">GFW</a></em></p>
 </div>
 </div>
+<p><strong><em>About GFW</em></strong></p>
+<p>Global Forest Watch (GFW) is an online platform that provides data and tools for monitoring forests. By harnessing cutting-edge technology, GFW allows anyone to access near real-time information about where and how forests are changing around the world.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="shareagain" style="min-width:300px;margin:1em auto;" data-exeternal="1">
+<iframe src="https://www.globalforestwatch.org/map/" width="1600" height="900" style="border:2px solid currentColor;" loading="lazy" allowfullscreen=""></iframe>
+<script>fitvids('.shareagain', {players: 'iframe'});</script>
+</div>
+</div>
+</div>
+<p><strong><em>Map &amp; dashboards on GFW</em></strong></p>
+<p>The map &amp; dashboards on GFW allow to explore hundreds of spatial datasets that help explain <strong>when, where and why forests are changing around the world</strong>.</p>
+<p>The map helps tell a visual story about what’s happening to forests in a particular place. Zoom in anywhere in the world to explore how forests are changing, how they’re managed and the values they provide. Layer data – like <code>annual tree cover loss</code>, <code>land use data</code> and <code>satellite imagery</code> – to better understand the underlying causes and impacts of forest change.</p>
+<p>The dashboards help answer important questions about forest change in any area and enable you to view hundreds of statistics through interactive charts and graphs, all derived from analysis of spatial data. Statistics can be customized to be as general or specific as you like and can be easily shared and downloaded for offline use.</p>
 </section><section id="case-comments" class="level3"><h3 class="anchored" data-anchor-id="case-comments"><strong>3.3 Case comments</strong></h3>
 <p><strong><em>Advantages or contribution</em></strong></p>
+<ul>
+<li>Global: GFW can provide forest monitoring data and information on a global scale, allowing governments, businesses, NGOs and citizens to understand the state of the world’s forest resources.</li>
+<li>Timeliness: GFW can provide almost real-time forest monitoring data and information that can help identify and respond to deforestation, wildfires and other natural disasters in a timely manner.</li>
+<li>Diversity: GFW can provide a wide range of data and information, including maps, satellite imagery, data analysis and stories, to meet the needs of a variety of users.</li>
+<li>Openness: GFW uses open data principles that allow anyone to use and share data and information, thus increasing the reliability and value of the data used.</li>
+</ul>
 <p><strong><em>Disadvantages or potential</em></strong></p>
-</section></section><section id="reflection" class="level2"><h2 class="anchored" data-anchor-id="reflection"><strong>4 Reflection</strong></h2>
+<ul>
+<li>Data quality: GFW relies on a variety of data sources, including satellite imagery, ground-based observations, interviews, etc. Data quality varies and may be subject to error.</li>
+<li>Data updates: Although GFW can provide almost real-time forest monitoring data and information, some data can be slow to update and it can take some time to wait for the latest data to become available.</li>
+<li>Threshold of data use: GFW data and information require a certain level of expertise and skills to use and analyse, which may be difficult for non-expert users.</li>
+<li>Data privacy: GFW’s data and information may contain some sensitive information that requires attention to data privacy protection.</li>
+</ul></section></section><section id="reflection" class="level2"><h2 class="anchored" data-anchor-id="reflection"><strong>4 Reflection</strong></h2>
+<p>During the week I have been learning about the basic principles and operational aspects of GEE and have been excited to learn about the many applications of GEE. Sometimes I want to upload my research to the web for interactive use, but I don’t know much about web development or software development due to my professional background, and GEE provides a platform for this, as well as a very rich data source and analysis tools to support the development of applications, which has a very wide range of applications. In addition, the interactive web platform provides a window of communication between urban planning and the public, making it easier to collect and publicise data.</p>
+<p>However, I have concerns about data privacy and copyright. On the one hand, I am concerned that my privacy may be compromised, and on the other hand, I am concerned that there may be unknowing copyright infringement in the data used, which requires careful attention during development.</p>
 
 
-<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
-<div id="ref-deng_pcabased_2008" class="csl-entry" role="doc-biblioentry">
-Deng, J. S., K. Wang, Y. H. Deng, and G. J. Qi. 2008. <span>“<span>PCA</span>‐based Land‐use Change Detection and Analysis Using Multitemporal and Multisensor Satellite Data.”</span> <em>International Journal of Remote Sensing</em> 29 (16): 4823–38. <a href="https://doi.org/10.1080/01431160801950162">https://doi.org/10.1080/01431160801950162</a>.
-</div>
-</div>
 </section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {

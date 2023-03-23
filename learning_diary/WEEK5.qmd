@@ -111,6 +111,8 @@ There are some similarities to python and R but there are some notable differenc
 
 ### **1.2 GEE in action**
 
+![What does GEE look like. Source: [lecture](https://andrewmaclachlan.github.io/CASA0023-lecture-5/#31)](img/Code_editor_diagram.png){width="100%"}
+
 #### **Building blocks of GEE** {.unnumbered}
 
 ![Object classes. Source: [GEE](https://developers.google.com/earth-engine/guides/objects_methods_overview)](img/GEE_object_classes.png){width="100%"}
@@ -133,8 +135,6 @@ There are some similarities to python and R but there are some notable differenc
 - `Feature` collection = several features with attributes
 
 #### **What typical processes can do in GEE?** {.unnumbered}
-
-![What does GEE look like. Source: [lecture](https://andrewmaclachlan.github.io/CASA0023-lecture-5/#31)](img/Code_editor_diagram.png){width="100%"}
 
 ***Geometry operations (e.g. spatial operations)***
 
@@ -189,6 +189,7 @@ The real benefit of GEE is being able to access all imagery for multiple sensors
 We can use additional variables like we have seen before, including multiple dependent variables...this is termed `Multivariate Multiple Linear Regression`. This just does the same as OLS for both of the dependent variables, the only difference is with a `covariance matrix`.
 
 ***We can combine reducers for regression***
+
 - Regression per pixels (typically with an image collection over several years)
 - Regression of all the values within a polygon (taking an image of 1 date, extracting all the pixels and then running regression)
 - In GEE we must add a constant as an independent variable for the intercept (unless it is 0)
@@ -216,34 +217,87 @@ We can use additional variables like we have seen before, including multiple dep
 
 > This week's practical will consist mainly of the following:
 >
-> -   Introduction and access to Landsat data
-> -   A deeper understanding of atmospheric correction and how it works in practice
-> -   Introduction to the principles of Radiance (or DN) to Reflectance
-> -   Practical exercises in image joining
-> -   A deep understanding of image enhancement and how it works in practice
+> -   Acquire remote sensing image data using GEE and perform basic operations such as clipping and mosaicing of data
+> -   Remote sensing image pre-processing and band mathing using GEE
+> -   Exporting GEE analysis results
+> -   GEE-related applications and data
 
-For this week's practical I chose to follow the guidance using Landsat data from Cape Town. I used R to do atmospheric corrections, merging, data enhancement and other operations on the data. Through practical, I gained a better understanding of remote sensing data pre-processing and was able to apply this to my workflow in R. Combined with the previous term's CASA0005 course, I can now use R to analyse more types of data.
+In this week's practical, I learnt the basic operations of remote sensing data processing using GEE. I followed the instructions to process and analyse the Landsat remote sensing image data from New Delhi, including texture measures, PCA, band math, etc. However, I was pleasantly surprised to learn about a lot of applications developed using GEE, which were very interesting and greatly broadened my view of remote sensing image applications and made me look forwards to developing applications using GEE.
 
-![Texture of landsat data from Cape Town](img/my_plot.png){width="100%"}
+![PCA analysis of Landsat 8 images in New Delhi.](img/WEEK5practical.png){width="100%"}
 
 ## **3 Application**
 
-> This week, the main focus was on the correction, joining and enhancement of remote sensing images, mostly applied to pre-processing before analysis, but remote sensing image enhancement has a wider range of applications.
+> As mentioned above, there are a wide variety of valuable applications that can be developed using GEE, and I would like to explore the applications that can be developed based on GEE
 
-### **3.1 Applications of remote sensing image enhancement**
+### **3.1 Applications developed on the basis of GEE**
+
+GEE provides powerful computing capabilities for processing and analysing geospatial data and can be of great use in a number of areas.
+
+`Land cover change detection`: By comparing remotely sensed images from different time periods, land cover changes such as urban expansion, deforestation and wetland degradation can be detected. For example: [Google Earth Engine Timelapse](https://earthengine.google.com/timelapse/).
+
+`Forest health monitoring`: Using high resolution and multi-temporal remote sensing imagery to analyse forest growth and identify forest health issues such as pests, drought and fire. For example: [Global Forest Watch (GFW)](https://www.globalforestwatch.org/map/).
+
+`Agricultural management`: Remote sensing imagery is used to analyse crop growth, acreage and yields to provide strong support for agricultural production and food security. For example: [Cropland Mapping App](https://earthengineedu.users.earthengine.app/view/agriculturalmonitoring).
+
+`Water resources monitoring`: Using remote sensing data to analyse the area of water bodies, water quality conditions and changes in water resources, providing a scientific basis for water resources management and protection. For example: [Global Surface Water Explorer (GSWE)](https://global-surface-water.appspot.com/map).
+
+`Climate change research`: To explore the causes and impacts of climate change by analysing long-term changes in surface temperature, precipitation, snow and ice and other climate factors. For example: [Climate Engine](https://app.climateengine.com/climateEngine).
+
+`Disaster assessment and management`: Using remote sensing images to detect natural disasters such as floods, earthquakes and landslides in a timely manner, providing information to support disaster assessment and rescue work. For example: [DFO Flood Observatory Web Map Server](https://diluvium.colorado.edu/arcgis/apps/Viewer/index.html?appid=759d697577dd438ab7f2d48f605593d5).
+
+`Ecosystem service assessment`: Evaluate the value of ecosystem services to humans by analysing ecological indicators such as land cover, vegetation productivity and biodiversity. For example: [NDVI slider](https://khaledalshamaa.users.earthengine.app/view/modis-ndvi-slider).
+
+`Urban planning and management`: Analyse urban construction land, traffic conditions and green space distribution through remote sensing images to provide decision support for urban planning and management. For example: [Urbanization Explorer](https://earthengineedu.users.earthengine.app/view/urbanization).
+
+`Air quality monitoring`: Using remote sensing data to analyse the concentration and distribution of atmospheric pollutants, providing data support for air quality monitoring and environmental protection. For example: [Europe's Air Quality Winner](https://gaertnerp.users.earthengine.app/view/europe-air-quality-winner#cloud=10;scale=15000;ranking=absolute%20difference%20(%CE%BCmol%2Fm%C2%B2);startdate=2020-03-01;enddate=2020-04-01;).
+
+`Wildlife protection`: analyse wildlife habitats, migration paths and the status of protected areas through remote sensing images to provide scientific basis for wildlife protection. For example: [eBird](https://ebird.org/map).
 
 ### **3.2 Application case**
 
 ::: callout-tip
 #### Sourse {.unnumbered}
 
-***PCA‐based land‐use change detection and analysis using multitemporal and multisensor satellite data*** , *Sourse: @deng_pcabased_2008*
+***Global Forest Watch (GFW)*** , *Sourse: [GFW](https://www.globalforestwatch.org/)*
 :::
+
+***About GFW***
+
+Global Forest Watch (GFW) is an online platform that provides data and tools for monitoring forests. By harnessing cutting-edge technology, GFW allows anyone to access near real-time information about where and how forests are changing around the world.
+
+```{r, echo = FALSE, out.width='100%'}
+xaringanExtra::embed_xaringan(
+  url = "https://www.globalforestwatch.org/map/",
+  ratio = "16:9")
+```
+
+***Map & dashboards on GFW***
+
+The map & dashboards on GFW allow to explore hundreds of spatial datasets that help explain **when, where and why forests are changing around the world**.
+
+The map helps tell a visual story about what’s happening to forests in a particular place. Zoom in anywhere in the world to explore how forests are changing, how they’re managed and the values they provide. Layer data – like `annual tree cover loss`, `land use data` and `satellite imagery` – to better understand the underlying causes and impacts of forest change.
+
+The dashboards help answer important questions about forest change in any area and enable you to view hundreds of statistics through interactive charts and graphs, all derived from analysis of spatial data. Statistics can be customized to be as general or specific as you like and can be easily shared and downloaded for offline use.
 
 ### **3.3 Case comments**
 
 ***Advantages or contribution***
 
+- Global: GFW can provide forest monitoring data and information on a global scale, allowing governments, businesses, NGOs and citizens to understand the state of the world's forest resources.
+- Timeliness: GFW can provide almost real-time forest monitoring data and information that can help identify and respond to deforestation, wildfires and other natural disasters in a timely manner.
+- Diversity: GFW can provide a wide range of data and information, including maps, satellite imagery, data analysis and stories, to meet the needs of a variety of users.
+- Openness: GFW uses open data principles that allow anyone to use and share data and information, thus increasing the reliability and value of the data used.
+
 ***Disadvantages or potential***
 
+- Data quality: GFW relies on a variety of data sources, including satellite imagery, ground-based observations, interviews, etc. Data quality varies and may be subject to error.
+- Data updates: Although GFW can provide almost real-time forest monitoring data and information, some data can be slow to update and it can take some time to wait for the latest data to become available.
+- Threshold of data use: GFW data and information require a certain level of expertise and skills to use and analyse, which may be difficult for non-expert users.
+- Data privacy: GFW's data and information may contain some sensitive information that requires attention to data privacy protection.
+
 ## **4 Reflection**
+
+During the week I have been learning about the basic principles and operational aspects of GEE and have been excited to learn about the many applications of GEE. Sometimes I want to upload my research to the web for interactive use, but I don't know much about web development or software development due to my professional background, and GEE provides a platform for this, as well as a very rich data source and analysis tools to support the development of applications, which has a very wide range of applications. In addition, the interactive web platform provides a window of communication between urban planning and the public, making it easier to collect and publicise data.
+
+However, I have concerns about data privacy and copyright. On the one hand, I am concerned that my privacy may be compromised, and on the other hand, I am concerned that there may be unknowing copyright infringement in the data used, which requires careful attention during development.

@@ -6,6 +6,8 @@
 
 ## **1 Summary: lecture**
 
+This week's content focuses on an introduction to basic information on remote sensing and Electromagnetic radiation (EMR).
+
 ![Mindmap of Week 1 Leacture](img/WEEK1_Mindmap.svg){width="100%"}
 
 ------------------------------------------------------------------------
@@ -125,11 +127,21 @@ Applicable to Radar: Electromagnetic waves are polarized and the direction depen
 
 ## **2 Summary: practical**
 
+> This week's practical will consist mainly of the following:
+>
+> -   Acquisition and reading of remote sensing data
+> -   The specifics of processing remote sensing data using SNAP and R
+> -   Methods for viewing the spectra of remote sensing data and comparing spectral features
+
+For this week's practical I chose Chelmsford, a city in the north-east suburbs of London, as my study area. I also followed the practical's instructions to operate on remote sensing images within its administrative area. Through this practical I became familiar with the use of SNAP and the remote sensing related package of R. I also learnt about some of the features of remote sensing imagery, such as spectral features, through these operations.
+
+![SNAP operating screen](img/SNAP.png){width="100%"}
+
 ## **3 Application**
 
 > This week's lecture is mainly about the basic knowledge of remote sensing and Electromagnetic radiation (EMR), so I would like to introduce some of the remote sensing applications based on spectral characteristics.
 
-### **2.1 Remote sensing applications based on spectral features**
+### **3.1 Remote sensing applications based on spectral features**
 
 Remote sensing uses spectral features to identify, classify and analyse a variety of features on the surface or in the atmosphere. Remote sensing has many applications using spectral features：
 
@@ -149,7 +161,7 @@ The specific application methods of remote sensing based on spectral features in
 
 -   Use remote sensing imagery for urban `construction change monitoring`, identifying the impact of urban construction activities on land use, and providing dynamic management for urban planning.
 
-### **2.2 Application case**
+### **3.2 Application case**
 
 ::: callout-tip
 #### Sourse {.unnumbered}
@@ -165,6 +177,20 @@ In this study, a hyperspectral library for urban tree species in Hong Kong was e
 
 ![The overall workflow of species classification framework using the Deep Neural Network modelling.](img/2.png){width="100%"}
 
+### **3.3 Case comments**
+
+***Advantages or contribution***
+
+-   A hyperspectral library for urban tree species in Hong Kong was established , and trees were classified and detected with high accuracy, which could be a valuable resource for future research in Hong Kong or similar environments.
+-   Hyperspectral phenology models were developed using deep neural network classification models to optimise data acquisition and improve accuracy in monitoring tree health, which provides experience in the field of machine learning of remote sensing images.
+
+***Disadvantages or potential***
+
+-   Hyperspectral image acquisition cost and processing complexity: Acquisition and processing of hyperspectral images may be more costly and complex compared to other remote sensing techniques, and may face cost issues in actual applications.
+-   Data set limitations: The study focuses on urban trees in Hong Kong and may not be directly applicable to other regions or cities with different ecological conditions. Expanding the study to include a wider range of geographical and ecological conditions would make the results more generalisable.
+
 ## **4 Reflection**
 
 During this week I have learnt about the basics of remote sensing and Electromagnetic radiation (EMR), which has greatly broadened my horizons when researching urban. Due to limited data collection facilities, detailed urban datasets (e.g. traffic flow data, mobile phone signalling data, etc.) are only available for main cities in developed areas, which makes many studies not reproducible in a wide range of non-developed or small cities. However, the extensive coverage of remote sensing data compensates well for this shortcoming, and the variety of data collected through the rich diversity of sensors can be of great help in urban (or regional) analysis.
+
+However, there are some limitations to remote sensing data at the level of accuracy and price. On the one hand, there is relatively little high-precision remote sensing data for inner-city scale studies, and on the other hand, high-precision data often leads to huge costs, which in practice can lead to some technologies not being implemented.

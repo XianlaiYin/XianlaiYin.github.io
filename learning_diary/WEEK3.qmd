@@ -6,6 +6,8 @@
 
 ## **1 Summary: lecture**
 
+This week focuses on the pre-processing of remote sensing data, including the correction, joining and enhancement of various types of remote sensing data.
+
 ![Mindmap of Week 3 Leacture](img/WEEK3_Mindmap.svg){width="100%"}
 
 ------------------------------------------------------------------------
@@ -235,6 +237,18 @@ $$
 
 ## **2 Summary: practical**
 
+> This week's practical will consist mainly of the following:
+>
+> -   Introduction and access to Landsat data
+> -   A deeper understanding of atmospheric correction and how it works in practice
+> -   Introduction to the principles of Radiance (or DN) to Reflectance
+> -   Practical exercises in image joining
+> -   A deep understanding of image enhancement and how it works in practice
+
+For this week's practical I chose to follow the guidance using Landsat data from Cape Town. I used R to do atmospheric corrections, merging, data enhancement and other operations on the data. Through practical, I gained a better understanding of remote sensing data pre-processing and was able to apply this to my workflow in R. Combined with the previous term's CASA0005 course, I can now use R to analyse more types of data.
+
+![Texture of landsat data from Cape Town](img/my_plot.png){width="100%"}
+
 ## **3 Application**
 
 > This week, the main focus was on the correction, joining and enhancement of remote sensing images, mostly applied to pre-processing before analysis, but remote sensing image enhancement has a wider range of applications.
@@ -273,6 +287,21 @@ Although errors and confusion exist, this method shows satisfying results with a
 
 ![Land use and land‐use change detected using the PCA‐based approach.](img/tres_a_295182_o_f0005g.jpeg){width="100%"}
 
+### **3.3 Case comments**
+
+***Advantages or contribution***
+
+- Flexible classification strategies: The hybrid classification approach allows the authors to combine the accuracy of supervised classification methods while taking advantage of the automation of unsupervised classification methods. This flexibility allows the method to be better adapted to different types of land use change scenarios.
+- PCA-based feature extraction: By combining multi-temporal and multi-sensor data into a single Principal Component Analysis (PCA) model, the authors are able to extract more meaningful features that help distinguish between changing and non-changing areas. This approach has advantages in dealing with high-dimensional data and reducing data redundancy.
+- Correction and radiation normalisation: This paper corrected and radiation normalised the data prior to analysis, which helped to reduce errors due to sensor differences, variations in atmospheric conditions and land cover type, thus improving the accuracy and reliability of the results.
+
+***Disadvantages or potential***
+
+- Limitations of Principal Component Analysis (PCA): While PCA is able to extract and enhance variation information from multi-sensor data, it may not be able to completely eliminate noise and other non-target factors. In addition, PCA may have limitations in handling non-linear data, which may lead to inaccurate detection results.
+- Limitations of sensor data: SPOT-5 and Landsat data were used in this paper. While these data sources are of value in land cover change detection, they may not capture the detailed information that finer spatial resolution and higher spectral resolution can provide. In addition, these data sources may be affected by issues such as cloud occlusion, atmospheric interference and timing inconsistencies.
+
 ## **4 Reflection**
 
 This week I learnt the principles and methods of correcting, joining and enhancing remotely sensed images and understood how to pre-process remotely sensed data. Although most of the data we acquired had already been pre-processed, this knowledge gave me a better understanding of how to apply remote sensing images to the actual analysis and what could cause errors and whether further processing was needed. In addition, the study of remote sensing image enhancement has taught me more about remote sensing data analysis methods and principles in a deeper way.
+
+However, not all data pre-processing can be perfectly accurate, errors are allowed but need to be controlled according to the actual situation. Also, in practice, some R packages are no longer available due to version updates. This is a common problem in data analysis and can be solved by downloading a lower version of the package or replacing it.

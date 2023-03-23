@@ -232,6 +232,47 @@
             "title": "High-Resolution Global Maps of 21st-Century Forest Cover Change",
             "type": "article-journal",
             "volume": "342"
+        },
+        {
+            "DOI": "10.1016/j.scs.2021.103128",
+            "ISSN": "2210-6707",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S2210670721004108",
+            "abstract": "Urban heat islands, one of the fundamental anthropogenic impacts on local climates, have been a growing concern especially for high-density urban areas such as Istanbul. This paper outlines the use of a supervised machine learning technique to understand the effects of the urban fabric on surface urban heat island (SUHI) formation in Istanbul, and identify effective variables to provide a basis for research and practice focusing on SUHI mitigation. An analysis using the Ridge Regression Model found that 71% of land surface temperature anomalies in Istanbul are linked to building coverage ratio (BCR), surface/volume ratio (SVR), sky-view factor (SVF), canyon geometry factor (CGF), and vegetation index (NDVI). NDVI and BCR were the urban fabric components with the highest contribution to SUHI formation, while the effects of SVF and CGF remained relatively low. This research can help planners and designers gauge the contribution of the urban fabric to micro-climate issues and adapt SUHI mitigation strategies for projects aiming to build climate-sensitive urban environments. It also provides insight into and improves knowledge of supervised machine learning approaches to the urban planning and design disciplines.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        3,
+                        23
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Erdem Okumus",
+                    "given": "Deniz"
+                },
+                {
+                    "family": "Terzi",
+                    "given": "Fatih"
+                }
+            ],
+            "container-title": "Sustainable Cities and Society",
+            "id": "erdem_okumus_evaluating_2021",
+            "issued": {
+                "date-parts": [
+                    [
+                        2021,
+                        10
+                    ]
+                ]
+            },
+            "keyword": "Istanbul, Land surface temperature, Ridge regression model, Surface urban heat island, Urban fabric",
+            "page": "103128",
+            "title": "Evaluating the role of urban fabric on surface urban heat island: The case of Istanbul",
+            "title-short": "Evaluating the role of urban fabric on surface urban heat island",
+            "type": "article-journal",
+            "volume": "73"
         }
     ],
     "project_biblios": [

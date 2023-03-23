@@ -187,8 +187,9 @@ div.csl-indent {
   <li><a href="#summary-practical" id="toc-summary-practical" class="nav-link" data-scroll-target="#summary-practical"><strong>2 Summary: practical</strong></a></li>
   <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><strong>3 Application</strong></a>
   <ul class="collapse">
-  <li><a href="#remote-sensing-applications-based-on-spectral-features" id="toc-remote-sensing-applications-based-on-spectral-features" class="nav-link" data-scroll-target="#remote-sensing-applications-based-on-spectral-features"><strong>2.1 Remote sensing applications based on spectral features</strong></a></li>
-  <li><a href="#application-case" id="toc-application-case" class="nav-link" data-scroll-target="#application-case"><strong>2.2 Application case</strong></a></li>
+  <li><a href="#remote-sensing-applications-based-on-spectral-features" id="toc-remote-sensing-applications-based-on-spectral-features" class="nav-link" data-scroll-target="#remote-sensing-applications-based-on-spectral-features"><strong>3.1 Remote sensing applications based on spectral features</strong></a></li>
+  <li><a href="#application-case" id="toc-application-case" class="nav-link" data-scroll-target="#application-case"><strong>3.2 Application case</strong></a></li>
+  <li><a href="#case-comments" id="toc-case-comments" class="nav-link" data-scroll-target="#case-comments"><strong>3.3 Case comments</strong></a></li>
   </ul></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><strong>4 Reflection</strong></a></li>
   </ul>
@@ -221,6 +222,7 @@ div.csl-indent {
 </section>
 <section id="summary-lecture" class="level2">
 <h2 class="anchored" data-anchor-id="summary-lecture"><strong>1 Summary: lecture</strong></h2>
+<p>This week’s content focuses on an introduction to basic information on remote sensing and Electromagnetic radiation (EMR).</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/WEEK1_Mindmap.svg" class="img-fluid figure-img" style="width:100.0%"></p>
@@ -376,6 +378,21 @@ Terms
 </section>
 <section id="summary-practical" class="level2">
 <h2 class="anchored" data-anchor-id="summary-practical"><strong>2 Summary: practical</strong></h2>
+<blockquote class="blockquote">
+<p>This week’s practical will consist mainly of the following:</p>
+<ul>
+<li>Acquisition and reading of remote sensing data</li>
+<li>The specifics of processing remote sensing data using SNAP and R</li>
+<li>Methods for viewing the spectra of remote sensing data and comparing spectral features</li>
+</ul>
+</blockquote>
+<p>For this week’s practical I chose Chelmsford, a city in the north-east suburbs of London, as my study area. I also followed the practical’s instructions to operate on remote sensing images within its administrative area. Through this practical I became familiar with the use of SNAP and the remote sensing related package of R. I also learnt about some of the features of remote sensing imagery, such as spectral features, through these operations.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/SNAP.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">SNAP operating screen</figcaption><p></p>
+</figure>
+</div>
 </section>
 <section id="application" class="level2">
 <h2 class="anchored" data-anchor-id="application"><strong>3 Application</strong></h2>
@@ -383,7 +400,7 @@ Terms
 <p>This week’s lecture is mainly about the basic knowledge of remote sensing and Electromagnetic radiation (EMR), so I would like to introduce some of the remote sensing applications based on spectral characteristics.</p>
 </blockquote>
 <section id="remote-sensing-applications-based-on-spectral-features" class="level3">
-<h3 class="anchored" data-anchor-id="remote-sensing-applications-based-on-spectral-features"><strong>2.1 Remote sensing applications based on spectral features</strong></h3>
+<h3 class="anchored" data-anchor-id="remote-sensing-applications-based-on-spectral-features"><strong>3.1 Remote sensing applications based on spectral features</strong></h3>
 <p>Remote sensing uses spectral features to identify, classify and analyse a variety of features on the surface or in the atmosphere. Remote sensing has many applications using spectral features：</p>
 <ul>
 <li><p>In the field of <code>agriculture</code>, the spectral characteristics of vegetation can be used to monitor the growth of crops, damage, yield prediction, etc.</p></li>
@@ -399,7 +416,7 @@ Terms
 </ul>
 </section>
 <section id="application-case" class="level3">
-<h3 class="anchored" data-anchor-id="application-case"><strong>2.2 Application case</strong></h3>
+<h3 class="anchored" data-anchor-id="application-case"><strong>3.2 Application case</strong></h3>
 <div class="callout-tip callout callout-style-default callout-captioned">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -428,10 +445,24 @@ Sourse
 </figure>
 </div>
 </section>
+<section id="case-comments" class="level3">
+<h3 class="anchored" data-anchor-id="case-comments"><strong>3.3 Case comments</strong></h3>
+<p><strong><em>Advantages or contribution</em></strong></p>
+<ul>
+<li>A hyperspectral library for urban tree species in Hong Kong was established , and trees were classified and detected with high accuracy, which could be a valuable resource for future research in Hong Kong or similar environments.</li>
+<li>Hyperspectral phenology models were developed using deep neural network classification models to optimise data acquisition and improve accuracy in monitoring tree health, which provides experience in the field of machine learning of remote sensing images.</li>
+</ul>
+<p><strong><em>Disadvantages or potential</em></strong></p>
+<ul>
+<li>Hyperspectral image acquisition cost and processing complexity: Acquisition and processing of hyperspectral images may be more costly and complex compared to other remote sensing techniques, and may face cost issues in actual applications.</li>
+<li>Data set limitations: The study focuses on urban trees in Hong Kong and may not be directly applicable to other regions or cities with different ecological conditions. Expanding the study to include a wider range of geographical and ecological conditions would make the results more generalisable.</li>
+</ul>
+</section>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection"><strong>4 Reflection</strong></h2>
 <p>During this week I have learnt about the basics of remote sensing and Electromagnetic radiation (EMR), which has greatly broadened my horizons when researching urban. Due to limited data collection facilities, detailed urban datasets (e.g.&nbsp;traffic flow data, mobile phone signalling data, etc.) are only available for main cities in developed areas, which makes many studies not reproducible in a wide range of non-developed or small cities. However, the extensive coverage of remote sensing data compensates well for this shortcoming, and the variety of data collected through the rich diversity of sensors can be of great help in urban (or regional) analysis.</p>
+<p>However, there are some limitations to remote sensing data at the level of accuracy and price. On the one hand, there is relatively little high-precision remote sensing data for inner-city scale studies, and on the other hand, high-precision data often leads to huge costs, which in practice can lead to some technologies not being implemented.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">

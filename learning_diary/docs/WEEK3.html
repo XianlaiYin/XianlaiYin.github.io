@@ -189,6 +189,7 @@ div.csl-indent {
   <ul class="collapse">
   <li><a href="#applications-of-remote-sensing-image-enhancement" id="toc-applications-of-remote-sensing-image-enhancement" class="nav-link" data-scroll-target="#applications-of-remote-sensing-image-enhancement"><strong>2.1 Applications of remote sensing image enhancement</strong></a></li>
   <li><a href="#application-case" id="toc-application-case" class="nav-link" data-scroll-target="#application-case"><strong>2.2 Application case</strong></a></li>
+  <li><a href="#case-comments" id="toc-case-comments" class="nav-link" data-scroll-target="#case-comments"><strong>3.3 Case comments</strong></a></li>
   </ul></li>
   <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><strong>4 Reflection</strong></a></li>
   </ul>
@@ -221,6 +222,7 @@ div.csl-indent {
 </section>
 <section id="summary-lecture" class="level2">
 <h2 class="anchored" data-anchor-id="summary-lecture"><strong>1 Summary: lecture</strong></h2>
+<p>This week focuses on the pre-processing of remote sensing data, including the correction, joining and enhancement of various types of remote sensing data.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/WEEK3_Mindmap.svg" class="img-fluid figure-img" style="width:100.0%"></p>
@@ -526,6 +528,23 @@ Terms
 </section>
 <section id="summary-practical" class="level2">
 <h2 class="anchored" data-anchor-id="summary-practical"><strong>2 Summary: practical</strong></h2>
+<blockquote class="blockquote">
+<p>This week’s practical will consist mainly of the following:</p>
+<ul>
+<li>Introduction and access to Landsat data</li>
+<li>A deeper understanding of atmospheric correction and how it works in practice</li>
+<li>Introduction to the principles of Radiance (or DN) to Reflectance</li>
+<li>Practical exercises in image joining</li>
+<li>A deep understanding of image enhancement and how it works in practice</li>
+</ul>
+</blockquote>
+<p>For this week’s practical I chose to follow the guidance using Landsat data from Cape Town. I used R to do atmospheric corrections, merging, data enhancement and other operations on the data. Through practical, I gained a better understanding of remote sensing data pre-processing and was able to apply this to my workflow in R. Combined with the previous term’s CASA0005 course, I can now use R to analyse more types of data.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/my_plot.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Texture of landsat data from Cape Town</figcaption><p></p>
+</figure>
+</div>
 </section>
 <section id="application" class="level2">
 <h2 class="anchored" data-anchor-id="application"><strong>3 Application</strong></h2>
@@ -573,10 +592,25 @@ Sourse
 </figure>
 </div>
 </section>
+<section id="case-comments" class="level3">
+<h3 class="anchored" data-anchor-id="case-comments"><strong>3.3 Case comments</strong></h3>
+<p><strong><em>Advantages or contribution</em></strong></p>
+<ul>
+<li>Flexible classification strategies: The hybrid classification approach allows the authors to combine the accuracy of supervised classification methods while taking advantage of the automation of unsupervised classification methods. This flexibility allows the method to be better adapted to different types of land use change scenarios.</li>
+<li>PCA-based feature extraction: By combining multi-temporal and multi-sensor data into a single Principal Component Analysis (PCA) model, the authors are able to extract more meaningful features that help distinguish between changing and non-changing areas. This approach has advantages in dealing with high-dimensional data and reducing data redundancy.</li>
+<li>Correction and radiation normalisation: This paper corrected and radiation normalised the data prior to analysis, which helped to reduce errors due to sensor differences, variations in atmospheric conditions and land cover type, thus improving the accuracy and reliability of the results.</li>
+</ul>
+<p><strong><em>Disadvantages or potential</em></strong></p>
+<ul>
+<li>Limitations of Principal Component Analysis (PCA): While PCA is able to extract and enhance variation information from multi-sensor data, it may not be able to completely eliminate noise and other non-target factors. In addition, PCA may have limitations in handling non-linear data, which may lead to inaccurate detection results.</li>
+<li>Limitations of sensor data: SPOT-5 and Landsat data were used in this paper. While these data sources are of value in land cover change detection, they may not capture the detailed information that finer spatial resolution and higher spectral resolution can provide. In addition, these data sources may be affected by issues such as cloud occlusion, atmospheric interference and timing inconsistencies.</li>
+</ul>
+</section>
 </section>
 <section id="reflection" class="level2">
 <h2 class="anchored" data-anchor-id="reflection"><strong>4 Reflection</strong></h2>
 <p>This week I learnt the principles and methods of correcting, joining and enhancing remotely sensed images and understood how to pre-process remotely sensed data. Although most of the data we acquired had already been pre-processed, this knowledge gave me a better understanding of how to apply remote sensing images to the actual analysis and what could cause errors and whether further processing was needed. In addition, the study of remote sensing image enhancement has taught me more about remote sensing data analysis methods and principles in a deeper way.</p>
+<p>However, not all data pre-processing can be perfectly accurate, errors are allowed but need to be controlled according to the actual situation. Also, in practice, some R packages are no longer available due to version updates. This is a common problem in data analysis and can be solved by downloading a lower version of the package or replacing it.</p>
 
 
 <div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">

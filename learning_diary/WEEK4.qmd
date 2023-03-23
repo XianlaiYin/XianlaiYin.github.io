@@ -6,6 +6,8 @@
 
 ## **1 Summary: lecture**
 
+This week focuses on the scenarios and application methods of various types of remote sensing data, as well as policy documents related to remote sensing at various levels.
+
 ![Mindmap of Week 4 Leacture](img/WEEK4_Mindmap.svg){width="100%"}
 
 ------------------------------------------------------------------------
@@ -14,6 +16,7 @@
 
 ::: callout-tip
 #### Example
+
 Multi-temporal land cover mapping, Spectral signatures / libraries, Change detection, Vegetation stress, Precipitation, Elevation models, Temperature, Night time lights, Forest fire monitoring, Pollution monitoring, Drought indices, Informal housing detection, Water level data monitoring, Building or network outlineextraction, Environmental monitoring, Estimations of resources, Air pollution and LULC, Urban green space, Disaster response and preparedness, Droughts monitoring, Forest fires analysis
 :::
 
@@ -23,25 +26,25 @@ Multi-temporal land cover mapping, Spectral signatures / libraries, Change detec
 
 ![What is Synthetic Aperture Radar?. Source:[NASA Earth Data](https://earthdata.nasa.gov/learn/backgrounders/what-is-sar)](img/SAR_bands.png){width="100%"}
 
-- Active sensors
-- Have surface texture data
-- See through weather and clouds
-- Different wavelengths - different applications
-- Different ploarizations
+-   Active sensors
+-   Have surface texture data
+-   See through weather and clouds
+-   Different wavelengths - different applications
+-   Different ploarizations
 
 #### **SAR polarization** {.unnumbered}
 
 Polarization refers to the `orientation of the plane` in which the transmitted electromagnetic wave oscillates. While the orientation can occur at any angle, SAR sensors typically transmit linearly polarized. The horizontal polarization is indicated by the letter `H`, and the vertical polarization is indicated by `V`
 
-- `Single` = 1 horizontal (or vertical)
-- `Dual` = transmits and receives both horizontal and vertical
-- `HH` = emitted in horizontal (H) and received in horizontal (H)
+-   `Single` = 1 horizontal (or vertical)
+-   `Dual` = transmits and receives both horizontal and vertical
+-   `HH` = emitted in horizontal (H) and received in horizontal (H)
 
 Different surfaces respond differently to the polarizations
 
-- `Rough scattering` (e.g. bare earth) = most sensitive to VV
-- `Volume scattering` (e.g. leaves) = cross, VH or HV
-- `Double bounce` (e.g. trees / buildings) = most sensitive to HH
+-   `Rough scattering` (e.g. bare earth) = most sensitive to VV
+-   `Volume scattering` (e.g. leaves) = cross, VH or HV
+-   `Double bounce` (e.g. trees / buildings) = most sensitive to HH
 
 Scattering can change based on wavelength, further penetration then the volume scattering will change
 
@@ -51,50 +54,53 @@ A SAR signal has both `amplitude (backscatter)` and `phase` data
 
 ::: callout-tip
 #### Terms
-- Backscatter is the `portion of the outgoing radar signal` that the target redirects directly back towards the radar antenna
-- The higher the backscattered intensity = rougher the surface. It is `"unitless"`
-- Can be converted to "`backscatter coefficient`, or `sigma nought`", measured in `decibel (dB)` units = normalised measure of the radar return from a distributed target
-- If the signal is from backscatter is not desired = `"clutter"`
+
+-   Backscatter is the `portion of the outgoing radar signal` that the target redirects directly back towards the radar antenna
+-   The higher the backscattered intensity = rougher the surface. It is `"unitless"`
+-   Can be converted to "`backscatter coefficient`, or `sigma nought`", measured in `decibel (dB)` units = normalised measure of the radar return from a distributed target
+-   If the signal is from backscatter is not desired = `"clutter"`
 :::
 
 ***Backscatter (amplitude)***
 
-- Polarization
-	- `VV` = surface roughness
-	- `VH` = volume of surface (e.g. vegetation has a complex volume and can change the polarization)
-- Permativity (dielectric constant) - how reflective is the property which means reflective back to the sensor. Water usually reflects it off elsewhere
-- The return value, also remember the band (wavelength)
-- Wind makes the water move and reflect back to the sensor (under VV)
+-   Polarization
+    -   `VV` = surface roughness
+    -   `VH` = volume of surface (e.g. vegetation has a complex volume and can change the polarization)
+-   Permativity (dielectric constant) - how reflective is the property which means reflective back to the sensor. Water usually reflects it off elsewhere
+-   The return value, also remember the band (wavelength)
+-   Wind makes the water move and reflect back to the sensor (under VV)
 
 ***Phase***
 
-- Location of wave on the cycle when it comes back to the sensor
+-   Location of wave on the cycle when it comes back to the sensor
 
 #### **SAR floods** {.unnumbered}
 
 ***Sensor: Sentinel-1 SAR***
 
-- `El Niño–Southern Oscillation (ENSO)` phases but this is from Australian La Niña 2022
-	- Trade winds from south america intensity
-	- Draw up cool deep waters and increase thermocline
-	- Temp difference increases, walker circulation intensifies - feedback loop
-	- More cloud + more rain + cyclones in West Pacific
+-   `El Niño–Southern Oscillation (ENSO)` phases but this is from Australian La Niña 2022
+    -   Trade winds from south america intensity
+    -   Draw up cool deep waters and increase thermocline
+    -   Temp difference increases, walker circulation intensifies - feedback loop
+    -   More cloud + more rain + cyclones in West Pacific
 
 #### **Interferometry Synthetic Aperture Radar (InSAR)** {.unnumbered}
 
-- Take `two RADAR` observations of the target (e.g. the ground)
-- Use the phase difference
-	- `Phase`: "total number of cycles of the wave at any given distance from the transmitter, including the fractional part"
-	- `Phase difference`: SUBTRACT the values (measured phase values) at two different measurement points
-	- Differential distance depends on the height of the terrain (topography)
-- Used for creating `DEMs`
-- Monitoring displacement of ground - earthquakes etc
+-   Take `two RADAR` observations of the target (e.g. the ground)
+-   Use the phase difference
+    -   `Phase`: "total number of cycles of the wave at any given distance from the transmitter, including the fractional part"
+    -   `Phase difference`: SUBTRACT the values (measured phase values) at two different measurement points
+    -   Differential distance depends on the height of the terrain (topography)
+-   Used for creating `DEMs`
+-   Monitoring displacement of ground - earthquakes etc
 
 ::: callout-tip
 #### Terms
-- `Coherence Map`: Coherence is defined as the degree of similarity of backscattering response (or reflection characteristic of as measured by the SAR sensor) between corresponding ground cells in both SAR image of an InSAR pair. Something is coherent when they are in phase (vibrate in unison)
-- `Differential Interferometry Synthetic Aperture Radar (DInSAR)`: "quantification of the ground displacement that occurred between the two acquisitions can be achieved" through a "differential interferogram"
+
+-   `Coherence Map`: Coherence is defined as the degree of similarity of backscattering response (or reflection characteristic of as measured by the SAR sensor) between corresponding ground cells in both SAR image of an InSAR pair. Something is coherent when they are in phase (vibrate in unison)
+-   `Differential Interferometry Synthetic Aperture Radar (DInSAR)`: "quantification of the ground displacement that occurred between the two acquisitions can be achieved" through a "differential interferogram"
 :::
+
 #### **SAR image** {.unnumbered}
 
 ![Urban objects detection from C-band synthetic aperture radar (SAR) satellite images through simulating filter properties. Source:[Deepak Kumar, 2021](https://www.nature.com/articles/s41598-021-85121-9)](img/SAR.png){width="100%"}
@@ -107,6 +113,7 @@ Damage detection, Urban area mapping, Urban flooding (lower backscatter coeffici
 
 ::: callout-tip
 #### Sourse {.unnumbered}
+
 ***High-Resolution Global Maps of 21st-Century Forest Cover Change*** , *Sourse: @hansen_high-resolution_2013*
 :::
 
@@ -116,11 +123,11 @@ Damage detection, Urban area mapping, Urban flooding (lower backscatter coeffici
 
 ***Landsat pre-processing steps***
 
-- Image resampling
-- Conversion of `raw digital values (DN)` to `top of atmosphere (TOA)` reflectance
-- Cloud/shadow/water screening and `quality assessment (QA)`
-- Image normalization
-  
+-   Image resampling
+-   Conversion of `raw digital values (DN)` to `top of atmosphere (TOA)` reflectance
+-   Cloud/shadow/water screening and `quality assessment (QA)`
+-   Image normalization
+
 The stack of QA layers was used to create a perpixel set of cloud-free image observations which in turn was employed to calculate timeseries spectral metrics
 
 #### **Creating metrics** {.unnumbered}
@@ -129,15 +136,16 @@ Metrics represent a generic feature space that facilitates regionalscale mapping
 
 ***How to create metrics***
 
-- `Reflectance values` representing maximum, minimum and selected percentile values 
-- Mean reflectance values for observations between selected percentiles 
-- Slope of linear regression of `band reflectance value` versus `image date`
-- The `time-sequential MODIS 32-dayinputs` were transformed to annual metrics to produce a more generalized feature space
+-   `Reflectance values` representing maximum, minimum and selected percentile values
+-   Mean reflectance values for observations between selected percentiles
+-   Slope of linear regression of `band reflectance value` versus `image date`
+-   The `time-sequential MODIS 32-dayinputs` were transformed to annual metrics to produce a more generalized feature space
 
 ::: callout-tip
 #### "a more generalized feature space"
-- `Feature space` = scattergram of two bands (or things that have been made into bands)
-- Can be used for very `basic classification` - selecting the values that represent land cover
+
+-   `Feature space` = scattergram of two bands (or things that have been made into bands)
+-   Can be used for very `basic classification` - selecting the values that represent land cover
 :::
 
 #### **Training data (in supervised machine learning)** {.unnumbered}
@@ -148,14 +156,14 @@ Training data to relate to the Landsat metrics were derived from `image interpre
 
 Decision trees are `hierarchical classifiers (top down)` that predict class membership by recursively partitioning (splitting) a data set into more homogeneous or less varying subsets, referred to as `nodes`
 
-- `A random forest classifier` is a collection of decision trees
-- Take something complex and force into many decisions = `if-else` conditions or also called divide and conquer
-- Often requires `hyperparameters` to train the model (or control the learning process)
-	- `DBSCAN` (radius of points, Epsilon or MinPts - to make a cluster)
-	- `Spatial weight matrix` (type and then weight)
-- Split the data into more and more homogeneous subsets (filtering!) this can be limited through
-	- `pre-pruning` - set a number of iterations before
-	- `post-pruning` - reduce groups afterwards based on accuracy. Tree fully grows but will be overfit. (In post-pruning first, it goes deeper and deeper in the tree to build a complete tree. If the tree shows the overfitting problem then pruning is done as a post-pruning step. We use a `cross-validation data` to check the effect of our pruning. *Using cross-validation data, it tests whether expanding a node will make an improvement or not.* If it shows an improvement, then we can continue by expanding that node. But if it shows a reduction in accuracy then it should not be expanded i.e, the node should be converted to a leaf node.)
+-   `A random forest classifier` is a collection of decision trees
+-   Take something complex and force into many decisions = `if-else` conditions or also called divide and conquer
+-   Often requires `hyperparameters` to train the model (or control the learning process)
+    -   `DBSCAN` (radius of points, Epsilon or MinPts - to make a cluster)
+    -   `Spatial weight matrix` (type and then weight)
+-   Split the data into more and more homogeneous subsets (filtering!) this can be limited through
+    -   `pre-pruning` - set a number of iterations before
+    -   `post-pruning` - reduce groups afterwards based on accuracy. Tree fully grows but will be overfit. (In post-pruning first, it goes deeper and deeper in the tree to build a complete tree. If the tree shows the overfitting problem then pruning is done as a post-pruning step. We use a `cross-validation data` to check the effect of our pruning. *Using cross-validation data, it tests whether expanding a node will make an improvement or not.* If it shows an improvement, then we can continue by expanding that node. But if it shows a reduction in accuracy then it should not be expanded i.e, the node should be converted to a leaf node.)
 
 ![REMAP method. Source:[UN-SPIDER](https://www.un-spider.org/news-and-events/news/new-online-remote-sensing-application-land-cover-classification-and-monitoring)](img/training_data.png){width="100%"}
 
@@ -165,7 +173,7 @@ Decision trees are `hierarchical classifiers (top down)` that predict class memb
 
 ### **1.5 Global policy documents**
 
-#### **New Urban Agenda**
+#### **New Urban Agenda** {.unnumbered}
 
 ***Standards and principles for planning, construction, development, management and urban improvement (Environmentally sustainable and resilient urban development subsection)***
 
@@ -175,78 +183,147 @@ Decision trees are `hierarchical classifiers (top down)` that predict class memb
 
 `point 67`: We commit ourselves to promoting the creation and maintenance of well-connected and well distributed networks of open, multipurpose, safe, inclusive, accessible, green and quality public spaces, to improving the resilience of cities to disasters and climate change, including floods, drought risks and heat waves to improving food security and nutrition, physical and mental health, and household and ambient air quality, to reducing noise and promoting attractive and liveable cities, human settlements and urban landscapes and to prioritizing the conservation of endemic species
 
-#### **Sustainable Development Goals (SDG): targets with measurable indicators for monitoring**
+#### **Sustainable Development Goals (SDG): targets with measurable indicators for monitoring** {.unnumbered}
 
 ***Goal 11: Make cities and human settlements inclusive, safe, resilient and sustainable***
 
 `Target 11.5`: By 2030, significantly reduce the number of deaths and the number of people affected and substantially decrease the direct economic losses relative to global gross domestic product caused by disasters, including water-related disasters, with a focus on protecting the poor and people in vulnerable situations
 
-- Monitoring 11.5
-	- 11.5.1 Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population
-	- 11.5.2 Direct economic loss attributed to disasters in relation to global gross domestic product (GDP)
-	- 11.5.3 (a) Damage to critical infrastructure and (b) number of disruptions to basic services, attributed to disasters
-- Data 11.5
-	- 11.5.1 (and .2) Data provider at national level is appointed Sendai Framework Focal Points. In most countries disaster data are collected by line ministries and national disaster loss databases are established and managed by special purpose agencies including national disaster management agencies, civil protection agencies, and meteorological agencies. The Sendai Framework Focal Points in each country are responsible of data reporting through the Sendai Framework Monitoring System.
-	- 11.5.3 National disaster loss database, reported to UNISDR...Not every country has a comparable national disaster loss database that is consistent with these guidelines (although current coverage exceeds 89 countries). Therefore, by 2020, it is expected that all countries will build/adjust national disaster loss databases according to the recommendations and guidelines by the OEIWG
+-   Monitoring 11.5
+    -   11.5.1 Number of deaths, missing persons and directly affected persons attributed to disasters per 100,000 population
+    -   11.5.2 Direct economic loss attributed to disasters in relation to global gross domestic product (GDP)
+    -   11.5.3 (a) Damage to critical infrastructure and (b) number of disruptions to basic services, attributed to disasters
+-   Data 11.5
+    -   11.5.1 (and .2) Data provider at national level is appointed Sendai Framework Focal Points. In most countries disaster data are collected by line ministries and national disaster loss databases are established and managed by special purpose agencies including national disaster management agencies, civil protection agencies, and meteorological agencies. The Sendai Framework Focal Points in each country are responsible of data reporting through the Sendai Framework Monitoring System.
+    -   11.5.3 National disaster loss database, reported to UNISDR...Not every country has a comparable national disaster loss database that is consistent with these guidelines (although current coverage exceeds 89 countries). Therefore, by 2020, it is expected that all countries will build/adjust national disaster loss databases according to the recommendations and guidelines by the OEIWG
 
 `Target 11.6`: By 2030, reduce the adverse per capita environmental impact of cities, including by paying special attention to air quality and municipal and other waste management
 
-- Indicator 11.6.2: Annual mean levels of fine particulate matter (e.g. PM2.5 and PM10) in cities (population weighted)
+-   Indicator 11.6.2: Annual mean levels of fine particulate matter (e.g. PM2.5 and PM10) in cities (population weighted)
 
 `Target 11.7`: By 2030, provide universal access to safe, inclusive and accessible, green and public spaces, in particular for women and children, older persons and persons with disabilities
 
-- Indicator 11.7.1: Average share of the built-up area of cities that is open space for public use for all, by sex, age and persons with disabilities
+-   Indicator 11.7.1: Average share of the built-up area of cities that is open space for public use for all, by sex, age and persons with disabilities
 
 ### **1.6 Metropolitan policy documents**
 
-#### **London**
+#### **London** {.unnumbered}
 
-- Increasing efficiency and resilience: These environmental threats are real and present, and London must be prepared for them. London’s homes and infrastructure must be protected against the increasing likelihood of heatwaves, and developments must plan for a more integrated approach to water management, while minimising flood risk
-- Policy SI 12 Flood risk management: Development Plans should use the Mayor’s Regional Flood Risk Appraisal and their Strategic Flood Risk Assessment as well as Local Flood Risk Management Strategies, where necessary, to identify areas where particular and cumulative flood risk issues exist and develop actions and policy approaches aimed at reducing these risks
+-   Increasing efficiency and resilience: These environmental threats are real and present, and London must be prepared for them. London's homes and infrastructure must be protected against the increasing likelihood of heatwaves, and developments must plan for a more integrated approach to water management, while minimising flood risk
+-   Policy SI 12 Flood risk management: Development Plans should use the Mayor's Regional Flood Risk Appraisal and their Strategic Flood Risk Assessment as well as Local Flood Risk Management Strategies, where necessary, to identify areas where particular and cumulative flood risk issues exist and develop actions and policy approaches aimed at reducing these risks
 
-#### **OneNYC 2050**
+#### **OneNYC 2050** {.unnumbered}
 
-- References the sustainable development goals
-- Has a hazards matrix
+-   References the sustainable development goals
+-   Has a hazards matrix
 
-#### **Cape Town: Cape Town Municipal Spatial Development Framework**
+#### **Cape Town: Cape Town Municipal Spatial Development Framework** {.unnumbered}
 
-- 2015-2018 "worst recorded drought in the city’s history, is a stark reminder that all cities will need to become more robust, resilient and efficient"
-- "The Cape Town Spatial Development Framework (CTSDF) was approved in May 2012 and established a long-term spatial vision and policy framework for the City after extensive technical drafting and public participation."
-- "Careful management of development to avoid developing in high flood risk areas"
+-   2015-2018 "worst recorded drought in the city's history, is a stark reminder that all cities will need to become more robust, resilient and efficient"
+-   "The Cape Town Spatial Development Framework (CTSDF) was approved in May 2012 and established a long-term spatial vision and policy framework for the City after extensive technical drafting and public participation."
+-   "Careful management of development to avoid developing in high flood risk areas"
 
-#### **Ahmedabad: 2016 Heat Action Plan**
+#### **Ahmedabad: 2016 Heat Action Plan** {.unnumbered}
 
-- Awareness and outreach
-- Early warning system
-- Capacity of health care professionals
-- Reduce heat exposure and promote adaptive mesaures ...and mapping high risk areas, although mapping was removed later in the document (page 11)
+-   Awareness and outreach
+-   Early warning system
+-   Capacity of health care professionals
+-   Reduce heat exposure and promote adaptive mesaures ...and mapping high risk areas, although mapping was removed later in the document (page 11)
 
 ### **1.7 Local policy documents**
 
 In most of the previous examples the documents were created by the `metropolitan government`, they set the strategic plan for the city and may have other responsibilities such as fire, policing, transport and development guidelines. `Lower tier government` then carries out or adheres to these goals, but there are variations to this rule
 
-#### **City of Cape Town**
+#### **City of Cape Town** {.unnumbered}
 
-- The City of Cape Town is a metropolitan municipality or Category A municipality, there is no local municipality below it
-- However, above the City of Cape Town is the Provincial government that is responsible for topics such as: agriculture, education, health and public housing. As such the City sets it's own development plan and then implements it (whilst adhering to relevant Provincial topics)
+-   The City of Cape Town is a metropolitan municipality or Category A municipality, there is no local municipality below it
+-   However, above the City of Cape Town is the Provincial government that is responsible for topics such as: agriculture, education, health and public housing. As such the City sets it's own development plan and then implements it (whilst adhering to relevant Provincial topics)
 
-#### **New York**
+#### **New York** {.unnumbered}
 
-- City of New York is responsible for public education, correctional institutions, public safety, recreational facilities, sanitation, water supply, and welfare services
-- 5 Boroughs under it act as spokespeople
-- City Council has 51 members from districts of about 157,000
-- New York City is responsible for setting and enacting the policy. State government is above it
+-   City of New York is responsible for public education, correctional institutions, public safety, recreational facilities, sanitation, water supply, and welfare services
+-   5 Boroughs under it act as spokespeople
+-   City Council has 51 members from districts of about 157,000
+-   New York City is responsible for setting and enacting the policy. State government is above it
 
 ## **2 Summary: practical**
 
-> The summary of the policy and city I have selected.***
+> The summary of the policy and city I have selected.
+
+:::callout-tip
+#### background
+Istanbul, the largest city in Turkey and connecting Europe and Asia, is scaling up its urban regeneration by joining the European Bank for Reconstruction and Development’s flagship EBRD Green Cities urban sustainability programme. Source: [EBRD](https://www.ebrd.com/news/2021/istanbul-joins-ebrd-green-cities-urban-sustainability-programme.html)
+:::
+
+### **2.2 City**
+
+***Istanbul***
+
+[Istanbul](http://en.istanbul.gov.tr/), formerly known as Constantinople, is the largest city in Turkey, serving as the country's economic, cultural and historic hub. The city straddles the Bosporus strait, lying in both Europe and Asia, and has a population of over 15 million residents, comprising 19% of the population of Turkey. Istanbul is the most populous European city, and the world's 15th-largest city.
+
+![İstanbul view](img/istanbul.jpg){width="100%"}
+
+![İstanbul at a glance. Source: [Governership of Istanbul](http://en.istanbul.gov.tr/istanbul-at-a-glance)](img/ingilizce.png){width="100%"}
+
+***Environment challage***
+
+Istanbul are faces many environmental problems.
+
+- **Urban expansion and land use change**: Istanbul has experienced rapid urbanisation in recent years, resulting in the expansion of the city and the replacement of green spaces and ecologically sensitive areas with built-up land. This land use change has had a negative impact on the urban ecosystem, such as a decline in biodiversity and destruction of natural habitats.
+- **Air pollution**: Istanbul has a growing air quality problem, mainly caused by traffic emissions, industrial emissions and fossil fuel combustion.
+- **Water management**: Water management issues in Istanbul include water scarcity, water quality pollution and deterioration of the water environment. With the growth of the city's population and industrial development, the conflict between water supply and demand has increased and the pressure on the water environment to carry water has increased.
+- **Urban heat island effect**: With the accelerated urbanisation, the density of buildings and roads in Istanbul is increasing, leading to a more pronounced urban heat island effect.
+
+**Therefore, the implementation of a green city plan is urgent.**
+
+### **2.1 Policy**
+
+***EBRD Green Cities***
+
+To address environmental challenges, the EBRD developed [EBRD Green Cities](https://www.ebrdgreencities.com/), with the aim of building a better and more sustainable future for cities and their residents. The programme has three central components:
+
+- Green City Action Plans (GCAPs): Assessing and prioritising environmental challenges, and developing an action plan to tackle these challenges through policy interventions and sustainable infrastructure investments.
+- Sustainable infrastructure investment: Facilitating and stimulating public or private green investments in: water and wastewater, urban transport, district energy, energy efficiency in buildings, solid waste and other interventions that improve the city’s adaptation and resilience to climate shocks.
+- Capacity-building: Providing technical support to city administrators and local stakeholders to ensure that infrastructure investments and policy measures identified in GCAPs can be developed, implemented and monitored effectively.
+
+EBRD Green city aims to:
+
+- Preserve the quality of environmental assets (air, water, land and biodiversity) and use these resources sustainably.
+- Mitigate and adapt to the risks of climate change.
+- Ensure that environmental policies and developments contribute to the social and economic well-being of residents.
+
+The path to becoming a Green City is continuous, allowing cities to adjust their strategic goals and visions over time. The process has three key stages:
+
+- Developing a Green City Action Plan (GCAP)
+  - Identifying and prioritising challenges
+  - Planning actions
+- Implementing the GCAP
+- Monitoring THE GCAP
+
+```{r, echo = FALSE, out.width='100%'}
+xaringanExtra::embed_xaringan(
+  url = "https://ebrdgreencities.com/assets/GCAP-Videos/GCAP-method-video-140122-English.mp4",
+  ratio = "16:9")
+```
+
 
 ## **3 Application**
 
 > How the remotely sensed data you sourced could be used to assist with contributing to the policy goal. How could the data be applied to solve the policy challenge.
 
+According to EBRD Green city，The first step in developing a GCAP involves assessing the city’s environmental performance using 35 core indicators that cover a wide range of urban issues. The indicators evaluate the state of the city’s environmental assets, its overall resource efficiency and climate change risks. **Therefore, the remote sensing data could be applied to evaluate and monitor the city’s environmental performance.**
+
+*Due to the large number of indicators, we are unable to discuss them all here, so we are analysing the environmental issues that stand out in Istanbul.*
+
+- **Urban expansion and land use change**: By classifying and detecting land cover changes from remote sensing imagery over multiple time periods, the rate of urban expansion, land use changes and ecological impacts in Istanbul can be assessed. Land use type classification using `Landsat` or `Sentinel-2` satellite data combined with classification algorithms (e.g. support vector machines, random forests, etc.).
+- **Air pollution**: Use remote sensing data to monitor concentrations of atmospheric pollutants (e.g. nitrogen oxides, particulate matter, etc.) and to assess the air quality status of Istanbul. Air pollutant concentrations are monitored using satellite data such as `MODIS` and `Sentinel-5P`, combined with air pollutant inversion methods.
+- **Water management**: The extraction of hydrological parameters from remote sensing data, such as the area of water bodies, suspended sediment concentrations and chlorophyll a concentrations, allows the assessment of water resource status and water pollution in Istanbul. In addition, `synthetic Aperture Radar (SAR)` data can be used to detect water environment problems such as oil pollution on water surfaces.
+- **Urban heat island effect**: Remote sensing data is used to calculate surface temperatures and to analyse the distribution and influencing factors of the urban heat island effect. `Landsat` and `MODIS` data are used in conjunction with surface temperature inversion methods to assess the urban heat island effect in Istanbul.
+
+![land surface temperature (LST) distribution (a) and map of the Surface Urban Heat Island (SUHI) effect (b) on 25th July 2017 in Istanbul. LST anomalies above the average (34.73 °C) indicate the SUHI effect at various levels. Source: @erdem_okumus_evaluating_2021](img/1-s2.0-S2210670721004108-gr4.jpg){width="100%"}
+
 ## **4 Reflection**
 
 > What I have learnt in relation to the policy, city and the application of the data.
 
+Through this week's study, I learnt about the scenarios and application methods of remote sensing images, as well as many different levels of policies related to remote sensing. In the process of learning, I gradually found out the role that remote sensing imagery can play in urban policy: `assessment` and `monitoring`. Remote sensing images can provide a wealth of information to assist in decision making, but on the other hand they also need to be responsive to policy in order to create value. As the EBRD Green city also provides over [50 policy tools](https://www.ebrdgreencities.com/policy-tool/) to help promote and implement policy. It is only when the application of remote sensing data is closely aligned with urban policy that the information can be used to maximum effect.

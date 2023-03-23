@@ -151,7 +151,7 @@ knitr::include_graphics('img/hyperion_21_45_200.jpg')
 
 ---
 
-### Reflection
+### Reflection: Advantages & Disdvantages
 
 .pull-left[
 #### Advantages
@@ -168,6 +168,20 @@ knitr::include_graphics('img/hyperion_21_45_200.jpg')
 
 - One of the hurdles researchers have had to face is finding ways to program hyperspectral satellites to sort through data on their own and transmit only the most important images, as ***both transmission and storage of that much data could prove difficult and costly***.
 ]
+
+---
+
+### Reflection: Why it is useful for me
+
+For the field of urban planning, the hyperspectral data of the urban environment collected by the Hyperspectral Radiometer can support a large number of analyses:
+
+- ***Vegetation cover analysis***: Hyperspectral Radiometer can measure vegetation spectral data in different wavelength ranges to analyse the vegetation cover in different areas of the city. This can help to better understand the ecology of the city and take steps to increase the green space in the city.
+
+- ***Air quality analysis***: The Hyperspectral Radiometer measures radiation in the atmosphere at different wavelength ranges, which is useful for analysing airborne pollutants, particulate matter and greenhouse gases, for example. This data can help to better understand the air quality situation in a city and take steps to improve it.
+
+- ***Thermal environment analysis***: The Hyperspectral Radiometer can measure surface temperatures in different wavelength ranges, which can help to better understand the thermal environment of a city and take measures to improve it.
+
+These analyses can provide a great support for the monitoring and research of the urban environment to improve the livability of cities.
 
 ---
 

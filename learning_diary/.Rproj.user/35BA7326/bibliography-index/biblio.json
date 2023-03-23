@@ -140,6 +140,98 @@
             "title": "PCA‐based land‐use change detection and analysis using multitemporal and multisensor satellite data",
             "type": "article-journal",
             "volume": "29"
+        },
+        {
+            "DOI": "10.1126/science.1244693",
+            "URL": "https://www.science.org/doi/10.1126/science.1244693",
+            "abstract": "Quantification of global forest change has been lacking despite the recognized importance of forest ecosystem services. In this study, Earth observation satellite data were used to map global forest loss (2.3 million square kilometers) and gain (0.8 million square kilometers) from 2000 to 2012 at a spatial resolution of 30 meters. The tropics were the only climate domain to exhibit a trend, with forest loss increasing by 2101 square kilometers per year. Brazil’s well-documented reduction in deforestation was offset by increasing forest loss in Indonesia, Malaysia, Paraguay, Bolivia, Zambia, Angola, and elsewhere. Intensive forestry practiced within subtropical forests resulted in the highest rates of forest change globally. Boreal forest loss due largely to fire and forestry was second to that in the tropics in absolute and proportional terms. These results depict a globally consistent and locally relevant record of forest change.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        3,
+                        22
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Hansen",
+                    "given": "M. C."
+                },
+                {
+                    "family": "Potapov",
+                    "given": "P. V."
+                },
+                {
+                    "family": "Moore",
+                    "given": "R."
+                },
+                {
+                    "family": "Hancher",
+                    "given": "M."
+                },
+                {
+                    "family": "Turubanova",
+                    "given": "S. A."
+                },
+                {
+                    "family": "Tyukavina",
+                    "given": "A."
+                },
+                {
+                    "family": "Thau",
+                    "given": "D."
+                },
+                {
+                    "family": "Stehman",
+                    "given": "S. V."
+                },
+                {
+                    "family": "Goetz",
+                    "given": "S. J."
+                },
+                {
+                    "family": "Loveland",
+                    "given": "T. R."
+                },
+                {
+                    "family": "Kommareddy",
+                    "given": "A."
+                },
+                {
+                    "family": "Egorov",
+                    "given": "A."
+                },
+                {
+                    "family": "Chini",
+                    "given": "L."
+                },
+                {
+                    "family": "Justice",
+                    "given": "C. O."
+                },
+                {
+                    "family": "Townshend",
+                    "given": "J. R. G."
+                }
+            ],
+            "container-title": "Science",
+            "id": "hansen_high-resolution_2013",
+            "issue": "6160",
+            "issued": {
+                "date-parts": [
+                    [
+                        2013,
+                        11
+                    ]
+                ]
+            },
+            "note": "Publisher: American Association for the Advancement of Science",
+            "page": "850-853",
+            "title": "High-Resolution Global Maps of 21st-Century Forest Cover Change",
+            "type": "article-journal",
+            "volume": "342"
         }
     ],
     "project_biblios": [

@@ -5,7 +5,7 @@ project:
 book:
   title: "Learning Diary"
   author: "Xianlai Yin"
-  date: "3/19/2023"
+  date: "3/24/2023"
   repo-url: https://github.com/XianlaiYin/XianlaiYin.github.io
   repo-actions: [issue]
   chapters:

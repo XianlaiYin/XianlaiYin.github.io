@@ -4,7 +4,7 @@
 
 > This is a learning diary of CASA0023 WEEK 1, the lecture presentation is [here](https://andrewmaclachlan.github.io/CASA0023-lecture-1/#1), and the practical material is [here](https://andrewmaclachlan.github.io/CASA0023/intro.html).
 
-## **1 Summary**
+## **1 Summary: lecture**
 
 ![Mindmap of Week 1 Leacture](img/WEEK1_Mindmap.svg){width="100%"}
 
@@ -123,7 +123,9 @@ Applicable to Radar: Electromagnetic waves are polarized and the direction depen
 -   `geosynchronous orbit (GSO)` = satellite matches the Earth's rotation
 -   `geostationary orbit` = holds same position, usually only for communications but some sensors are geostationary.
 
-## **2 Application**
+## **2 Summary: practical**
+
+## **3 Application**
 
 > This week's lecture is mainly about the basic knowledge of remote sensing and Electromagnetic radiation (EMR), so I would like to introduce some of the remote sensing applications based on spectral characteristics.
 
@@ -163,6 +165,6 @@ In this study, a hyperspectral library for urban tree species in Hong Kong was e
 
 ![The overall workflow of species classification framework using the Deep Neural Network modelling.](img/2.png){width="100%"}
 
-## **3 Reflection**
+## **4 Reflection**
 
 During this week I have learnt about the basics of remote sensing and Electromagnetic radiation (EMR), which has greatly broadened my horizons when researching urban. Due to limited data collection facilities, detailed urban datasets (e.g. traffic flow data, mobile phone signalling data, etc.) are only available for main cities in developed areas, which makes many studies not reproducible in a wide range of non-developed or small cities. However, the extensive coverage of remote sensing data compensates well for this shortcoming, and the variety of data collected through the rich diversity of sensors can be of great help in urban (or regional) analysis.

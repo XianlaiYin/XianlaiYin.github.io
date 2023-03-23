@@ -1,9 +1,25 @@
-> This is a learning diary of CASA0023 from Xianlai Yin, the repository of this page is [here](https://github.com/XianlaiYin/XianlaiYin.github.io/tree/main/learning_diary).
+> This is a learning diary of CASA0023 from Xianlai Yin, the repository of this website is [here](https://github.com/XianlaiYin/XianlaiYin.github.io/tree/main/learning_diary).
+
+### **Introduction** {.unnumbered}
+
+***About this website***
+
+This website will include a summary of the content of CASA0023 Remotely Sensing Cities and Environments and my thoughts and ideas based on the content of the course.
+
+Many thanks to the lecturer [Dr Andrew MacLachlan](https://www.ucl.ac.uk/bartlett/casa/people/dr-andrew-maclachlan) and all [CASA teachers](https://www.ucl.ac.uk/bartlett/casa/people) for their contributions to this course.
+
+***About me***
+
+Hi, I am Xianlai Yin from Jiangxi, China. I am currently studying in [MSc Urban Spatial Science](https://www.ucl.ac.uk/prospective-students/graduate/taught-degrees/urban-spatial-science-msc) at [the Bartlett Centre for Advanced Spatial Analysis, UCL](https://www.ucl.ac.uk/bartlett/casa/). My undergraduate degree is in Urban and Rural Planning at [Chang'an University](https://en.chd.edu.cn/).
+
+`My research experience` is mainly related to urban planning, including the study of the spatial structure of urban agglomerations based on social network analysis methods, and the study of the resilience of urban transport networks. `My work experience` is mainly in the field of urban construction, including working as an intern planner at the institute of urban planning and design and as an intern in the smart city department of a real estate company.
+
+I am very interested in the application of spatial data analysis in the field of urban planning, and remote sensing can provide a wide and diverse source of data. Therefore, I took CASA0023 in the hope of studying the application of remote sensing technology in the field of urban analysis. Meanwhile, **during the creation of this learning dairy, thinking will mainly from the perspective of urban planning.**
 
 ### **Content** {.unnumbered}
 
 | WEEK   | THEME                                                                                                        |
-|:-------|--------------------------------------------------------------------------------------------------------------|
+|:---------------|--------------------------------------------------------|
 | WEEK 1 | [An Introduction to Remote Sensing](https://xianlaiyin.github.io/learning_diary/docs/WEEK1.html)             |
 | WEEK 2 | [Portfolio tools: Xaringan and Quarto](https://xianlaiyin.github.io/learning_diary/docs/WEEK2.html)          |
 | WEEK 3 | [Remote sensing data](https://xianlaiyin.github.io/learning_diary/docs/WEEK3.html)                           |

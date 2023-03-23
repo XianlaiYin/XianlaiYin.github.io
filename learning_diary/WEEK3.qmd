@@ -253,7 +253,7 @@ For this week's practical I chose to follow the guidance using Landsat data from
 
 > This week, the main focus was on the correction, joining and enhancement of remote sensing images, mostly applied to pre-processing before analysis, but remote sensing image enhancement has a wider range of applications.
 
-### **2.1 Applications of remote sensing image enhancement**
+### **3.1 Applications of remote sensing image enhancement**
 
 Remote sensing image enhancement refers to the improvement of the quality and information of remote sensing images through some technical means to make them more suitable for human vision or subsequent analytical processing. Remote sensing image enhancement can be applied to the following areas:
 
@@ -269,7 +269,7 @@ Remote sensing image enhancement refers to the improvement of the quality and in
 
 `Fusion`: Increasing the spatial or spectral resolution of an image and increasing the amount of information in the image by combining remote sensing images from different sources or at different resolutions. Fusion can be done using methods such as HIS transform, wavelet transform, multi-resolution analysis, etc.
 
-### **2.2 Application case**
+### **3.2 Application case**
 
 ::: callout-tip
 #### Sourse {.unnumbered}
@@ -291,14 +291,14 @@ Although errors and confusion exist, this method shows satisfying results with a
 
 ***Advantages or contribution***
 
-- Flexible classification strategies: The hybrid classification approach allows the authors to combine the accuracy of supervised classification methods while taking advantage of the automation of unsupervised classification methods. This flexibility allows the method to be better adapted to different types of land use change scenarios.
-- PCA-based feature extraction: By combining multi-temporal and multi-sensor data into a single Principal Component Analysis (PCA) model, the authors are able to extract more meaningful features that help distinguish between changing and non-changing areas. This approach has advantages in dealing with high-dimensional data and reducing data redundancy.
-- Correction and radiation normalisation: This paper corrected and radiation normalised the data prior to analysis, which helped to reduce errors due to sensor differences, variations in atmospheric conditions and land cover type, thus improving the accuracy and reliability of the results.
+-   Flexible classification strategies: The hybrid classification approach allows the authors to combine the accuracy of supervised classification methods while taking advantage of the automation of unsupervised classification methods. This flexibility allows the method to be better adapted to different types of land use change scenarios.
+-   PCA-based feature extraction: By combining multi-temporal and multi-sensor data into a single Principal Component Analysis (PCA) model, the authors are able to extract more meaningful features that help distinguish between changing and non-changing areas. This approach has advantages in dealing with high-dimensional data and reducing data redundancy.
+-   Correction and radiation normalisation: This paper corrected and radiation normalised the data prior to analysis, which helped to reduce errors due to sensor differences, variations in atmospheric conditions and land cover type, thus improving the accuracy and reliability of the results.
 
 ***Disadvantages or potential***
 
-- Limitations of Principal Component Analysis (PCA): While PCA is able to extract and enhance variation information from multi-sensor data, it may not be able to completely eliminate noise and other non-target factors. In addition, PCA may have limitations in handling non-linear data, which may lead to inaccurate detection results.
-- Limitations of sensor data: SPOT-5 and Landsat data were used in this paper. While these data sources are of value in land cover change detection, they may not capture the detailed information that finer spatial resolution and higher spectral resolution can provide. In addition, these data sources may be affected by issues such as cloud occlusion, atmospheric interference and timing inconsistencies.
+-   Limitations of Principal Component Analysis (PCA): While PCA is able to extract and enhance variation information from multi-sensor data, it may not be able to completely eliminate noise and other non-target factors. In addition, PCA may have limitations in handling non-linear data, which may lead to inaccurate detection results.
+-   Limitations of sensor data: SPOT-5 and Landsat data were used in this paper. While these data sources are of value in land cover change detection, they may not capture the detailed information that finer spatial resolution and higher spectral resolution can provide. In addition, these data sources may be affected by issues such as cloud occlusion, atmospheric interference and timing inconsistencies.
 
 ## **4 Reflection**
 

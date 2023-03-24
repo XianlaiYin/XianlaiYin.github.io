@@ -276,11 +276,72 @@ Simply a linear binary classifier - like `logistic regression`
 
 > This week's practical will consist mainly of the following:
 >
-> -   Acquire remote sensing image data using GEE and perform basic operations such as clipping and mosaicing of data
-> -   Remote sensing image pre-processing and band mathing using GEE
-> -   Exporting GEE analysis results
-> -   GEE-related applications and data
+> -   EO data acquisition and cloud removal using GEE
+> -   Training a CART classifier for land use supervised classification using GEE
+> -   Accuracy check of land use classification using GEE by dividing training and test sets through random forest method
 
-In this week's practical, I learnt the basic operations of remote sensing data processing using GEE. I followed the instructions to process and analyse the Landsat remote sensing image data from New Delhi, including texture measures, PCA, band math, etc. However, I was pleasantly surprised to learn about a lot of applications developed using GEE, which were very interesting and greatly broadened my view of remote sensing image applications and made me look forwards to developing applications using GEE.
+During this week, I used GEE to classify land use in Nanchang, China (my hometown), referring to practical's guidance. The first step was to obtain Sentinel data and remove the effect of clouds by taking the median, after which the CART classifier was trained by supervised classification, after which the training and test sets were divided by the random forest method, and the land use of Nanchang was classified and checked for accuracy.
 
-![Practical output: PCA analysis of Landsat 8 images in New Delhi.](img/WEEK6practical.png){width="100%"}
+![Practical output: Nanchang land use classification through supervised classification.](img/WEEK6practical.png){width="100%"}
+
+## **3 Application**
+
+> This week I have learnt about machine learning, classification and regression trees (CART) and image classification.
+I hope to delve into the application of image classification in the field of remote sensing.
+
+### **3.1 Applications of image classification in remote sensing**
+
+The applications of image classification in the field of remote sensing are mainly in the following areas:
+
+`Land cover and land use classification`: Image classification techniques can assign pixels in remote sensing images to different land cover and land use categories, such as forests, grasslands, farmlands, cities, wetlands and so on. This helps to understand the distribution, use and change of land resources and provides important information for urban planning, environmental protection and resource management.
+
+`Vegetation and forest monitoring`: Image classification methods can identify vegetation types such as trees, shrubs, grasslands, etc. in remotely sensed images. This helps to assess forest cover, biodiversity and ecosystem health. Also, image classification can be used to monitor disaster events such as forest fires, pests and diseases, providing a basis for forest protection and management.
+
+`Agricultural monitoring`: Image classification allows the identification of crop growing areas in remotely sensed images to estimate crop acreage, growth and yield. This contributes to early warning for food security, agricultural policy development and fine-grained agricultural management.
+
+There are also specific application scenarios and examples in the field of urban planning:
+
+`Construction land extraction`: Image classification techniques can extract various types of construction land from remote sensing images, such as residential, commercial and industrial areas. This helps to assess the current situation and development trend of urban land, and provides a basis for urban land use planning and urban expansion.
+
+`Traffic facilities extraction`: Image classification can extract information on traffic facilities such as roads, bridges and railways from remote sensing images. This helps to understand the layout and development status of urban transport networks and provides a basis for transport planning and construction.
+
+`Greenery coverage extraction`: Image classification technology can extract greenery coverage information such as green areas, parks and woodlands from remote sensing images. This helps to assess the state of urban greenery and ecological environment quality, and provides a basis for urban greenery planning and ecological protection.
+
+`Urban expansion and change monitoring`: By classifying multi-temporal remote sensing images, urban expansion and change can be identified, providing a basis for urban development trend analysis and planning adjustment.
+
+### **3.2 Application case**
+
+::: callout-tip
+#### Sourse {.unnumbered}
+
+***Assessing contextual descriptive features for plot-based classification of urban areas*** , *Sourse: @hermosilla_assessing_2012*
+:::
+
+A methodology for mapping urban land-use types integrating information from `multiple data sources` (high spatial resolution imagery, LiDAR data, and cadastral plots) is presented. A large set of complementary descriptive features that allow distinguishing different urban structures (historical, urban, residential, and industrial) is extracted and, after a selection process, a plot-based image classification approach applied, facilitating to directly relate the classification results and the urban descriptive parameters computed to the existent land-use/land-cover units in geospatial databases. 
+
+![Examples of the urban classes defined in colour-infrared composition: (a) historical; (b) urban; (c) open urban; (d) detached housing; (e) semi-detached/terraced housing; and (f) industrial. (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of this article.)](img/1-s2.0-S016920461200059X-gr2.jpg)
+
+The descriptive features are extracted by considering different hierarchical scale levels with semantic meaning in urban environments: buildings, plots, and urban blocks. Plots are characterised by means of `image-based (spectral and textural)`, `three-dimensional`, and `geometrical features`. In addition, two groups of contextual features are defined: internal and external. Internal contextual features describe the main land cover types inside the plot (buildings and vegetation). External contextual features describe each object in terms of the properties of the urban block to which it belongs. After the evaluation in an heterogeneous Mediterranean urban area, the land-use classification accuracy values obtained show that the complementary descriptive features proposed improve the characterisation of urban typologies. **A progressive introduction of the different groups of descriptive features in the classification tests show how the subsequent addition of internal and external contextual features have a positive effect by increasing the final accuracy of the urban classes considered in this study.**
+
+![Three details of colour infrared images (left) and a land-use thematic map (right) derived from the classification using the most efficient set of features.](img/1-s2.0-S016920461200059X-gr11.jpg)
+
+### **3.3 Case comments**
+
+***Advantages or contribution***
+
+-   **Multi-source data fusion**: The study proposes a method for integrating multi-source data (high-resolution remote sensing images, LiDAR data and cadastral maps) for mapping urban land use types, enabling the differentiation of different urban structures (historical, urban, residential and industrial).
+-   **Integrated feature extraction**: The thesis extracts a set of complementary descriptive features, including basic image features (spectral and texture), 3D features and geometric features, as well as internal and external contextual features. These features describe the main land cover types (buildings and vegetation) within the parcel, and the attributes of the urban neighbourhood to which the parcel belongs, respectively.
+-   **Hierarchical structural treatment**: The thesis extracts descriptive features by considering different hierarchical structural scales (buildings, plots and urban blocks) that have semantic significance in the urban environment.
+-   **Accuracy of results**: The thesis verifies that the proposed descriptive features improve the accuracy of the classification of urban land use types through an empirical study in a Mediterranean urban area. The results of classification experiments where different groups of descriptive features are introduced step by step show that the addition of internal and external contextual features is effective in improving the accuracy of the final classification.
+
+***Disadvantages or potential***
+
+-   **Data accessibility**: The multi-source data used in the thesis, including high-resolution remote sensing imagery, LiDAR data and cadastral maps, may be difficult to access or require expensive purchase costs in some areas. This limits the application of the method in areas where resources are limited or data is difficult to obtain.
+-   **Feature selection sensitivity**: The feature selection methods used in the thesis may have an impact on the accuracy of the final classification results. Different feature selection methods may lead to different classification results.
+-   **Scene adaptation**: The methods in the thesis may require parameter adaptation and optimisation for different urban scenarios and land use types. This may increase the complexity and difficulty of the methods in practical application.
+
+## **4 Reflection**
+
+The learning this week has been very informative and exciting, with image classification based on machine learning offering huge potential for remote sensing image analysis, and applications in the urban domain to do work that would be difficult to do by hand alone. But for me personally, there is an overwhelming amount of knowledge coming in and it will take a while to understand the principles of the knowledge.
+
+But is this perhaps also a `black box`? For me, with a focus on urban analysis, I should know more about how to apply these tools appropriately to urban scenarios, rather than knowing every step of the way (of course it's better to understand them), and understanding the inputs and outputs of these tools properly might as well be able to meet most of my needs.

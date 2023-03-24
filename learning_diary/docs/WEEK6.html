@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -166,6 +185,13 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#image-classification" id="toc-image-classification" class="nav-link" data-scroll-target="#image-classification"><strong>1.4 Image classification</strong></a></li>
   </ul></li>
   <li><a href="#summary-practical" id="toc-summary-practical" class="nav-link" data-scroll-target="#summary-practical"><strong>2 Summary: practical</strong></a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><strong>3 Application</strong></a>
+  <ul class="collapse">
+  <li><a href="#applications-of-image-classification-in-remote-sensing" id="toc-applications-of-image-classification-in-remote-sensing" class="nav-link" data-scroll-target="#applications-of-image-classification-in-remote-sensing"><strong>3.1 Applications of image classification in remote sensing</strong></a></li>
+  <li><a href="#application-case" id="toc-application-case" class="nav-link" data-scroll-target="#application-case"><strong>3.2 Application case</strong></a></li>
+  <li><a href="#case-comments" id="toc-case-comments" class="nav-link" data-scroll-target="#case-comments"><strong>3.3 Case comments</strong></a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><strong>4 Reflection</strong></a></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/XianlaiYin/XianlaiYin.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -560,21 +586,94 @@ Terms
 <blockquote class="blockquote">
 <p>This week’s practical will consist mainly of the following:</p>
 <ul>
-<li>Acquire remote sensing image data using GEE and perform basic operations such as clipping and mosaicing of data</li>
-<li>Remote sensing image pre-processing and band mathing using GEE</li>
-<li>Exporting GEE analysis results</li>
-<li>GEE-related applications and data</li>
+<li>EO data acquisition and cloud removal using GEE</li>
+<li>Training a CART classifier for land use supervised classification using GEE</li>
+<li>Accuracy check of land use classification using GEE by dividing training and test sets through random forest method</li>
 </ul>
 </blockquote>
-<p>In this week’s practical, I learnt the basic operations of remote sensing data processing using GEE. I followed the instructions to process and analyse the Landsat remote sensing image data from New Delhi, including texture measures, PCA, band math, etc. However, I was pleasantly surprised to learn about a lot of applications developed using GEE, which were very interesting and greatly broadened my view of remote sensing image applications and made me look forwards to developing applications using GEE.</p>
+<p>During this week, I used GEE to classify land use in Nanchang, China (my hometown), referring to practical’s guidance. The first step was to obtain Sentinel data and remove the effect of clouds by taking the median, after which the CART classifier was trained by supervised classification, after which the training and test sets were divided by the random forest method, and the land use of Nanchang was classified and checked for accuracy.</p>
 <div class="quarto-figure quarto-figure-center">
 <figure class="figure">
 <p><img src="img/WEEK6practical.png" class="img-fluid figure-img" style="width:100.0%"></p>
-<p></p><figcaption class="figure-caption">Practical output: PCA analysis of Landsat 8 images in New Delhi.</figcaption><p></p>
+<p></p><figcaption class="figure-caption">Practical output: Nanchang land use classification through supervised classification.</figcaption><p></p>
 </figure>
 </div>
+</section>
+<section id="application" class="level2">
+<h2 class="anchored" data-anchor-id="application"><strong>3 Application</strong></h2>
+<blockquote class="blockquote">
+<p>This week I have learnt about machine learning, classification and regression trees (CART) and image classification. I hope to delve into the application of image classification in the field of remote sensing.</p>
+</blockquote>
+<section id="applications-of-image-classification-in-remote-sensing" class="level3">
+<h3 class="anchored" data-anchor-id="applications-of-image-classification-in-remote-sensing"><strong>3.1 Applications of image classification in remote sensing</strong></h3>
+<p>The applications of image classification in the field of remote sensing are mainly in the following areas:</p>
+<p><code>Land cover and land use classification</code>: Image classification techniques can assign pixels in remote sensing images to different land cover and land use categories, such as forests, grasslands, farmlands, cities, wetlands and so on. This helps to understand the distribution, use and change of land resources and provides important information for urban planning, environmental protection and resource management.</p>
+<p><code>Vegetation and forest monitoring</code>: Image classification methods can identify vegetation types such as trees, shrubs, grasslands, etc. in remotely sensed images. This helps to assess forest cover, biodiversity and ecosystem health. Also, image classification can be used to monitor disaster events such as forest fires, pests and diseases, providing a basis for forest protection and management.</p>
+<p><code>Agricultural monitoring</code>: Image classification allows the identification of crop growing areas in remotely sensed images to estimate crop acreage, growth and yield. This contributes to early warning for food security, agricultural policy development and fine-grained agricultural management.</p>
+<p>There are also specific application scenarios and examples in the field of urban planning:</p>
+<p><code>Construction land extraction</code>: Image classification techniques can extract various types of construction land from remote sensing images, such as residential, commercial and industrial areas. This helps to assess the current situation and development trend of urban land, and provides a basis for urban land use planning and urban expansion.</p>
+<p><code>Traffic facilities extraction</code>: Image classification can extract information on traffic facilities such as roads, bridges and railways from remote sensing images. This helps to understand the layout and development status of urban transport networks and provides a basis for transport planning and construction.</p>
+<p><code>Greenery coverage extraction</code>: Image classification technology can extract greenery coverage information such as green areas, parks and woodlands from remote sensing images. This helps to assess the state of urban greenery and ecological environment quality, and provides a basis for urban greenery planning and ecological protection.</p>
+<p><code>Urban expansion and change monitoring</code>: By classifying multi-temporal remote sensing images, urban expansion and change can be identified, providing a basis for urban development trend analysis and planning adjustment.</p>
+</section>
+<section id="application-case" class="level3">
+<h3 class="anchored" data-anchor-id="application-case"><strong>3.2 Application case</strong></h3>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Sourse
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><em>Assessing contextual descriptive features for plot-based classification of urban areas</em></strong> , <em>Sourse: <span class="citation" data-cites="hermosilla_assessing_2012">Hermosilla et al. (<a href="references.html#ref-hermosilla_assessing_2012" role="doc-biblioref">2012</a>)</span></em></p>
+</div>
+</div>
+<p>A methodology for mapping urban land-use types integrating information from <code>multiple data sources</code> (high spatial resolution imagery, LiDAR data, and cadastral plots) is presented. A large set of complementary descriptive features that allow distinguishing different urban structures (historical, urban, residential, and industrial) is extracted and, after a selection process, a plot-based image classification approach applied, facilitating to directly relate the classification results and the urban descriptive parameters computed to the existent land-use/land-cover units in geospatial databases.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/1-s2.0-S016920461200059X-gr2.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Examples of the urban classes defined in colour-infrared composition: (a) historical; (b) urban; (c) open urban; (d) detached housing; (e) semi-detached/terraced housing; and (f) industrial. (For interpretation of the references to colour in this figure legend, the reader is referred to the web version of this article.)</figcaption><p></p>
+</figure>
+</div>
+<p>The descriptive features are extracted by considering different hierarchical scale levels with semantic meaning in urban environments: buildings, plots, and urban blocks. Plots are characterised by means of <code>image-based (spectral and textural)</code>, <code>three-dimensional</code>, and <code>geometrical features</code>. In addition, two groups of contextual features are defined: internal and external. Internal contextual features describe the main land cover types inside the plot (buildings and vegetation). External contextual features describe each object in terms of the properties of the urban block to which it belongs. After the evaluation in an heterogeneous Mediterranean urban area, the land-use classification accuracy values obtained show that the complementary descriptive features proposed improve the characterisation of urban typologies. <strong>A progressive introduction of the different groups of descriptive features in the classification tests show how the subsequent addition of internal and external contextual features have a positive effect by increasing the final accuracy of the urban classes considered in this study.</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/1-s2.0-S016920461200059X-gr11.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">Three details of colour infrared images (left) and a land-use thematic map (right) derived from the classification using the most efficient set of features.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="case-comments" class="level3">
+<h3 class="anchored" data-anchor-id="case-comments"><strong>3.3 Case comments</strong></h3>
+<p><strong><em>Advantages or contribution</em></strong></p>
+<ul>
+<li><strong>Multi-source data fusion</strong>: The study proposes a method for integrating multi-source data (high-resolution remote sensing images, LiDAR data and cadastral maps) for mapping urban land use types, enabling the differentiation of different urban structures (historical, urban, residential and industrial).</li>
+<li><strong>Integrated feature extraction</strong>: The thesis extracts a set of complementary descriptive features, including basic image features (spectral and texture), 3D features and geometric features, as well as internal and external contextual features. These features describe the main land cover types (buildings and vegetation) within the parcel, and the attributes of the urban neighbourhood to which the parcel belongs, respectively.</li>
+<li><strong>Hierarchical structural treatment</strong>: The thesis extracts descriptive features by considering different hierarchical structural scales (buildings, plots and urban blocks) that have semantic significance in the urban environment.</li>
+<li><strong>Accuracy of results</strong>: The thesis verifies that the proposed descriptive features improve the accuracy of the classification of urban land use types through an empirical study in a Mediterranean urban area. The results of classification experiments where different groups of descriptive features are introduced step by step show that the addition of internal and external contextual features is effective in improving the accuracy of the final classification.</li>
+</ul>
+<p><strong><em>Disadvantages or potential</em></strong></p>
+<ul>
+<li><strong>Data accessibility</strong>: The multi-source data used in the thesis, including high-resolution remote sensing imagery, LiDAR data and cadastral maps, may be difficult to access or require expensive purchase costs in some areas. This limits the application of the method in areas where resources are limited or data is difficult to obtain.</li>
+<li><strong>Feature selection sensitivity</strong>: The feature selection methods used in the thesis may have an impact on the accuracy of the final classification results. Different feature selection methods may lead to different classification results.</li>
+<li><strong>Scene adaptation</strong>: The methods in the thesis may require parameter adaptation and optimisation for different urban scenarios and land use types. This may increase the complexity and difficulty of the methods in practical application.</li>
+</ul>
+</section>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection"><strong>4 Reflection</strong></h2>
+<p>The learning this week has been very informative and exciting, with image classification based on machine learning offering huge potential for remote sensing image analysis, and applications in the urban domain to do work that would be difficult to do by hand alone. But for me personally, there is an overwhelming amount of knowledge coming in and it will take a while to understand the principles of the knowledge.</p>
+<p>But is this perhaps also a <code>black box</code>? For me, with a focus on urban analysis, I should know more about how to apply these tools appropriately to urban scenarios, rather than knowing every step of the way (of course it’s better to understand them), and understanding the inputs and outputs of these tools properly might as well be able to meet most of my needs.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-hermosilla_assessing_2012" class="csl-entry" role="doc-biblioentry">
+Hermosilla, T., L. A. Ruiz, J. A. Recio, and M. Cambra-López. 2012. <span>“Assessing Contextual Descriptive Features for Plot-Based Classification of Urban Areas.”</span> <em>Landscape and Urban Planning</em> 106 (1): 124–37. <a href="https://doi.org/10.1016/j.landurbplan.2012.02.008">https://doi.org/10.1016/j.landurbplan.2012.02.008</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

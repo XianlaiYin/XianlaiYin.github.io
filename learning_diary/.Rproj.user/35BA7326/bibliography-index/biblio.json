@@ -273,6 +273,55 @@
             "title-short": "Evaluating the role of urban fabric on surface urban heat island",
             "type": "article-journal",
             "volume": "73"
+        },
+        {
+            "DOI": "10.1016/j.landurbplan.2012.02.008",
+            "ISSN": "0169-2046",
+            "URL": "https://www.sciencedirect.com/science/article/pii/S016920461200059X",
+            "abstract": "A methodology for mapping urban land-use types integrating information from multiple data sources (high spatial resolution imagery, LiDAR data, and cadastral plots) is presented. A large set of complementary descriptive features that allow distinguishing different urban structures (historical, urban, residential, and industrial) is extracted and, after a selection process, a plot-based image classification approach applied, facilitating to directly relate the classification results and the urban descriptive parameters computed to the existent land-use/land-cover units in geospatial databases. The descriptive features are extracted by considering different hierarchical scale levels with semantic meaning in urban environments: buildings, plots, and urban blocks. Plots are characterised by means of image-based (spectral and textural), three-dimensional, and geometrical features. In addition, two groups of contextual features are defined: internal and external. Internal contextual features describe the main land cover types inside the plot (buildings and vegetation). External contextual features describe each object in terms of the properties of the urban block to which it belongs. After the evaluation in an heterogeneous Mediterranean urban area, the land-use classification accuracy values obtained show that the complementary descriptive features proposed improve the characterisation of urban typologies. A progressive introduction of the different groups of descriptive features in the classification tests show how the subsequent addition of internal and external contextual features have a positive effect by increasing the final accuracy of the urban classes considered in this study.",
+            "accessed": {
+                "date-parts": [
+                    [
+                        2023,
+                        3,
+                        24
+                    ]
+                ]
+            },
+            "author": [
+                {
+                    "family": "Hermosilla",
+                    "given": "T."
+                },
+                {
+                    "family": "Ruiz",
+                    "given": "L. A."
+                },
+                {
+                    "family": "Recio",
+                    "given": "J. A."
+                },
+                {
+                    "family": "Cambra-López",
+                    "given": "M."
+                }
+            ],
+            "container-title": "Landscape and Urban Planning",
+            "id": "hermosilla_assessing_2012",
+            "issue": "1",
+            "issued": {
+                "date-parts": [
+                    [
+                        2012,
+                        5
+                    ]
+                ]
+            },
+            "keyword": "Classification, Contextual features, High-resolution imagery, Land-use mapping, LiDAR, Urban areas",
+            "page": "124-137",
+            "title": "Assessing contextual descriptive features for plot-based classification of urban areas",
+            "type": "article-journal",
+            "volume": "106"
         }
     ],
     "project_biblios": [

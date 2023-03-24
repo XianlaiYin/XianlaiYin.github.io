@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -63,6 +82,7 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
 </head>
 
@@ -154,7 +174,25 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary-lecture" id="toc-summary-lecture" class="nav-link active" data-scroll-target="#summary-lecture"><strong>1 Summary: lecture</strong></a>
+  <ul class="collapse">
+  <li><a href="#object-based-image-analysis-and-sub-pixel-analysis" id="toc-object-based-image-analysis-and-sub-pixel-analysis" class="nav-link" data-scroll-target="#object-based-image-analysis-and-sub-pixel-analysis"><strong>1.1 Object based image analysis and sub pixel analysis</strong></a></li>
+  <li><a href="#accuracy-assessment" id="toc-accuracy-assessment" class="nav-link" data-scroll-target="#accuracy-assessment"><strong>1.2 Accuracy assessment</strong></a></li>
+  </ul></li>
+  <li><a href="#summary-practical" id="toc-summary-practical" class="nav-link" data-scroll-target="#summary-practical"><strong>2 Summary: practical</strong></a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><strong>3 Application</strong></a>
+  <ul class="collapse">
+  <li><a href="#applications-of-sub-pixel-analysis" id="toc-applications-of-sub-pixel-analysis" class="nav-link" data-scroll-target="#applications-of-sub-pixel-analysis"><strong>3.1 Applications of sub pixel analysis</strong></a></li>
+  <li><a href="#application-case" id="toc-application-case" class="nav-link" data-scroll-target="#application-case"><strong>3.2 Application case</strong></a></li>
+  <li><a href="#case-comments" id="toc-case-comments" class="nav-link" data-scroll-target="#case-comments"><strong>3.3 Case comments</strong></a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><strong>4 Reflection</strong></a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/XianlaiYin/XianlaiYin.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -180,8 +218,342 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>This is a learning diary of CASA0023 WEEK 7, the lecture presentation is <a href="https://andrewmaclachlan.github.io/CASA0023-lecture-7/#1">here</a>, and the practical material is <a href="https://andrewmaclachlan.github.io/CASA0023/7_classification_II.html">here</a>.</p>
 </blockquote>
+</section>
+<section id="summary-lecture" class="level2">
+<h2 class="anchored" data-anchor-id="summary-lecture"><strong>1 Summary: lecture</strong></h2>
+<p>This week started with Object based image analysis (OBIA) and sub pixel analysis, and continued with accuracy assessment methods, mainly spatial cross validation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/WEEK7_Mindmap.svg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Mindmap of Week 7 Leacture</figcaption><p></p>
+</figure>
+</div>
+<hr>
+<section id="object-based-image-analysis-and-sub-pixel-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="object-based-image-analysis-and-sub-pixel-analysis"><strong>1.1 Object based image analysis and sub pixel analysis</strong></h3>
+<section id="object-based-image-analysis-obia" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="object-based-image-analysis-obia"><strong>Object based image analysis (OBIA)</strong></h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/segOptim.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">SegOptim. Source: <a href="https://segoptim.bitbucket.io/docs/">João Gonçalves 2020</a></figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Instead of considering cells we consider shapes based on the <code>similarity (homogeneity)</code> or <code>difference (heterogeneity)</code> of the cells = <code>superpixels</code></li>
+<li><strong>SLIC (Simple Linear Iterative Clustering)</strong> Algorithm for Superpixel generation is the most common method
+<ul>
+<li>Regular points on the image</li>
+<li>Work out spatial distance (from point to centre of pixel) = closeness to centre</li>
+<li>Colour difference (RGB vs RGB to centre point) = homogenity of colours</li>
+<li>Can only use <code>Euclidean distance</code> in SLIC</li>
+<li>Each iteration the centre moves- 4-10 is best (based on orignal paper)</li>
+<li>The values can change and the boarders move (like k-means?)</li>
+<li>Doesn’t consider connectivity = very small cells</li>
+<li>We can then take the average values per object and classify them using methods we’ve seen</li>
+<li><code>Supercells</code> package can use any distance measure (e.g.&nbsp;dissimilarity)</li>
+</ul></li>
+<li>Note that there are many OBIA classifiers, they all do similar, but slightly different processes, more advanced package would be <code>SegOptim</code> that can use algorithms from other software</li>
+</ul>
+</section>
+<section id="sub-pixel-analysis" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="sub-pixel-analysis"><strong>Sub pixel analysis</strong></h4>
+<blockquote class="blockquote">
+<p>Termed (all the same): Sub pixel classification, Spectral Mixture Analysis (SMA), Linear spectral unmixing</p>
+</blockquote>
+<p><strong><em>Characteristic</em></strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/Perfect-decomposition-with-a-Linear-Spectral-Mixture-Model-LSMM-on-a-30-m-pixel-formed.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://www.researchgate.net/figure/Perfect-decomposition-with-a-Linear-Spectral-Mixture-Model-LSMM-on-a-30-m-pixel-formed_fig6_259715697">Machado and Small (2013) 2017</a></figcaption><p></p>
+</figure>
+</div>
+<p>SMA determines the <code>proportion</code> or <code>abundance</code> of landcover per pixel. The assumption that reflectance measured at each pixel is represented by the linear sum of endmembers weighted by the associated endmember fraction. Typically we have a few endmembers that are <code>spectrally pure</code>.</p>
+<p><strong><em>Formula</em></strong></p>
+<p>Sum of end member reflectance * fraction contribution to <code>best-fit mixed spectrum</code></p>
+<p><span class="math display">\[
+p_\lambda=\sum_{i=1}^{n} (p_{i\lambda} * f_i) + e_\lambda
+\]</span></p>
+<ul>
+<li><span class="math inline">\(p_\lambda\)</span> = The pixel reflectance</li>
+<li><span class="math inline">\(p_i\lambda\)</span> = reflectance of endmember <span class="math inline">\(i\)</span></li>
+<li><span class="math inline">\(f_i\)</span> = fractional cover of end member <span class="math inline">\(i\)</span></li>
+<li><span class="math inline">\(n\)</span> = number of endmembers</li>
+<li><span class="math inline">\(e_\lambda\)</span> = model error</li>
+</ul>
+<p><strong><em>Number of End members</em></strong></p>
+<p>Simplify the process and use the <code>V-I-S model</code> in urban areas: Vegetation-Impervious surface-Soil (V-I-S) fractions</p>
+<p><strong><em>Multiple endmember spectral analysis (MESMA)</em></strong></p>
+<p>Increase computation or use a spectral library</p>
+</section>
+</section>
+<section id="accuracy-assessment" class="level3">
+<h3 class="anchored" data-anchor-id="accuracy-assessment"><strong>1.2 Accuracy assessment</strong></h3>
+<blockquote class="blockquote">
+<p>After producing and output we need to assign an accuracy value to it (common to machine learning).</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/matrix.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLII-3/61/2018/isprs-archives-XLII-3-61-2018.pdf">Barsi et al.&nbsp;2018 Accuracy Dimensions in Remote Sensing</a></figcaption><p></p>
+</figure>
+</div>
+<section id="remote-sensing-focus-on" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="remote-sensing-focus-on"><strong>Remote sensing focus on</strong></h4>
+<ul>
+<li><code>PA</code> Producer accuracy (recall or true positive rate or sensitivity)</li>
+<li><code>UA</code> User’s accuracy (consumer’s accuracy or precision or positive predictive value</li>
+<li><code>OA</code> the (overall) accuracy</li>
+</ul>
+</section>
+<section id="where-model-is-correct" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="where-model-is-correct"><strong>Where model is correct</strong></h4>
+<ul>
+<li><code>True positive</code> = model predicts positive class correctly</li>
+<li><code>True negative</code> = model predicts negative class correctly</li>
+</ul>
+</section>
+<section id="where-model-is-incorrect" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="where-model-is-incorrect"><strong>Where model is incorrect</strong></h4>
+<ul>
+<li><code>False positive</code> = model predicts positive, but it is negative</li>
+<li><code>False negative</code> = model predicts negative, but it is positive</li>
+</ul>
+</section>
+<section id="calculation" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="calculation"><strong>Calculation</strong></h4>
+<ul>
+<li><code>Producer’s accuracy</code> defined as the fraction of correctly classified pixels (TP) compared to ground truth data (TP+FN)</li>
+<li><code>User’s accuracy</code> defined as the fraction of correctly classified pixels (TP) relative to all others classified as a particular land cover(TP+FP)</li>
+<li><code>Overall accuracy</code> that represents the combined fraction of correctly classified pixels (TP +TN) across all land cover types (TP+FP+FN+TN)</li>
+<li><code>Errors of omission</code> (100-producer’s accuracy)</li>
+<li><code>Errors of commission</code> (100- user’s accuracy)</li>
+</ul>
+</section>
+<section id="kappa-coefficient" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="kappa-coefficient"><strong>Kappa coefficient</strong></h4>
+<p>. <span class="math display">\[
+k=\frac{p_o - p_e}{1- p_e}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(p_o\)</span> is the proportion of cases correctly classified (accuracy)</li>
+<li><span class="math inline">\(p_e\)</span> expected cases correctly classified by chance (further equations in <a href="https://reader.elsevier.com/reader/sd/pii/S0034425719306509?token=47B253784FA5346F4A2E26B6DA796DBE71DC53A34AE76AAB1FFA43927EC021937C0C108A42154C4AE774083E4C7BD52F&amp;originRegion=eu-west-1&amp;originCreation=20220707132403">Foody 2020</a>)</li>
+</ul>
+<p>Designed to express the accuracy of an image compared to the results by chance, ranges from <code>0 to 1</code>.</p>
+<blockquote class="blockquote">
+<p>“Sadly the calls to abandon the use of the kappa coefficient in accuracy assessment seem to have fallen on deaf ears. It may be that the kappa coefficient is still widely used because it has become ingrained in practice and there may be a sense of obligation to use it”</p>
+</blockquote>
+</section>
+<section id="beyond-traditional-remote-sensing-accuracy-assessment" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="beyond-traditional-remote-sensing-accuracy-assessment"><strong>Beyond traditional remote sensing accuracy assessment</strong></h4>
+<ul>
+<li>Problem with recall (<code>Producer accuracy</code>) vs Precision (<code>User accuracy</code>)</li>
+<li>False positives (<code>Producer</code>) or false negatives (<code>User</code>) more important?
+<ul>
+<li>model with high recall (Producer accuracy) = true positives but some false positives (predicted urban but land cover that isn’t urban)</li>
+<li>Model with high precision (User’s accuracy) = actual urban but predicted other landcover <strong>We can’t have both a high high producer accuracy (recall) and a high user’s accuracy (precision)</strong></li>
+</ul></li>
+<li>User’s accuracy (precision)
+<ul>
+<li>I have gone to a site, the model predicted it to be urban, it is not urban…</li>
+<li>How well can the user use the data / classification</li>
+</ul></li>
+<li>Producer’s accuracy (recall)
+<ul>
+<li>I have gone all the urban sites, they were urban. BUT I can see in the distance a site that was predicted to be GRASS but is actually URBAN</li>
+<li>How well did the producer make the data/ classification</li>
+</ul></li>
+</ul>
+<p><strong><em>F1 score</em></strong></p>
+<p>The F1-Score (or F Measure) combines both recall (Producer accuracy) and Precision (User accuracy):</p>
+<p><span class="math display">\[
+F1 = \frac{TP}{TP + \frac{1}{2}*(FP+FN)}
+\]</span></p>
+<p><em>Value from 0 to 1, where 1 is better performance</em></p>
+<ul>
+<li>Issues
+<ul>
+<li>No True Negatives (TN) in the equation</li>
+<li>Negative categories that are correctly classified as negative</li>
+<li>Are precision and recall equally important ?
+<ul>
+<li>Precision (producer): how many positive points are correct</li>
+<li>Recall (user): how precise the model is at positive predictions</li>
+</ul></li>
+<li>What if our data is very unbalanced ? - More negatives than positives?</li>
+</ul></li>
+</ul>
+</section>
+<section id="receiver-operating-characteristic-curve-the-roc-curve" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="receiver-operating-characteristic-curve-the-roc-curve"><strong>Receiver Operating Characteristic Curve (the ROC Curve)</strong></h4>
+<ul>
+<li><strong>Changing the threshold value of classifier</strong> will change the True Positive rate</li>
+<li>Maximise true positives (1) and minimise false positives (0)</li>
+<li><strong>Vertical columns here</strong> - uses whole matrix
+<ul>
+<li>First is True positive: true positive rate = TP/TP+FN</li>
+<li>Second is False positive rate: false positive rate = FP/FP+TN</li>
+</ul></li>
+</ul>
+<p><strong><em>Area Under the ROC Curve (AUC, or AUROC)</em></strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/AUC.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://mlu-explain.github.io/roc-auc/">MLU-EXPLAIN</a></figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Simply the area under the curve</li>
+<li>Compare models easily (no need to look at the ROC curve)</li>
+<li>Perfect value will be 1, random will be 0.5</li>
+</ul>
+<blockquote class="blockquote">
+<p>“The AUC is the probability that the model will rank a randomly chosen positive example more highly than a randomly chosen negative example.”</p>
+</blockquote>
+</section>
+<section id="how-do-we-get-test-data-for-the-accuracy-assessment" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="how-do-we-get-test-data-for-the-accuracy-assessment"><strong>How do we get test data for the accuracy assessment?</strong></h4>
+<ul>
+<li>Sometimes - <code>remote sensing approach</code></li>
+<li>Good approach - <code>train and test split</code></li>
+<li>Best approach - <code>cross validation</code></li>
+</ul>
+<p><strong><em>Spatial cross validation</em></strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/13_partitioning.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Spatial visualization of selected test and training observations for cross-validation of one repetition. Random (upper row) and spatial partitioning (lower row). Source: <a href="https://geocompr.robinlovelace.net/spatial-cv.html">Lovelace et al.&nbsp;2022</a></figcaption><p></p>
+</figure>
+</div>
+<ul>
+<li>Spatially partition the folded data, folds are from cross validation</li>
+<li><code>Disjoint</code> (no common boundary) using k -means clustering (number of points and a distance)</li>
+<li>Same as cross validation but with clustering to the folds</li>
+<li>Stops our training data and testing data being near each other &gt; In other words this makes sure all the points (or pixels) we train the model with a far away from the points (or pixels) we test the model with</li>
+</ul>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Source
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><em>Use a Support Vector Machine classifier that requires hyperparameters (set before the classification)</em></strong>.Source: <a href="https://geocompr.robinlovelace.net/spatial-cv.html">Lovelace et al.&nbsp;(2022)</a></p>
+</div>
+</div>
+<ul>
+<li>Standard SVM then the classifier will try to <code>overfit</code> = perfect for the current data but useless for anything else</li>
+<li>Cortes and Vapnik - <code>soft margin</code>, permit misclassifications = controlled with C
+<ul>
+<li><code>C</code> = adds penalty (proportional to distance from decision line) for each classified point. Small = image on right, large = image on left. <strong>changes the slope</strong></li>
+<li><code>Gamma (or also called Sigma)</code> = controls the influence of a training point within the classified data</li>
+<li><code>Performance level</code> each spatial fold (taken from our first k-means cross validation fold division). = Top row below, a typical cross validation fold</li>
+<li><code>Tuning level</code> each fold (outer) is then divided into 5 again (inner fold).= Bottom row below</li>
+<li><code>Performance estimation</code> Use the 50 randomly selected hyperparameters in each of these inner subfolds, i.e., fit 250 models with random C and Gamma use the best values to outer fold, based on <code>AUROC</code> with testing data</li>
+</ul></li>
+</ul>
+</section>
+</section>
+</section>
+<section id="summary-practical" class="level2">
+<h2 class="anchored" data-anchor-id="summary-practical"><strong>2 Summary: practical</strong></h2>
+<blockquote class="blockquote">
+<p>This week’s practical will consist mainly of the following:</p>
+<ul>
+<li>Objectbased image analysis (OBIA) using GEE</li>
+<li>Spectral unfixing with GEE</li>
+</ul>
+</blockquote>
+<p>This week’s practical focused on deepening the content of the lecture and carrying out practical exercises. I followed the instructions and choosed Dar es Salaam as my research area, did spectral unfixing and object based image analysis (OBIA) using GEE. The content is relatively complex and requires further practice or application to fully understand the content of this section.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/WEEK7practical.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Operating procedures at GEE.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="application" class="level2">
+<h2 class="anchored" data-anchor-id="application"><strong>3 Application</strong></h2>
+<blockquote class="blockquote">
+<p>This week’s study included many interesting topics such as object based image analysis (OBIA), sub pixel analysis, and spatial cross validation. In particular, sub pixel analysis significantly expanding the application scenarios and accuracy of remote sensing image analysis.</p>
+</blockquote>
+<section id="applications-of-sub-pixel-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="applications-of-sub-pixel-analysis"><strong>3.1 Applications of sub pixel analysis</strong></h3>
+<p>Sub pixel analysis has a wide range of application scenarios in the field of remote sensing, mainly including the following:</p>
+<p><code>Image resolution enhancement</code>: Sub pixel analysis can be used to improve the spatial resolution of remote sensing images. Traditional remote sensing images are often limited by the size of image elements, resulting in insufficient ability to describe the details of the features. Sub-pixel analysis techniques can extract more feature detail from the information within the image element, thereby increasing the resolution of the image and helping to identify and measure surface features more accurately.</p>
+<p><code>Target detection and classification</code>: Sub pixel analysis plays an important role in the detection and classification of targets in remotely sensed images. For example, features such as buildings, vegetation and water bodies in remotely sensed images may be mixed within an image element, making it difficult for traditional element-based classification methods to accurately distinguish these features. Sub-pixel analysis can extract detailed information within these mixed pixels to improve the accuracy of target detection and classification.</p>
+<p><code>Environmental monitoring</code>: Sub pixel analysis also has important applications in environmental monitoring. For example, by analysing sub-pixel information in satellite remote sensing images, environmental parameters such as vegetation cover and water body area can be estimated more accurately, providing an important basis for environmental protection and planning.</p>
+<p><code>Radiative transfer models</code>: Sub-pixel analysis techniques can also be used in the study of radiative transfer models. Radiative transfer models are the basis of remote sensing inversions and are used to describe the radiative transfer processes between the Earth’s surface and the atmosphere. Sub-pixel techniques can help researchers to model this process more accurately and improve the accuracy of remote sensing inversions.</p>
+<p>There are also extensive applications in the field of urban planning.</p>
+<p><code>Building and road extraction</code>: Sub pixel analysis techniques can be used to extract building and road information from urban remote sensing images more accurately. This is important for the planning, construction and maintenance of urban infrastructure. By increasing image resolution, sub-pixel analysis helps to identify and measure detailed features in the city, such as building outlines, road widths, etc.</p>
+<p><code>Green space and water monitoring</code>: Sub pixel analysis can be applied to urban green space and water monitoring. By analysing the detailed information in the mixed image elements, sub-pixel analysis can provide more accurate estimates of environmental parameters such as green space coverage and water body areas, providing a basis for urban greening and water resource management.</p>
+<p><code>Urban sprawl and land use change monitoring</code>: Sub pixel analysis can help urban planners monitor urban sprawl and land use change. This technique can improve the accuracy of change detection and help to analyse urban development trends and develop sound urban planning strategies.</p>
+<p><code>Heat island effect research</code>: Sub pixel analysis techniques can be applied to the study of urban heat island effect. By improving the resolution and accuracy of remotely sensed images, sub-pixel analysis can provide a more accurate description of urban surface temperature distribution, help to identify the causes and extent of the urban heat island phenomenon, and provide support to urban planners in formulating measures to reduce the heat island effect.</p>
+<p><code>Population density estimation</code>: Sub pixel analysis techniques can be used to more accurately estimate urban population density. By analysing detailed information about buildings and residential areas in remotely sensed images, sub-pixel analysis can provide more accurate data to support urban population distribution and planning.</p>
+</section>
+<section id="application-case" class="level3">
+<h3 class="anchored" data-anchor-id="application-case"><strong>3.2 Application case</strong></h3>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Sourse
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><em>Mapping sub-pixel urban expansion in China using MODIS and DMSP/OLS nighttime lights</em></strong> , <em>Sourse: <span class="citation" data-cites="huang_mapping_2016">Huang, Schneider, and Friedl (<a href="references.html#ref-huang_mapping_2016" role="doc-biblioref">2016</a>)</span></em></p>
+</div>
+</div>
+<p>Urbanization accelerated rapidly in China during the first decade of the 21st century, largely at the expense of agricultural lands. To improve available regional information related to the coupled dynamics between these two land use types, this paper fused data from the Moderate Resolution Imaging Spectroradiometer (<code>MODIS</code>) and stable nighttime lights observations from <code>DMSP/OLS</code> instruments to map fractional urban cover at 250m spatial resolution for cities in Eastern, Central, and Southern China where recent urban expansion has been rapid and pronounced.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/1-s2.0-S0034425715302637-gr9.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">A comparison of the Landsat-based maps, the percentage urban cover from MODIS, the difference in percentage urban land, as well as the bias for each date for three cities: Chengdu (top row), Guangzhou (middle row), and Kunming (bottom row).</figcaption><p></p>
+</figure>
+</div>
+<p>To accomplish this, this paper constructed Random Forest regression models to estimate sub-pixel urban percentage for 2001 and 2010 using high quality calibration information derived from Landsat data. Separate models were built for temperate and tropical regions and then evaluated for nine cities between 18,000 and 31,000km2 in area. Urban area estimated from MODIS compared favorably with Landsat-based results, with mean absolute errors of ~9-15%. Tests of different input feature sets showed that including data from downscaled MODIS 500m bands and nighttime lights can improve estimates of urban land area compared to using MODIS 250m features alone. Based on these results this paper produced wall-to-wall maps of urban land use in 2001 and 2010 for four MODIS tiles covering temperate and subtropical China, thereby demonstrating the utility of coarse spatial resolution data for mapping urban land use and loss of agricultural land at regional and larger scales.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/1-s2.0-S0034425715302637-gr11.jpg" class="img-fluid figure-img"></p>
+<p></p><figcaption class="figure-caption">A comparison of (left to right) the Landsat false color composite (red, green, blue set to SWIR, NIR, and green), the mean annual enhanced vegetation index (EVI) from MODIS, and the DMSP/OLS nighttime lights, the 250 m urban fraction maps produced in this work for two cities in Eastern and Central China: Shijiazhuang and Xinxiang. Note that no training data were drawn from these areas.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="case-comments" class="level3">
+<h3 class="anchored" data-anchor-id="case-comments"><strong>3.3 Case comments</strong></h3>
+<p><strong><em>Advantages or contribution</em></strong></p>
+<ul>
+<li>Improved access to spatial resolution and regional information on rapid urban expansion in eastern, central and southern China using a combination of MODIS and DMSP/OLS nighttime lighting data.</li>
+<li>Estimated sub pixel urban coverage percentages for 2001 and 2010 using a random forest regression model and obtained high quality calibration information using Landsat data.</li>
+<li>Separate models were constructed for different climatic regions (temperate and tropical), assessing nine cities within a range of 18,000-31,000 km2 .</li>
+<li>Compared to Landsat-based results, the urban areas estimated using MODIS have a high accuracy, with an average absolute error of about 9-15%.</li>
+<li>Different sets of input features were tested and the results show that incorporating downscaled MODIS 500m band and nighttime light data into the model improves the accuracy of urban land area estimates, outperforming the use of MODIS 250m features only.</li>
+</ul>
+<p><strong><em>Disadvantages or potential</em></strong></p>
+<ul>
+<li>The article focuses on the impact of urban expansion on agricultural land, but does not discuss in depth the changes in other land types (e.g.&nbsp;forests, wetlands, etc.) during urban expansion, possibly overlooking the impact of urbanisation on other ecosystems.</li>
+<li>The article uses MODIS and DMSP/OLS nighttime lighting data for the analysis, but there may be limitations in the spatial and temporal resolution and sensor performance of these two data sources that affect the accurate identification of urban expansion and land use change.</li>
+<li>This study only analyses urban land use for the years 2001 and 2010 without dynamic change analysis, thus making it difficult to capture the stage characteristics and trends in the urban expansion process.</li>
+<li>The article relies mainly on remote sensing data for urban expansion analysis and lacks the support of field surveys and socio-economic data, which may lead to the analysis results deviating from the actual situation.</li>
+</ul>
+</section>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection"><strong>4 Reflection</strong></h2>
+<p>This week has been interesting and challenging, with new knowledge added to improve the accuracy of remote sensing image analysis and broaden the application scenarios. Based on what I have learnt this week, I am not only able to carry out more in-depth analysis, but also able to assess the accuracy of the analysis.</p>
+<p>In my practical work in detailed urban planning and design, the spatial resolution of many remote sensing data is too large (around 30m is common), but what this week learnt has reduced this limitation. However, it will still take some practice and application for me to master the content of this week.</p>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-huang_mapping_2016" class="csl-entry" role="doc-biblioentry">
+Huang, Xiaoman, Annemarie Schneider, and Mark A. Friedl. 2016. <span>“Mapping Sub-Pixel Urban Expansion in <span>China</span> Using <span>MODIS</span> and <span>DMSP</span>/<span>OLS</span> Nighttime Lights.”</span> <em>Remote Sensing of Environment</em> 175 (March): 92–108. <a href="https://doi.org/10.1016/j.rse.2015.12.042">https://doi.org/10.1016/j.rse.2015.12.042</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

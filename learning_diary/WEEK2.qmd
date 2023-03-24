@@ -8,7 +8,7 @@
 
 This week I learnt how to use Quarto to create websites and Xaringan to create presentations. [This website](https://xianlaiyin.github.io/learning_diary/docs/) and [this slide](https://xianlaiyin.github.io/week2_xaringan/week2_xaringan.html#1) can be used as a presentation of what I learnt the content of this week.
 
-```{r, echo = FALSE, out.width='40%'}
+```{r, echo = FALSE, out.width='100%'}
 xaringanExtra::embed_xaringan(
   url = "https://xianlaiyin.github.io/learning_diary/week2_xaringan/week2_xaringan.html#1",
   ratio = "16:9")

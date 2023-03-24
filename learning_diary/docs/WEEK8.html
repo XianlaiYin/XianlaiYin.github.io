@@ -20,6 +20,25 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1.6em;
   vertical-align: middle;
 }
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+}
+.hanging div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
+}
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
+}
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}
 </style>
 
 
@@ -154,7 +173,29 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#summary-lecture" id="toc-summary-lecture" class="nav-link active" data-scroll-target="#summary-lecture"><strong>1 Summary: lecture</strong></a>
+  <ul class="collapse">
+  <li><a href="#what-is-the-urban-heat-island" id="toc-what-is-the-urban-heat-island" class="nav-link" data-scroll-target="#what-is-the-urban-heat-island"><strong>1.1 What is the Urban Heat Island</strong></a></li>
+  <li><a href="#global-policy-documents" id="toc-global-policy-documents" class="nav-link" data-scroll-target="#global-policy-documents"><strong>1.2 Global policy documents</strong></a></li>
+  <li><a href="#beat-the-heat-handbook" id="toc-beat-the-heat-handbook" class="nav-link" data-scroll-target="#beat-the-heat-handbook"><strong>1.3 Beat The Heat Handbook</strong></a></li>
+  <li><a href="#metropolitan-city-policy-temperature-reduction-activities" id="toc-metropolitan-city-policy-temperature-reduction-activities" class="nav-link" data-scroll-target="#metropolitan-city-policy-temperature-reduction-activities"><strong>1.4 Metropolitan (city) policy / temperature reduction activities</strong></a></li>
+  <li><a href="#rethinking-planning-requirements" id="toc-rethinking-planning-requirements" class="nav-link" data-scroll-target="#rethinking-planning-requirements"><strong>1.5 Rethinking planning requirements</strong></a></li>
+  <li><a href="#approaching-projects" id="toc-approaching-projects" class="nav-link" data-scroll-target="#approaching-projects"><strong>1.6 Approaching projects</strong></a></li>
+  </ul></li>
+  <li><a href="#summary-practical" id="toc-summary-practical" class="nav-link" data-scroll-target="#summary-practical"><strong>2 Summary: practical</strong></a></li>
+  <li><a href="#application" id="toc-application" class="nav-link" data-scroll-target="#application"><strong>3 Application</strong></a>
+  <ul class="collapse">
+  <li><a href="#applications-of-remote-sensing-in-response-to-uhi" id="toc-applications-of-remote-sensing-in-response-to-uhi" class="nav-link" data-scroll-target="#applications-of-remote-sensing-in-response-to-uhi"><strong>3.1 Applications of remote sensing in response to UHI</strong></a></li>
+  <li><a href="#application-case" id="toc-application-case" class="nav-link" data-scroll-target="#application-case"><strong>3.2 Application case</strong></a></li>
+  <li><a href="#case-comments" id="toc-case-comments" class="nav-link" data-scroll-target="#case-comments"><strong>3.3 Case comments</strong></a></li>
+  </ul></li>
+  <li><a href="#reflection" id="toc-reflection" class="nav-link" data-scroll-target="#reflection"><strong>4 Reflection</strong></a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/XianlaiYin/XianlaiYin.github.io/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -180,8 +221,368 @@ ul.task-list li input[type="checkbox"] {
 <blockquote class="blockquote">
 <p>This is a learning diary of CASA0023 WEEK 8, the lecture presentation is <a href="https://andrewmaclachlan.github.io/CASA0023-lecture-8/#1">here</a>, and the practical material is <a href="https://andrewmaclachlan.github.io/CASA0023/8_temperature.html">here</a>.</p>
 </blockquote>
+</section>
+<section id="summary-lecture" class="level2">
+<h2 class="anchored" data-anchor-id="summary-lecture"><strong>1 Summary: lecture</strong></h2>
+<p>The week began with a study of urban heat islands, followed by a number of remote sensing-related policy scenarios, and prompted reflection on policy development and implementation.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/WEEK8_Mindmap.svg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Mindmap of Week 8 Leacture</figcaption><p></p>
+</figure>
+</div>
+<hr>
+<section id="what-is-the-urban-heat-island" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-the-urban-heat-island"><strong>1.1 What is the Urban Heat Island</strong></h3>
+<blockquote class="blockquote">
+<p>Urban areas obtain comparatively higher atmospheric and surface temperatures than surrounding rural areas</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/UHIfig1-768x779.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://earth.org/data_visualization/urban-heat-islands/">EARTH.ORG</a></figcaption><p></p>
+</figure>
+</div>
+<section id="factors" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="factors"><strong>Factors</strong></h4>
+<ul>
+<li><strong>More dark surfaces that retain heat</strong></li>
+<li><strong>Less vegetation that cools the environment (evapotranspiration and solar blocking)</strong></li>
+<li>A low <code>Sky View Factor (SVF)</code>: radiation received (or emitted) by a planar surface to the radiation emitted (or received) by the entire hemispheric environment</li>
+<li>Air speed, cloud cover, cyclic solar radiation, building material type and anthropogenic energy</li>
+</ul>
+</section>
+<section id="how-much-does-it-cost" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="how-much-does-it-cost"><strong>How much does it cost</strong></h4>
+<p><strong><em>Social</em></strong></p>
+<p>Population adjusted excess mortality rates during the 1998 Shanghai heatwave were estimated at <strong>27.3 per 100,000 within the urban area</strong> compared to only <strong>7 per 100,000 in the exurban districts</strong></p>
+<p><strong><em>Environmental</em></strong></p>
+<ul>
+<li>Each degree of ambient temperature rise the increase in peak electricity load has been estimated between 0.45 and 4.6%, corresponding to around 21 W per degree rise per person</li>
+<li><strong>Fossil fuel + pollution</strong></li>
+</ul>
+<p><strong><em>Economic</em></strong></p>
+<ul>
+<li><code>Gross Domestic Product (GDP)</code> = value of finished goods and services within a country</li>
+<li>Percent GDP lost from UHI
+<ul>
+<li>Under low Green House Gas scenario: 0.71% (in 2050) and 1.04% (in 2100)</li>
+<li>Under very high Green House Gas scenario: 0.80% (in 2050) and 1.79% (in 2100)</li>
+</ul></li>
+<li>UHI excluded from <code>Global Climate Change (GCC)</code> scenarios</li>
+<li>Hope: reduction in economic damages through policies</li>
+</ul>
+</section>
+</section>
+<section id="global-policy-documents" class="level3">
+<h3 class="anchored" data-anchor-id="global-policy-documents"><strong>1.2 Global policy documents</strong></h3>
+<section id="new-urban-agenda" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="new-urban-agenda"><strong>New Urban Agenda</strong></h4>
+<blockquote class="blockquote">
+<p>Standards and principles for planning, construction, development, management and urban improvement</p>
+</blockquote>
+<p><strong><em>Point 37</em></strong></p>
+<p>We commit ourselves to promoting <strong>safe, inclusive, accessible, green and quality public spaces, including streets, sidewalks and cycling lanes, squares, waterfront areas, gardens and parks</strong>, that are multifunctional areas for social interaction and inclusion, <strong>human health and well-being</strong></p>
+<p><strong><em>Point 54</em></strong></p>
+<p>We commit ourselves to the generation and use of renewable and affordable energy and sustainable and efficient transport infrastructure and services, where possible, <strong>achieving the benefits of connectivity and reducing the financial, environmental and public health costs of inefficient mobility, congestion, air pollution, urban heat island effects and noise</strong>. We also commit ourselves to giving particular attention to the energy and transport needs of all people, particularly the poor and those living in informal settlements. We also note that reductions in renewable energy costs give cities and human settlements an effective tool to lower energy supply costs.</p>
+<p><strong><em>Point 79</em></strong></p>
+<p>We commit ourselves to promoting international, national, subnational and local climate action, including climate change adaptation and mitigation, <strong>and to supporting the efforts of cities and human settlements, their inhabitants and all local stakeholders as important implementers</strong>.</p>
+</section>
+<section id="sustainable-development-goals-sdg" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="sustainable-development-goals-sdg"><strong>Sustainable Development Goals (SDG)</strong></h4>
+<blockquote class="blockquote">
+<p>Targets with measurable indicators for monitoring</p>
+</blockquote>
+<p><strong><em>Goal 11</em></strong></p>
+<p>Make cities and human settlements inclusive, safe, resilient and sustainable</p>
+<p><strong><em>2018 SDG 11 issue brief</em></strong></p>
+<ul>
+<li>Investing in parks and green spaces in urban areas will help to amelioratethe urban heat island effect and improve air quality in urban spaces.</li>
+<li>We work with national coordination units that support integrated urban planning and mapping and promote sustainable heating and cooling in related and cross-sector policy frameworks at multiple levels</li>
+</ul>
+<p><strong><em>COP26</em></strong></p>
+<p>Following 2021 United Nations Climate Change Conference in Glasgow - <a href="https://www.unep.org/resources/report/beating-heat-sustainable-cooling-handbook-cities">beat the heat handbook</a></p>
+</section>
+</section>
+<section id="beat-the-heat-handbook" class="level3">
+<h3 class="anchored" data-anchor-id="beat-the-heat-handbook"><strong>1.3 Beat The Heat Handbook</strong></h3>
+<section id="if-is-the-first-full-guide-on-uhi-that-suggests" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="if-is-the-first-full-guide-on-uhi-that-suggests"><strong>If is the first full guide on UHI that suggests</strong></h4>
+<ul>
+<li>Baseline assessment</li>
+<li>Key factors to consider(p.&nbsp;60) such as albedo, urban form, city zoning, green cover, heat maps (that mention satellite data) - <em>Chapter 5</em></li>
+<li>First major document that calls for specific integration into policy</li>
+<li>Has many examples of mitigation…although <code>some aren't in response to the UHI</code>, they were in place before / an associated benefit is temperature reduction</li>
+</ul>
+</section>
+<section id="superblocks" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="superblocks"><strong>Superblocks</strong></h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/superblocks.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://regenerativedesign.world/superblocks/?utm_source=rss&amp;utm_medium=rss&amp;utm_campaign=superblocks">Beating the Heat: A Sustainable Cooling Handbook for Cities. Image: regenerativedesign.world</a></figcaption><p></p>
+</figure>
+</div>
+<p><strong><em>Background</em></strong></p>
+<ul>
+<li>The idea has been proposed many times - dating back to Barcelona’s Plan Macià, 1932, and Josep Lluís Sert and Le Corbusier</li>
+<li>First superblock was in 1993</li>
+</ul>
+<p><strong><em>Superille (2016)</em></strong></p>
+<ul>
+<li><code>Community did not want</code></li>
+<li>Cars = less business…but at that time only 5% used cars</li>
+<li><code>Gentrification concerns</code> - 15 minute cities? Council used social housing then 120 other places</li>
+</ul>
+<p><strong><em>Future</em></strong></p>
+<ul>
+<li><code>Transform mobility</code> (2024 Urban Mobility Plan)</li>
+<li>67Km more <code>bus lanes</code> that align with superblocks</li>
+<li><code>Green axes</code></li>
+</ul>
+</section>
+<section id="medellín-green-corridors" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="medellín-green-corridors"><strong>Medellín Green Corridors</strong></h4>
+<ul>
+<li>Rapid and uncontrolled growth</li>
+<li>2016-2019 Government Plan = Medellín, <code>Environmental Urbanism</code></li>
+<li>Restore green corridors
+<ul>
+<li>36 corridors</li>
+<li>Along 18 roads and waterways</li>
+<li>Reduced temperature 4 degrees Celsius</li>
+</ul></li>
+</ul>
+</section>
+<section id="sydneys-western-suburbs" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="sydneys-western-suburbs"><strong>Sydney’s western suburbs</strong></h4>
+<ul>
+<li>Turn Down the Heat Strategy and Action Plan in 2018.</li>
+<li>An <code>in-depth assessment</code> of the cooling landscape was foundational to the development of this comprehensive Strategy and Action Plan and included aspects such as:
+<ul>
+<li>Assessment of the current state of urban heat in Western Sydney today;</li>
+<li>The future of urban heat in Western Sydney, highlighting the increasing severity and frequency of heat waves; impacts of urban heat on people, infrastructure, the economy and the environment; ans taking stock of the existing work across Western Sydney to address heat.</li>
+</ul></li>
+</ul>
+</section>
+<section id="reflections" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="reflections"><strong>Reflections</strong></h4>
+<blockquote class="blockquote">
+<p>Useful as it is first real guidance that states this should become part of city planning / policy</p>
+</blockquote>
+<p>It doesn’t actually give specifics</p>
+<ul>
+<li>How are you meant to use data to solve these problems?</li>
+<li>What sort of <code>planning rules</code> need to be changed</li>
+<li>Do all cities have appropriate staff (a GIS team?) to solve these challenges</li>
+<li>Is there sufficient interest within local / metropolitan / national government</li>
+<li>Is there buy in from the public</li>
+</ul>
+</section>
+<section id="does-provide-some-useful-project-ideas" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="does-provide-some-useful-project-ideas"><strong>Does provide some useful project ideas</strong></h4>
+<ul>
+<li>Assessing or determining the potential for reflective roofs / pavements / sidewalks</li>
+<li>Community engagement</li>
+<li>2021 Cool Roads Trial in Western Sydney</li>
+<li>Accessibility to cool or green spaces / heat inequity</li>
+<li>Disparities in the way communities are planned, developed, and maintained</li>
+<li>Developing countries, which area has access to cooler spaces?</li>
+</ul>
+</section>
+</section>
+<section id="metropolitan-city-policy-temperature-reduction-activities" class="level3">
+<h3 class="anchored" data-anchor-id="metropolitan-city-policy-temperature-reduction-activities"><strong>1.4 Metropolitan (city) policy / temperature reduction activities</strong></h3>
+<section id="voluntary" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="voluntary"><strong>Voluntary</strong></h4>
+<ul>
+<li>Chicago’s green roof</li>
+<li>Baltimore’s tree vouchers</li>
+</ul>
+</section>
+<section id="policy" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="policy"><strong>Policy</strong></h4>
+<p><strong><em>Metropolitan strategies</em></strong></p>
+<ul>
+<li>Perth and Peel 3.5 million</li>
+<li><strong>The London Plan</strong></li>
+<li>Singapore’s Master Plan</li>
+</ul>
+<p><strong><em>Local city mandates</em></strong></p>
+<ul>
+<li>Seattle’s Green Factor
+<ul>
+<li>Increases the amount of and improves the quality of landscaping in new development</li>
+<li>Development standards for certain areas require landscaping that meets a minimum Green Factor score</li>
+<li>You must reach a <strong>minimum score established by the zoning of your property</strong></li>
+<li>e.g.&nbsp;“Commercial and Neighborhood Commercial (NC1, NC2, NC3, C1, C2): Minimum score 0.30”</li>
+</ul></li>
+<li>Baton Rouge’s landscape ordinance</li>
+<li>Fremantle’s Urban Forest:</li>
+<li>20% canopy coverage (2020) – AUD 2.57million</li>
+<li>Maintain and enhance vegetation</li>
+<li>Increase quantity and distribution of green areas/tress (20% canopy coverage)</li>
+<li>Encourage greening of hard surfaces (e.g.&nbsp;parking) and in private realm</li>
+<li>First city to use data to inform their cooling / greening strategy</li>
+<li>Temperature image from one day in January</li>
+<li>Believe this is from Landsat data (see practical), 30 m data that has been aggregated to block (street block level)</li>
+</ul>
+</section>
+</section>
+<section id="rethinking-planning-requirements" class="level3">
+<h3 class="anchored" data-anchor-id="rethinking-planning-requirements"><strong>1.5 Rethinking planning requirements</strong></h3>
+<section id="perth-metropolitan-area" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="perth-metropolitan-area"><strong>Perth Metropolitan Area</strong></h4>
+<p>Follows the original landscape ordinance of 10% of any gross sub divisible area required for open space</p>
+<ul>
+<li>Unaltered since Stephenson– Hepburn metropolitan regional plan was legislated in 1955</li>
+<li>Based on population density values, with an assumed number of persons likely to be housed across various residential codes</li>
+<li>Grose (2017) = gross underestimtation of open space</li>
+</ul>
+</section>
+<section id="singapore" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="singapore"><strong>Singapore</strong></h4>
+<p>Singapore’s 2011 open space provisioning is defined as 4.05 m2 for every 56.0 m2 of gross floor area Detailed landscaping requirements such as grass coverage, tree girth, and minimum branches, yet excludes landscape arrangement conditions</p>
+</section>
+<section id="a-data-driven-approach-for-mitigating-urban-heat" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="a-data-driven-approach-for-mitigating-urban-heat"><strong>A Data-Driven Approach for Mitigating Urban Heat</strong></h4>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/density.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Source: <a href="https://www.frontiersin.org/articles/10.3389/fbuil.2020.519599/full">MacLachlan et al.&nbsp;2021</a></figcaption><p></p>
+</figure>
+</div>
+<blockquote class="blockquote">
+<p>Mean radiant temperature (MRT), this is the temperature that surrounds a point</p>
+</blockquote>
+<ul>
+<li><strong>Low density is the statistical area of Currambine – North of Perth</strong>.</li>
+<li><strong>High density is from the city of Subiaco, West of Perth</strong>. Follows the Subiaco Redevelopment Scheme which supersedes the Metropolitan Region Scheme. It seeks improved social, economic and environmental development outcomes and transformed underutilized industrial land.</li>
+<li>In 2011 – population density was very similar, now Subiaco has more than double the density of Currambine with lower temperatures of between 1 and 0.6 degree Celsius dependent on land cover.</li>
+<li>Ran 4 scenarios:
+<ul>
+<li>Original (existing) development (from satellite imagery)</li>
+<li>Proposed redevelopment as in the plan</li>
+<li>Proposed redevelopment removing trees</li>
+<li>Proposed redevelopment with trees covering the hottest pixels</li>
+</ul></li>
+<li>On average reduced temperature by 0.8 degrees Celsius across the study area.</li>
+</ul>
+</section>
+<section id="making-sense-of-this" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="making-sense-of-this"><strong>Making sense of this</strong></h4>
+<ul>
+<li>There is a gap between global, metropolitan, local policy and data analysis</li>
+<li>The analysis needs to solve the problem and be usable</li>
+<li>Should we focus on <code>equal</code> access/ distribution or <code>equitable</code> access / distribution or providing environmental <code>justice</code></li>
+<li>Are policies themselves the problem</li>
+<li>How could other cities use the same methods - e.g.&nbsp;could Sydney use the same temperature approach as Fremantle.</li>
+</ul>
+</section>
+</section>
+<section id="approaching-projects" class="level3">
+<h3 class="anchored" data-anchor-id="approaching-projects"><strong>1.6 Approaching projects</strong></h3>
+<section id="first" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="first"><strong>First</strong></h4>
+<ul>
+<li>Search for EO data…we have seen (or will see) the following data
+<ul>
+<li>Temperature</li>
+<li>Landcover</li>
+<li>Pollution</li>
+<li>Elevation</li>
+<li>Texture / Spectral</li>
+<li>Not constrained to this list</li>
+</ul></li>
+<li>Identify an issue (look at local policy documents)</li>
+<li>Look at global policy documents (to see the link)</li>
+</ul>
+</section>
+<section id="second" class="level4 unnumbered">
+<h4 class="unnumbered anchored" data-anchor-id="second"><strong>Second</strong></h4>
+<ul>
+<li>What can be solved with the data</li>
+<li>What could this data contribute to another question (e.g.&nbsp;including it as a variable)</li>
+<li>How could the remotely sensed data be included within a data workflow</li>
+<li>Anything else as long as it includes EO data (or some sort, at some stage) and analysis for solving a policy question</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="summary-practical" class="level2">
+<h2 class="anchored" data-anchor-id="summary-practical"><strong>2 Summary: practical</strong></h2>
+<blockquote class="blockquote">
+<p>This week’s practical will consist mainly of the following:</p>
+<ul>
+<li>Exploring the UHI in GEE using Landsat and MODIS.</li>
+<li>Exploration of time series data</li>
+<li>Plot the average temperature in R to explore UHI.</li>
+</ul>
+</blockquote>
+<p>In this week’s practical, I have used Landsat and MODIS data for Beijing and followed the practical’s instructions to plot the average temperature of Beijing to analyse and visualise the urban heat island (UHI) effect, in addition to plotting a time series of MODIS data.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/WEEK8practical.png" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Mean summer temperature in Beijing.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="application" class="level2">
+<h2 class="anchored" data-anchor-id="application"><strong>3 Application</strong></h2>
+<blockquote class="blockquote">
+<p>This week’s learning covers the theory and analysis of the urban heat island (UHI) effect and a discussion of policies related to remote sensing, so the application of remote sensing in response to UHI effect policies will be explored.</p>
+</blockquote>
+<section id="applications-of-remote-sensing-in-response-to-uhi" class="level3">
+<h3 class="anchored" data-anchor-id="applications-of-remote-sensing-in-response-to-uhi"><strong>3.1 Applications of remote sensing in response to UHI</strong></h3>
+<p>Remote sensing can be used to obtain a large amount of image data, thus enabling monitoring, analysis and assessment of the urban heat island effect, and thus responding to policy.</p>
+<p>On the one hand, remote sensing can enable <code>monitoring</code> of the urban heat island effect. Monitoring can use satellite remote sensing and drone remote sensing technology to conduct high-precision infrared thermal imaging of the city and its surrounding areas to obtain the spatial distribution characteristics of the urban heat field. Based on the monitoring results, the government can formulate targeted policies and implement different regulatory measures for the urban heat island effect in different areas.</p>
+<p>On the other hand, remote sensing can also <code>evaluate the implementation</code> of urban heat island effect policies. Through the time series data obtained by remote sensing technology, the urban heat island effect before and after the implementation of the policy can be compared and analysed, and the effect of the policy can then be evaluated.</p>
+</section>
+<section id="application-case" class="level3">
+<h3 class="anchored" data-anchor-id="application-case"><strong>3.2 Application case</strong></h3>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Sourse
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><strong><em>Modelling the urban heat island effect of smart growth policy scenarios in Brisbane</em></strong> , <em>Sourse: <span class="citation" data-cites="deilami_modelling_2017">Deilami and Kamruzzaman (<a href="references.html#ref-deilami_modelling_2017" role="doc-biblioref">2017</a>)</span></em></p>
+</div>
+</div>
+<p>Smart growth policy has been identified as a panacea to tackle a range of undesirable outcomes of sprawl development. Various neighbourhood planning concepts have been developed following smart growth principles such as transit oriented development, and infill development. Existing empirical studies, however, do not answer to a key policy question: can smart growth policies reduce the urban heat island (UHI) effect? If so, what type of smart growth policy would be most effective? This research examined the questions by deriving five alternative neighbourhood planning scenarios for Brisbane for 2023: a) business as usual, b) transit oriented development (TOD), c) infill development, d) motorway corridor oriented development, and e) sprawl development. The research utilises Landsat remote sensing images of 1991, 2004, and 2013 to: first, estimate and validate a Geographically Weighted Regression model in order to identify statistically significant factors influencing the UHI intensities in Brisbane; and second, predict the UHI intensities of the five policy scenarios. Two factors were identified to have significant influence on the UHI intensities in Brisbane: population density, and porosity.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/1-s2.0-S0264837716313138-gr7.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Spatial patterns of the UHI intensities in Brisbane: a) 1991, b) 2004, and c) 2013.</figcaption><p></p>
+</figure>
+</div>
+<p>Results show that compared to the 2004 and 2013 levels, Brisbane will respectively experience a higher and lower levels of UHI effect in 2023, irrespective of the policy scenarios. On average, the infill development scenario, as a smart growth policy, has a marginally better potential to mitigate the UHI effect in Brisbane in 2023 compared to the sprawl development scenario conditional on the definition applied in this research. The UHI effect would be more equitably balanced spatially under the sprawl development scenario.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="img/1-s2.0-S0264837716313138-gr9.jpg" class="img-fluid figure-img" style="width:100.0%"></p>
+<p></p><figcaption class="figure-caption">Spatial patterns of the projected UHI intensities for Brisbane for 2023: a) business as usual scenario, b) transit oriented development scenario, c) infill development scenario, d) motorway corridor development scenario, and e) sprawl development scenario.</figcaption><p></p>
+</figure>
+</div>
+</section>
+<section id="case-comments" class="level3">
+<h3 class="anchored" data-anchor-id="case-comments"><strong>3.3 Case comments</strong></h3>
+<p><strong><em>Advantages or contribution</em></strong></p>
+<p><strong><em>Disadvantages or potential</em></strong></p>
+</section>
+</section>
+<section id="reflection" class="level2">
+<h2 class="anchored" data-anchor-id="reflection"><strong>4 Reflection</strong></h2>
 
 
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography" style="display: none">
+<div id="ref-deilami_modelling_2017" class="csl-entry" role="doc-biblioentry">
+Deilami, Kaveh, and Md. Kamruzzaman. 2017. <span>“Modelling the Urban Heat Island Effect of Smart Growth Policy Scenarios in <span>Brisbane</span>.”</span> <em>Land Use Policy</em> 64 (May): 38–55. <a href="https://doi.org/10.1016/j.landusepol.2017.02.027">https://doi.org/10.1016/j.landusepol.2017.02.027</a>.
+</div>
+</div>
 </section>
 
 </main> <!-- /main -->

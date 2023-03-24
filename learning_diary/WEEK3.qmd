@@ -247,7 +247,7 @@ $$
 
 For this week's practical I chose to follow the guidance using Landsat data from Cape Town. I used R to do atmospheric corrections, merging, data enhancement and other operations on the data. Through practical, I gained a better understanding of remote sensing data pre-processing and was able to apply this to my workflow in R. Combined with the previous term's CASA0005 course, I can now use R to analyse more types of data.
 
-![Texture of landsat data from Cape Town](img/my_plot.png){width="100%"}
+![Practical output: texture of landsat data from Cape Town](img/my_plot.png){width="100%"}
 
 ## **3 Application**
 

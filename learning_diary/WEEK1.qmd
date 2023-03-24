@@ -135,7 +135,7 @@ Applicable to Radar: Electromagnetic waves are polarized and the direction depen
 
 For this week's practical I chose Chelmsford, a city in the north-east suburbs of London, as my study area. I also followed the practical's instructions to operate on remote sensing images within its administrative area. Through this practical I became familiar with the use of SNAP and the remote sensing related package of R. I also learnt about some of the features of remote sensing imagery, such as spectral features, through these operations.
 
-![SNAP operating screen](img/SNAP.png){width="100%"}
+![Practical output: SNAP operating screen](img/SNAP.png){width="100%"}
 
 ## **3 Application**
 

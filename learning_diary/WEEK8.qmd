@@ -282,6 +282,20 @@ Results show that compared to the 2004 and 2013 levels, Brisbane will respective
 
 ***Advantages or contribution***
 
+- The study employs remote sensing techniques and geo-weighted regression models, which can provide effective estimates and predictions of the heat island effect and assist in scientific decision-making for policy.
+
+- The study considers the impact of different neighbourhood planning scenarios on the heat island effect, providing a valuable reference for urban planning and policy formulation.
+
+- The study finds that infill development as a smart growth policy has good potential to mitigate the heat island effect, which provides important insights for promoting sustainable urban development.
+
 ***Disadvantages or potential***
 
+- The policy options adopted in the study may have uncertainties and limitations and are not necessarily optimal, and the impact of different policy options on the heat island effect at the societal level needs to be further explored.
+
+- Other factors that may affect the heat island effect, such as climate change and land use change, are not addressed in the study and need further research and analysis.
+
 ## **4 Reflection**
+
+Policy making is often a complex process that requires both scientific and rational judgment to ensure that the policy can bring positive benefits to the society; and to weigh the interests of different groups to ensure benefits while taking into account equity, while the balance between equity and benefits is a difficult point to grasp.
+
+In the formulation of urban policies, the assistance of remote sensing can be good for the science of policies, such as this week's case to judge the trend of urban heat island effect by predicting different smart growth patterns, and urban planning plays an important role as a policy tool in it. Thus the combination of remote sensing and urban planning can largely contribute to the virtuous promotion of urban policies.
